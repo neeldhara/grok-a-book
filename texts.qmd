@@ -4,7 +4,7 @@ sidebar: false
 toc: false
 listing:
   - id: texts-listing
-    contents: texts
+    contents: texts/listing.yml
     sort: date desc
     type: table
     categories: false

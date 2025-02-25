@@ -4,7 +4,7 @@ sidebar: false
 toc: false
 listing:
   - id: nonfiction-listing
-    contents: non-fiction
+    contents: non-fiction/listing.yml
     sort: date desc
     type: table
     categories: false
