@@ -1,0 +1,56 @@
+---
+title: "Meditation for Mortals | Spring 2025"
+sidebar: false
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    sort: date asc
+    page-size: 100
+    type: table
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    feed: false
+    template: ../../../materials.ejs
+date-format: DD MMM, YYYY
+---
+
+## Meditation for Mortals: A Guide to Life, Death and Beyond
+
+##### Spring 2025
+
+:::{.callout-note collapse="true" icon="false"}
+##### About the Book
+
+A practical and philosophical exploration of meditation, focusing on its role in understanding life, death, and consciousness. This book club will explore both the practical aspects of meditation and the deeper philosophical questions it raises.
+:::
+
+:::{.callout-note collapse="true" icon="false"}
+##### Target Audience
+
+This book club welcomes:
+- Beginners interested in meditation
+- Experienced practitioners looking to deepen their understanding
+- Anyone interested in exploring questions about consciousness and existence
+:::
+
+:::{.callout-tip collapse="true" icon="false"}
+##### Format
+
+Each session will include:
+- Discussion of the week's reading
+- A guided meditation practice
+- Open dialogue about experiences and questions
+:::
+
+:::{.callout-caution collapse="true" icon="false"}
+##### Timings and Venue
+
+We meet every Wednesday at 7 AM IST. Join us in the Meditation Room or via Zoom.
+:::
+
+## Reading Schedule
+
+::: {#lectures-listing}
+:::

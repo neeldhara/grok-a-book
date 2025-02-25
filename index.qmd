@@ -1,0 +1,13 @@
+---
+title: "Grok A Book"
+page-layout: full
+toc: false
+css: css/teaching.css
+---
+
+Welcome to Grok A Book, a collection of reading groups and book clubs. Here you'll find:
+
+- **Texts**: Reading groups focused on textbooks, primarily in mathematics and computer science
+- **Non-Fiction**: Book clubs exploring various non-fiction works
+
+Choose your adventure from the navigation menu!

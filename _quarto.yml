@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Grok A Book"
+  navbar:
+    background: primary
+    search: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: texts.qmd
+        text: Texts
+      - href: non-fiction.qmd
+        text: Non-Fiction
+
+format:
+  html:
+    theme: cosmo
+    css: css/teaching.css
+    toc: true

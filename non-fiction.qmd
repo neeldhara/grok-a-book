@@ -1,0 +1,26 @@
+---
+title: "Non-Fiction"
+sidebar: false
+toc: false
+listing:
+  - id: nonfiction-listing
+    contents: non-fiction
+    sort: date desc
+    type: table
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    fields: [date, title, subtitle, description]
+    field-display-names:
+      date: "When"
+      title: "Book"
+      subtitle: "Details"
+      description: "Description"
+    page-size: 100
+    template: teaching.ejs
+---
+
+## Non-Fiction Book Clubs
+
+:::{#nonfiction-listing}
+:::

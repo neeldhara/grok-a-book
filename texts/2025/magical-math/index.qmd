@@ -1,0 +1,62 @@
+---
+title: "Magical Mathematics | Spring 2025"
+sidebar: false
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    sort: date asc
+    page-size: 100
+    type: table
+    categories: false
+    sort-ui: false
+    filter-ui: false
+    feed: false
+    template: ../../../materials.ejs
+date-format: DD MMM, YYYY
+---
+
+## Magical Mathematics: The Mathematical Ideas That Animate Great Magic Tricks
+
+##### Spring 2025
+
+:::{.callout-note collapse="true" icon="false"}
+##### About the Book
+
+This book reveals the rich mathematical ideas that make great magic tricks work. Explaining the mathematics behind a startling card trick or a mind-reading number act can enhance your appreciation of both the magic and the mathematics.
+
+Written by Persi Diaconis (a professional magician who is also one of the world's leading mathematicians) and Ron Graham (a renowned mathematician who is also a skilled magician), this book explores how mathematical principles underpin the magic tricks that have captivated audiences for centuries.
+:::
+
+:::{.callout-note collapse="true" icon="false"}
+##### Target Audience
+
+This reading group is perfect for:
+- Mathematics enthusiasts who enjoy magic
+- Magicians interested in the mathematical principles behind their craft
+- Anyone fascinated by the intersection of mathematics and entertainment
+:::
+
+:::{.callout-tip collapse="true" icon="false"}
+##### Prerequisites
+
+Basic comfort with mathematical reasoning. No prior experience with magic is required!
+:::
+
+:::{.callout-tip collapse="true" icon="false"}
+##### References
+
+1. *Magical Mathematics: The Mathematical Ideas That Animate Great Magic Tricks* by Persi Diaconis and Ron Graham
+2. Additional materials will be shared during the sessions
+:::
+
+:::{.callout-caution collapse="true" icon="false"}
+##### Timings and Venue
+
+We meet every Saturday at 4 PM IST. Join us in Room 1/201 or via Zoom.
+:::
+
+## Reading Schedule
+
+::: {#lectures-listing}
+:::
