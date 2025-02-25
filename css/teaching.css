@@ -53,13 +53,9 @@ body {
     border-bottom: none;
 }
 
+/* Header styles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', serif;
-    font-weight: normal;
-}
-
-.quarto-title {
-    font-family: 'Lato', serif;
+    font-family: 'amsterdamkingdom', serif;
     font-weight: normal;
 }
 
@@ -77,6 +73,11 @@ h3 {
     font-size: 1.8em;
 }
 
+.quarto-title {
+    font-family: 'Lato', serif;
+    font-weight: normal;
+}
+
 /* Navigation styling */
 .navbar {
     background-color: #ffffff;
@@ -84,8 +85,14 @@ h3 {
 }
 
 .navbar-brand {
-    font-family: 'amsterdamkingdom', sans-serif;
+    font-family: 'amsterdamkingdom', serif;
+    font-size: 1.5em;
     font-weight: 700;
+}
+
+.navbar .nav-link {
+    font-family: 'amsterdamkingdom', serif;
+    font-size: 1.2em;
 }
 
 /* Course listing styles */
