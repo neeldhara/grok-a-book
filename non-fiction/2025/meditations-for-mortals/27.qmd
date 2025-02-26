@@ -1,0 +1,11 @@
+---
+title: "Day Twenty-Seven: C'est fait par du monde"
+date: 2025-04-19
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

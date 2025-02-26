@@ -1,0 +1,11 @@
+---
+title: "Day Fourteen: The point of the mountain"
+date: 2025-04-06
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

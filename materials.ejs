@@ -1,35 +1,142 @@
 ```{=html}
-    <table class="table materials-listing-table">
-      <thead>
-        <tr>
-          <th>Date</th>
-          <th>Lecture</th>
-          <th>Slides</th>
-          <th>Notes</th>
-          <th>Video</th>
-        </tr>
-      </thead>
-      <tbody class="list">
-        <% for (const item of items) { %>
-        <tr data-index="0" data-categories="null" <%= metadataAttrs(item) %>>            
-          <td><%= item.date %></td>
-          <td style="width:60% !important;">
-            <% if (item.lecid) { %><%= item.lecid %>.<% } %> 
-            <%= item.title %>
-            <br>
-            <em><small><%= item.summary %></small></em>
-          </td>
-          <td style="text-align: center;">
-            <% if (item.slides) { %><a href="<%= item.slides %>"><span class="bi bi-file-earmark-slides"></span></a><% } else { %><span class="bi bi-dash-circle-dotted"></span><% } %>
-          </td>
-          <td style="text-align: center;">
-            <% if (item.notes) { %><a href="<%= item.notes %>"><span class="bi bi-journal-richtext"></span></a><% } else { %><span class="bi bi-dash-circle-dotted"></span><% } %>
-          </td>
-          <td style="text-align: center;">
-            <% if (item.video) { %><a href="<%= item.video %>"><span class="bi bi-film"></span></a><% } else { %><span class="bi bi-dash-circle-dotted"></span><% } %>
-          </td>
-        </tr>
-        <% } %>
-      </tbody>
-    </table>
+<script>
+  // Pagination functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get all items from the table
+    const table = document.querySelector('.materials-listing-table');
+    const rows = Array.from(table.querySelectorAll('tbody tr'));
+    
+    // Get page size from templateParams or default to 10
+    const pageSize = templateParams && templateParams['page-size'] ? templateParams['page-size'] : 10;
+    const itemsPerPage = pageSize;
+    
+    // Get current page from URL or default to 1
+    const urlParams = new URLSearchParams(window.location.search);
+    let currentPage = parseInt(urlParams.get('page')) || 1;
+    
+    // Calculate pagination values
+    const totalItems = rows.length;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+    
+    // Ensure current page is valid
+    if (currentPage < 1) currentPage = 1;
+    if (currentPage > totalPages) currentPage = totalPages;
+    
+    // Hide all rows first
+    rows.forEach(row => {
+      row.style.display = 'none';
+    });
+    
+    // Show only rows for the current page
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = Math.min(startIndex + itemsPerPage, totalItems);
+    
+    for (let i = startIndex; i < endIndex; i++) {
+      if (rows[i]) {
+        rows[i].style.display = '';
+      }
+    }
+    
+    // Create pagination controls if needed
+    if (totalPages > 1) {
+      // Create pagination container
+      const paginationContainer = document.createElement('div');
+      paginationContainer.className = 'pagination-container';
+      paginationContainer.style.display = 'flex';
+      paginationContainer.style.justifyContent = 'center';
+      paginationContainer.style.marginTop = '20px';
+      
+      // Create pagination list
+      const paginationList = document.createElement('ul');
+      paginationList.className = 'pagination';
+      
+      // Previous button
+      if (currentPage > 1) {
+        const prevItem = document.createElement('li');
+        prevItem.className = 'page-item';
+        const prevLink = document.createElement('a');
+        prevLink.className = 'page-link';
+        prevLink.href = '?page=' + (currentPage - 1);
+        prevLink.setAttribute('aria-label', 'Previous');
+        prevLink.innerHTML = '<span aria-hidden="true">&laquo;</span>';
+        prevItem.appendChild(prevLink);
+        paginationList.appendChild(prevItem);
+      }
+      
+      // Page numbers
+      for (let i = 1; i <= totalPages; i++) {
+        const pageItem = document.createElement('li');
+        pageItem.className = 'page-item';
+        if (i === currentPage) {
+          pageItem.classList.add('active');
+        }
+        const pageLink = document.createElement('a');
+        pageLink.className = 'page-link';
+        pageLink.href = '?page=' + i;
+        pageLink.textContent = i;
+        pageItem.appendChild(pageLink);
+        paginationList.appendChild(pageItem);
+      }
+      
+      // Next button
+      if (currentPage < totalPages) {
+        const nextItem = document.createElement('li');
+        nextItem.className = 'page-item';
+        const nextLink = document.createElement('a');
+        nextLink.className = 'page-link';
+        nextLink.href = '?page=' + (currentPage + 1);
+        nextLink.setAttribute('aria-label', 'Next');
+        nextLink.innerHTML = '<span aria-hidden="true">&raquo;</span>';
+        nextItem.appendChild(nextLink);
+        paginationList.appendChild(nextItem);
+      }
+      
+      paginationContainer.appendChild(paginationList);
+      
+      // Add page info
+      const pageInfo = document.createElement('div');
+      pageInfo.style.textAlign = 'center';
+      pageInfo.style.marginTop = '10px';
+      pageInfo.innerHTML = '<small>Showing ' + (startIndex + 1) + ' to ' + endIndex + ' of ' + totalItems + ' items</small>';
+      
+      // Insert pagination after the table
+      table.parentNode.insertBefore(paginationContainer, table.nextSibling);
+      table.parentNode.insertBefore(pageInfo, paginationContainer.nextSibling);
+    }
+  });
+</script>
+
+<table class="table materials-listing-table">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Lecture</th>
+      <th>Slides</th>
+      <th>Notes</th>
+      <th>Video</th>
+    </tr>
+  </thead>
+  <tbody class="list">
+    <% for (const item of items) { %>
+    <tr data-index="0" data-categories="null" <%= metadataAttrs(item) %>>            
+      <td><%= item.date %></td>
+      <td style="width:60% !important;">
+        <% if (item.lecid) { %><%= item.lecid %>.<% } %> 
+        <%= item.title %>
+        <br>
+        <em><small><%= item.summary %></small></em>
+      </td>
+      <td style="text-align: center;">
+        <% if (item.slides) { %><a href="<%= item.slides %>"><span class="bi bi-file-earmark-slides"></span></a><% } else { %><span class="bi bi-dash-circle-dotted"></span><% } %>
+      </td>
+      <td style="text-align: center;">
+        <% if (item.notes) { %><a href="<%= item.notes %>"><span class="bi bi-journal-richtext"></span></a><% } else { %><span class="bi bi-dash-circle-dotted"></span><% } %>
+      </td>
+      <td style="text-align: center;">
+        <% if (item.video) { %><a href="<%= item.video %>"><span class="bi bi-film"></span></a><% } else { %><span class="bi bi-dash-circle-dotted"></span><% } %>
+      </td>
+    </tr>
+    <% } %>
+  </tbody>
+</table>
 ```

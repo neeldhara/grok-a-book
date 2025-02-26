@@ -1,0 +1,11 @@
+---
+title: "Day Eighteen: Allow other people their problems"
+date: 2025-04-10
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

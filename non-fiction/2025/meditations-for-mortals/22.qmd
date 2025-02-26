@@ -1,0 +1,11 @@
+---
+title: "Day Twenty-Two: Stop being so kind to Future You"
+date: 2025-04-14
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

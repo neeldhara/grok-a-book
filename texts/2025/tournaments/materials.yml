@@ -1,0 +1,139 @@
+- date: 2025-04-21
+  title: "Introduction"
+  summary: "Basic definitions and fundamental concepts of tournaments"
+  notes: "01.qmd"
+
+- date: 2025-04-22
+  title: "Irreducible Tournaments"
+  summary: "Exploring irreducible tournaments and their properties"
+  notes: "02.qmd"
+
+- date: 2025-04-23
+  title: "Strong Tournaments"
+  summary: "Understanding strong tournaments and their characteristics"
+  notes: "03.qmd"
+
+- date: 2025-04-24
+  title: "Cycles in a Tournament"
+  summary: "Analysis of cycles and their significance in tournaments"
+  notes: "04.qmd"
+
+- date: 2025-04-25
+  title: "Strong Subtournaments of a Tournament"
+  summary: "Examining strong subtournaments and their relationships"
+  notes: "05.qmd"
+
+- date: 2025-04-26
+  title: "The Distribution of 3-cycles in a Tournament"
+  summary: "Statistical analysis of 3-cycles in tournament structures"
+  notes: "06.qmd"
+
+- date: 2025-04-27
+  title: "Transitive Tournaments"
+  summary: "Exploring transitive tournaments and their unique properties"
+  notes: "07.qmd"
+
+- date: 2025-04-28
+  title: "Sets of Consistent Arcs in a Tournament"
+  summary: "Understanding consistent arc sets and their implications"
+  notes: "08.qmd"
+
+- date: 2025-04-29
+  title: "The Parity of the Number of Spanning Paths of a Tournament"
+  summary: "Examining parity properties of spanning paths"
+  notes: "09.qmd"
+
+- date: 2025-04-30
+  title: "The Maximum Number of Spanning Paths of a Tournament"
+  summary: "Analysis of maximum spanning paths in tournament structures"
+  notes: "10.qmd"
+
+- date: 2025-05-01
+  title: "An Extremal Problem"
+  summary: "Exploring extremal problems in tournament theory"
+  notes: "11.qmd"
+
+- date: 2025-05-02
+  title: "The Diameter of a Tournament"
+  summary: "Understanding tournament diameter and its implications"
+  notes: "12.qmd"
+
+- date: 2025-05-03
+  title: "The Powers of Tournament Matrices"
+  summary: "Examining matrix representations of tournaments and their powers"
+  notes: "13.qmd"
+
+- date: 2025-05-04
+  title: "Scheduling a Tournament"
+  summary: "Practical applications in tournament scheduling"
+  notes: "14.qmd"
+
+- date: 2025-05-05
+  title: "Ranking the Participants in a Tournament"
+  summary: "Methods and algorithms for ranking tournament participants"
+  notes: "15.qmd"
+
+- date: 2025-05-06
+  title: "The Minimum Number of Comparisons Necessary to Determine a Transitive Tournament"
+  summary: "Optimization problems in transitive tournaments"
+  notes: "16.qmd"
+
+- date: 2025-05-07
+  title: "Universal Tournaments"
+  summary: "Exploring the concept and properties of universal tournaments"
+  notes: "17.qmd"
+
+- date: 2025-05-08
+  title: "Expressing Oriented Graphs as the Union of Bilevel Graphs"
+  summary: "Representation theory for oriented graphs in tournaments"
+  notes: "18.qmd"
+
+- date: 2025-05-09
+  title: "Oriented Graphs Induced by Voting Patterns"
+  summary: "Applications of tournament theory to voting systems"
+  notes: "19.qmd"
+
+- date: 2025-05-10
+  title: "Oriented Graphs Induced by Team Comparisons"
+  summary: "Applications of tournament theory to sports and competitions"
+  notes: "20.qmd"
+
+- date: 2025-05-11
+  title: "Criteria for a Score Vector"
+  summary: "Understanding the mathematical criteria for valid score vectors"
+  notes: "21.qmd"
+
+- date: 2025-05-12
+  title: "Score Vectors of Generalizations of Tournaments"
+  summary: "Extending score vector concepts to generalized tournaments"
+  notes: "22.qmd"
+
+- date: 2025-05-13
+  title: "The Number of Score Vectors"
+  summary: "Combinatorial analysis of possible score vectors"
+  notes: "23.qmd"
+
+- date: 2025-05-14
+  title: "The Largest Score in a Tournament"
+  summary: "Extremal analysis of maximum scores in tournaments"
+  notes: "24.qmd"
+
+- date: 2025-05-15
+  title: "A Reversal Theorem"
+  summary: "Exploring reversal properties in tournament theory"
+  notes: "25.qmd"
+
+- date: 2025-05-16
+  title: "Tournaments with a Given Automorphism Group"
+  summary: "Algebraic analysis of tournament symmetries"
+  notes: "26.qmd"
+
+- date: 2025-05-17
+  title: "The Group of the Composition of Two Tournaments"
+  summary: "Understanding compositional properties of tournament groups"
+  notes: "27.qmd"
+
+- date: 2025-05-18
+  title: "The Maximum Order of the Group of a Tournament"
+  summary: "Exploring maximum order properties in tournament groups"
+  notes: "28.qmd"

@@ -1,13 +1,26 @@
 ---
 title: "Grok A Book"
-page-layout: full
 toc: false
 css: css/teaching.css
 ---
 
-Welcome to Grok A Book, a collection of reading groups and book clubs. Here you'll find:
+#### Background
 
-- **Texts**: Reading groups focused on textbooks, primarily in mathematics and computer science
-- **Non-Fiction**: Book clubs exploring various non-fiction works
+---
 
-Choose your adventure from the navigation menu!
+
+👋🏽 Let's work through books together!
+
+This website serves to catalog records of meetings organized around book reading exercises. The typical plan is simple:
+
+- pick a book to grok
+- identify a ~month-long window and make a reading plan
+- meet every day at a fixed time over Zoom (the default is 9PM IST)
+
+The meetings are recorded and if there is any material that went into prep (slides and/or notes), they will be posted here along with the recordings. There will be, in any case, a placeholder page for each session with a comment box thrown in, so we can have asynchronous discussions. 
+
+We alternate between [textbook-ish material](texts.qmd) and [non-fiction reads](non-fiction.qmd).
+
+Do you have any suggestions/ideas? Drop a comment below!
+
+{{< comments >}}

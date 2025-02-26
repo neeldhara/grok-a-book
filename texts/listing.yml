@@ -1,6 +1,15 @@
 - title: "Magical Mathematics"
   subtitle: "The Mathematical Ideas That Animate Great Magic Tricks"
   url: /texts/2025/magical-math
-  description: "A fascinating exploration of the mathematics behind magic tricks, led by a professional magician who is also a mathematician."
+  description: "by Persi Diaconis and Ronald Graham. A fascinating exploration of magic driven by math."
   date: 2025-03-01
   status: Upcoming
+  image: /texts/2025/magical-math/cover.jpg
+
+- title: "Topics on Tournaments"
+  subtitle: ""
+  url: /texts/2025/tournaments
+  description: "by John W. Moon. An introduction to the theory of tournaments from a predominantly combinatorial perspective."
+  date: 2025-04-21
+  status: Upcoming
+  image: /texts/2025/tournaments/cover.jpg

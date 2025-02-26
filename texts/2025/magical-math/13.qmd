@@ -1,0 +1,13 @@
+---
+title: "The Mandelbrot Set"
+date: 2025-03-13
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+
+{{< comments >}}

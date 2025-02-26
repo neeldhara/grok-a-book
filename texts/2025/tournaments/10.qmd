@@ -1,0 +1,13 @@
+---
+title: "The Maximum Number of Spanning Paths of a Tournament"
+date: 2025-04-30
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+
+{{< comments >}}

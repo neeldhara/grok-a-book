@@ -1,0 +1,17 @@
+[build]
+  publish = "_site"
+  command = "quarto render"
+
+[build.environment]
+  NETLIFY_USE_YARN = "true"
+
+[[plugins]]
+package = "@quarto/netlify-plugin-quarto"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+  conditions = {Language = []}
+  headers = {X-From = "Netlify"}

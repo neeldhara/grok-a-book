@@ -1,0 +1,11 @@
+---
+title: "Day Sixteen: The reverse golden rule"
+date: 2025-04-08
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

@@ -1,0 +1,11 @@
+---
+title: "Day Eleven: Just go to the shed"
+date: 2025-04-03
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

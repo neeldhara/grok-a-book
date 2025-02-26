@@ -1,0 +1,11 @@
+---
+title: "Day Six: You can't care about everything"
+date: 2025-03-29
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

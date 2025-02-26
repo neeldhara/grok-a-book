@@ -1,15 +1,79 @@
 - date: 2025-03-01
-  title: "Introduction to Mathematical Magic"
-  description: "Overview of the connection between mathematics and magic. We'll explore the de Bruijn sequence and its applications in card tricks."
+  title: "Royal Hummer"
+  notes: 01.qmd
+
+- date: 2025-03-02
+  title: "Back to Magic"
+  notes: 02.qmd
+
+- date: 2025-03-03
+  title: "The Magic of de Bruijn Sequences"
+  notes: 03.qmd
+
+- date: 2025-03-04
+  title: "Going Further"
+  notes: 04.qmd
+
+- date: 2025-03-05
+  title: "Robotic Vision"
+  notes: 05.qmd
+
+- date: 2025-03-06
+  title: "Making Codes"
+  notes: 06.qmd
+
+- date: 2025-03-07
+  title: "To the Core of Our Being"
+  notes: 07.qmd
 
 - date: 2025-03-08
-  title: "Perfect Shuffles"
-  description: "Understanding the mathematics behind perfect shuffles and their surprising properties."
+  title: "This de Bruijn Stuff Is Cool but Can It Get You a Job?"
+  notes: 08.qmd
 
-- date: 2025-03-15
+- date: 2025-03-09
+  title: "Order Matters"
+  notes: 09.qmd
+
+- date: 2025-03-10
+  title: "A Mind-reading Effect"
+  notes: 10.qmd
+
+- date: 2025-03-11
+  title: "Universal Cycles Again"
+  notes: 11.qmd
+
+- date: 2025-03-12
   title: "The Gilbreath Principle"
-  description: "Exploring one of the most powerful principles in card magic and its mathematical foundations."
+  notes: 12.qmd
+
+- date: 2025-03-13
+  title: "The Mandelbrot Set"
+  notes: 13.qmd
+
+- date: 2025-03-14
+  title: "A Mind-reading Computer"
+  notes: 14.qmd
+
+- date: 2025-03-17
+  title: "A Look Inside Perfect Shuffles"
+  notes: 15.qmd
+
+- date: 2025-03-18
+  title: "A Look Inside Monge and Milk Shuffles"
+  notes: 16.qmd
+
+- date: 2025-03-19
+  title: "A Look Inside Down-and-Under Shuffles"
+  notes: 17.qmd
+
+- date: 2025-03-20
+  title: "All the Shuffles Are Related"
+  notes: 18.qmd
+
+- date: 2025-03-21
+  title: "The Miracle Divination"
+  notes: 19.qmd
 
 - date: 2025-03-22
-  title: "Probability and Magic"
-  description: "How understanding probability can make magic tricks more effective and deceptive."
+  title: "How Many Magic Tricks Are There?"
+  notes: 20.qmd

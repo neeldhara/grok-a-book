@@ -1,0 +1,26 @@
+```{=html}
+<div class="book-cards-container list">
+<% for (const item of items) { %>
+<a href="<%= item.url %>" class="book-card-link" <%= metadataAttrs(item) %>>
+  <div class="book-card">
+    <% if (item.status) { %>
+      <span class="book-status listing-status"><%= item.status %></span>
+    <% } %>
+    <div class="book-cover">
+      <% if (item.image) { %>
+        <img src="<%= item.image %>" alt="Cover of <%= item.title %>">
+      <% } %>
+    </div>
+    <div class="book-info">
+      <h3 class="book-title listing-title"><%= item.title %></h3>
+      <% if (item.subtitle) { %>
+        <h4 class="book-subtitle listing-subtitle"><%= item.subtitle %></h4>
+      <% } %>
+      <p class="book-description listing-description"><%= item.description %></p>
+      <span class="book-date listing-date"><%= item.date %></span>
+    </div>
+  </div>
+</a>
+<% } %>
+</div>
+```

@@ -1,12 +1,16 @@
 project:
   type: website
   output-dir: _site
+  preview:
+    port: 4242
 
 website:
   title: "Grok A Book"
   navbar:
-    background: primary
+    pinned: true
+    background: white
     search: true
+    title: "Grok A Book"
     left:
       - href: index.qmd
         text: Home
@@ -14,9 +18,31 @@ website:
         text: Texts
       - href: non-fiction.qmd
         text: Non-Fiction
+  page-footer:
+    left: |
+      Made with [Quarto](https://quarto.org) and 🩶
+    center: |
+      [{{< fa brands youtube size=2x >}}](https://www.youtube.com/@neeldhara) &nbsp;&nbsp;&nbsp;
+      [{{< fa brands github size=2x >}}](https://github.com/neeldhara) &nbsp;&nbsp;&nbsp;
+      [{{< fa brands twitter size=2x >}}](https://twitter.com/neeldhara) &nbsp;&nbsp;&nbsp;
+      [{{< fa brands mastodon size=2x >}}](https://mathstodon.xyz/@neeldhara) &nbsp;&nbsp;&nbsp;
+      [{{< fa brands bluesky size=2x >}}](https://bsky.app/profile/neeldhara.bsky.social) &nbsp;&nbsp;&nbsp;
+      [{{< fa brands instagram size=2x >}}](http://instagram.com/neeldharamisra) &nbsp;&nbsp;&nbsp;
+      [{{< fa solid globe size=2x >}}](https://www.neeldhara.com) &nbsp;&nbsp;&nbsp;
+    right: |
+      Content {{< fa brands creative-commons >}} {{< fa brands creative-commons-by >}} by [Neeldhara Misra](https://www.neeldhara.com)
+  cookie-consent: false
+  page-navigation: true
 
 format:
   html:
     theme: cosmo
     css: css/teaching.css
     toc: true
+
+extensions:
+  - fontawesome
+  - comments
+
+execute:
+  freeze: auto

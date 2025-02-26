@@ -5,22 +5,16 @@ toc: false
 listing:
   - id: texts-listing
     contents: texts/listing.yml
-    sort: date desc
-    type: table
+    sort: date asc
+    type: grid
+    grid-columns: 1
     categories: false
     sort-ui: false
     filter-ui: false
-    fields: [date, title, subtitle, description]
-    field-display-names:
-      date: "When"
-      title: "Book"
-      subtitle: "Details"
-      description: "Description"
-    page-size: 100
-    template: teaching.ejs
+    page-size: 3
+    fields: [image, date, title, subtitle, description, status]
+    template: _templates/book-card.ejs
 ---
-
-## Technical Reading Groups
 
 :::{#texts-listing}
 :::

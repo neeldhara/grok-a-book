@@ -1,0 +1,67 @@
+---
+title: "Topics on Tournaments | Apr-May 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### Topics on Tournaments
+
+#### _John W. Moon_
+
+---
+
+##### 21 Apr 2025 to 18 May 2025
+
+:::: {.columns}
+
+::: {.column width="58%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+Tournaments are complete directed graphs, and derive their name from how they naturally model outcomes of round-robin tournaments. 
+
+The study of tournaments is a rich area of graph theory, with applications to various fields such as sports, voting, and ranking. This will be an exploration of the combinatorial aspects of tournaments.
+
+You can find this book on [Project Gutenberg](https://www.gutenberg.org/ebooks/42833).
+:::
+
+
+
+:::{.callout-tip icon="false"}
+##### Prerequisites
+
+The equivalent of a first course in discrete math at an undergraduate level would be useful background to have. Some familiarity with graphs in general is desirable but required.
+:::
+
+
+:::
+
+::: {.column width="42%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We meet on Zoom at 9PM IST for about 40-60 minutes every day according to the schedule below. A link to a Whatsapp group will be posted here soon. If you want a heads up when these details are available, drop your email below.
+
+<script async src="https://talk.hyvor.com/embed/newsletter.js" type="module"></script>
+<hyvor-talk-newsletter website-id="12638"></hyvor-talk-newsletter>
+:::
+:::
+
+::::
+
+:::{#lectures-listing}
+:::

@@ -1,0 +1,11 @@
+---
+title: "Day Fifteen: What if this were easy?"
+date: 2025-04-07
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

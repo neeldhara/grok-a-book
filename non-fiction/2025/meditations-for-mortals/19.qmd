@@ -1,0 +1,11 @@
+---
+title: "Day Nineteen: A good time or a good story"
+date: 2025-04-11
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

@@ -1,0 +1,11 @@
+---
+title: "Day Three: You need only face the consequences"
+date: 2025-03-26
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

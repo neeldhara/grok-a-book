@@ -1,0 +1,13 @@
+---
+title: "A Mind-reading Effect"
+date: 2025-03-10
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+
+{{< comments >}}
