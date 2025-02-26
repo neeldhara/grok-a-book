@@ -44,7 +44,7 @@ You can find this book on [Project Gutenberg](https://www.gutenberg.org/ebooks/4
 :::{.callout-tip icon="false"}
 ##### Prerequisites
 
-The equivalent of a first course in discrete math at an undergraduate level would be useful background to have. Some familiarity with graphs in general is desirable but required.
+The equivalent of a first course in discrete math at an undergraduate level would be useful background to have. Some familiarity with graphs in general is desirable but not required.
 :::
 
 

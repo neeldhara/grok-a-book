@@ -1,4 +1,4 @@
 - source: project
   netlify:
     - id: b31be39d-b056-437c-bd6c-9dccb0eb998c
-      url: https://grokabook.netlify.app
+      url: https://grokabook.com
