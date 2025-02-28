@@ -6,6 +6,8 @@ project:
 
 website:
   title: "Grok A Book"
+  search:
+    keyboard-shortcut: []
   navbar:
     pinned: true
     background: white
@@ -46,3 +48,5 @@ extensions:
 
 execute:
   freeze: auto
+
+search: true
