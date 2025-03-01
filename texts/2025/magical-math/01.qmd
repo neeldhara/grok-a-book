@@ -2,12 +2,234 @@
 title: "Royal Hummer"
 date: 2025-03-01
 toc: false
+include-in-header:
+  text: |
+    <script type="application/javascript" src="scripts/01a.js"></script>
+    <script type="application/javascript" src="scripts/01b.js"></script>
+    <script type="application/javascript" src="scripts/01c.js"></script>
+    <script type="application/javascript" src="scripts/01d.js"></script>
+    <script type="application/javascript" src="scripts/01e.js"></script>
+    <link rel="stylesheet" href="styles/01a.css">
+    <link rel="stylesheet" href="styles/01b.css">
+    <link rel="stylesheet" href="styles/01c.css">
+    <link rel="stylesheet" href="styles/01d.css">
+    <link rel="stylesheet" href="styles/01e.css">
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+:::{.callout-tip}
+## Acknowledgements
+
+Most of the playables here were made with help from a bunch of LLMs from within Windsurf. I mostly used Claude 3.7 without thinking, but frequently also appealed to Gemini, GPT-4o and Deepseek. Any bugs in the implementations here are very likely prompting error :) Please leave a comment if you find an issue, or if you have any suggestions! The interactives are best viewed on desktop and are not particularly optimized for mobile. 
+:::
 
 
+In the opening trick of the book, we work with four cards, let's call them A,B,C,D. Stack them up in your hand, all cards face-down, make note of the bottom card (say `X`), and perform the following steps:
+
+1. `INIT.` Push the top card to the bottom and flip the top card.
+2. `CUT AND FLIP TWO.` Take the top two cards and flip them over. Give the deck a cut anywhere you like. Repeat this step as many times as you want. 
+3. `FINAL.` Flip the top card to the bottom, take the next card to the bottom and flip the top card.
+
+The outcome: the card `X` faces one way and all other cards face the other way, no matter how many times step 2 is executed. Try this below! 
+
+> The trick is known as Baby Hummer in magic circles. It was invented by magician Charles Hudson as a variation on an original trick by a truly eccentric genius named Bob Hummer.
+
+_Why does this work?_
+
+```{=html}
+<div class="card-trick-container" style="border: 2px solid #3498db; border-radius: 12px; padding: 25px 15px 15px 15px; padding-top: 150px; margin: 20px 0; background-color: #f8f9fa;">
+<div style="display: flex; align-items: center; justify-content: center; margin: 20px 0;">
+  <div style="writing-mode: vertical-lr; transform: rotate(180deg); font-weight: bold; margin-right: 10px; text-align: center;">TOP</div>
+  
+  <div id="card-container" style="display: flex; justify-content: center; gap: 10px; margin: 20px auto; position: relative; height: 200px; align-items: center; overflow: visible;">
+  </div>
+  
+  <div style="writing-mode: vertical-lr; font-weight: bold; margin-left: 10px; text-align: center;">BOTTOM</div>
+</div>
+
+<div id="controls" style="display: flex; flex-direction: column; align-items: center; margin: 20px 0;">
+  <div style="display: flex; justify-content: center; margin-bottom: 15px;">
+    <button id="initialize-btn" class="action-btn">Initialize</button>
+    <button id="cut-flip-btn" class="action-btn">Cut and Flip</button>
+    <button id="finalize-btn" class="action-btn">Finalize</button>
+  </div>
+  
+  <div id="cut-flip-controls" style="display: none; flex-direction: column; align-items: center; margin-top: 10px; width: 200px;">
+    <label for="cut-slider">Select number (0-3): <span id="slider-value">0</span></label>
+    <input type="range" id="cut-slider" min="0" max="3" value="0" style="width: 100%;">
+  </div>
+  
+  <div style="margin-top: 20px;">
+    <button id="reset-btn">Reset</button>
+    <button id="toggle-state-btn" style="margin-left: 10px; background-color: #9b59b6;">Toggle State</button>
+  </div>
+  
+  <div id="bottom-card-info" style="margin-top: 15px; font-style: italic; color: #555;"></div>
+</div>
+
+</div>
+```
+
+Let's consider what happens with a stack of ten initially face-down cards when we repeatedly apply the CUT-AND-FLIP-2 action.
+
+```{=html}
+<div class="card-trick-container-b">
+  <div class="controls-b">
+    <div class="slider-container-b">
+      <label for="cut-slider-b">Cut amount: <span id="slider-value-b">1</span></label>
+      <input type="range" id="cut-slider-b" min="0" max="9" value="1">
+    </div>
+    <button id="cut-flip-btn-b">Cut and Flip</button>
+    <button id="reset-btn-b">Reset</button>
+  </div>
+  
+  <div id="card-container-b">
+    <!-- Cards will be injected here -->
+  </div>
+  
+  <div id="card-counter-b">
+    <p>Number of face up cards at odd positions: <span id="odd-count-b">0</span><br>
+    Number of face up cards at even positions: <span id="even-count-b">0</span></p>
+  </div>
+</div>
+```
+
+Note that the number of face up cards at odd positions and even positions remain equal after each action, assuming that we start with all cards face up. Why?
+
+:::{.callout-tip collapse="true"} 
+### An Argument 
+
+Assume that the claim is true after $k$ CATO operations. So we have a deck where the number of face up cards at odd positions is equal to the number of face up cards at even positions. First consider the flip operation on the top two cards. Using `0` to denote a face down state and `1` to denote a face up state, there are four possible scenarios:
+
+1. `00` -> `11`
+2. `01` -> `01`
+3. `10` -> `10`
+4. `11` -> `00`
+
+In cases (2) and (3), the number of face up cards at odd positions and even positions remains the same as before. In case (1), the number of face up cards at odd positions increases by one and the number of face up cards at even positions also increases by one. In case (4), the number of face up cards at odd positions decreases by one and the number of face up cards at even positions also decreases by one. Thus equality is maintained.
+
+Now we turn to the cut: depending on where we cut, either every card that was in a even position before remains in an even position and every card that was in an odd position before remains in an odd position; or every card that was in an even position before moves to an odd position and every card that was in an odd position before moves to an even position. In both cases, equality is evidently maintained. 
+
+You can extend this argument to scenarios where the start state has a difference in the number of face up cards in even and odd positions, and conclude that CATO operations will always maintain the difference.
+:::
+
+A very natural question to ask is what patterns/configurations are reachable from, say, the identity permutation with all cards face up, using only CATO operations. 
+
+:::{.callout-warning collapse="true"} 
+### [Spoiler] Characterization of reachable patterns
+
+Suppose we have a pattern $\mathcal{P} = \langle \sigma, b \rangle$ over $n$ cards, where $\sigma$ is a permutation of $[n]$ and $b$ is a bitstring of length $n$ (with `0` denoting a face-down state and `1` denoting a face-up state). 
+
+For each position $i$, let $\tau(i)$ be the sum $i + \sigma(i) + b[i]$. It turns out that we can reach $\mathcal{P}$ from the identity permutation with all cards face up --- using only CATO operations --- if and only if all $\tau(i)$ have the same parity.
+
+We state this claim here without proof. The games below let you get some practice with CATO operations! 
+::: 
+
+Food for thought: what if the starting permutation was different? Do you gain additional reacahable permutations if you are allowed to flip any even number of cards?
+
+I hope you have fun with the games below, where you're given a target pattern to achieve using only CATO operations :)
+
+:::{.panel-tabset}
+
+### Easy Game
+
+```{=html}
+<div class="card-trick-container-e">
+  <div class="controls-e">
+    <div class="slider-container-e">
+      <label for="cut-slider-e">Cut amount: <span id="slider-value-e">1</span></label>
+      <input type="range" id="cut-slider-e" min="0" max="3" value="1">
+    </div>
+    <button id="cut-flip-btn-e">Cut and Flip</button>
+    <button id="reset-btn-e">Reset</button>
+    <span id="moves-counter-e">Moves: 0</span>
+  </div>
+  
+  <div id="player-cards-e" class="card-row-e">
+    <!-- User's cards will be injected here -->
+  </div>
+  
+  <div class="row-label-e">Your current arrangement</div>
+  
+  <div id="target-cards-e" class="card-row-e">
+    <!-- Target cards will be injected here -->
+  </div>
+  
+  <div class="row-label-e">Target arrangement</div>
+  
+  <div class="footer-controls-e">
+    <button id="impossible-btn-e">This seems impossible!</button>
+    <div id="result-message-e"></div>
+  </div>
+</div>
+```
+
+### Medium Game
+
+```{=html}
+<div class="card-trick-container-m">
+  <div class="controls-m">
+    <div class="slider-container-m">
+      <label for="cut-slider-m">Cut amount: <span id="slider-value-m">1</span></label>
+      <input type="range" id="cut-slider-m" min="0" max="5" value="1">
+    </div>
+    <button id="cut-flip-btn-m">Cut and Flip</button>
+    <button id="reset-btn-m">Reset</button>
+    <span id="moves-counter-m">Moves: 0</span>
+  </div>
+  
+  <div id="player-cards-m" class="card-row-m">
+    <!-- User's cards will be injected here -->
+  </div>
+  
+  <div class="row-label-m">Your current arrangement</div>
+  
+  <div id="target-cards-m" class="card-row-m">
+    <!-- Target cards will be injected here -->
+  </div>
+  
+  <div class="row-label-m">Target arrangement</div>
+  
+  <div class="footer-controls-m">
+    <button id="impossible-btn-m">This seems impossible!</button>
+    <div id="result-message-m"></div>
+  </div>
+</div>
+```
+
+### Hard Game
+```{=html}
+<div class="card-trick-container-c">
+  <div class="controls-c">
+    <div class="slider-container-c">
+      <label for="cut-slider-c">Cut amount: <span id="slider-value-c">1</span></label>
+      <input type="range" id="cut-slider-c" min="0" max="9" value="1">
+    </div>
+    <button id="cut-flip-btn-c">Cut and Flip</button>
+    <button id="reset-btn-c">Reset</button>
+    <span id="moves-counter-c">Moves: 0</span>
+  </div>
+  
+  <div id="player-cards-c" class="card-row-c">
+    <!-- User's cards will be injected here -->
+  </div>
+  
+  <div class="row-label-c">Your current arrangement</div>
+  
+  <div id="target-cards-c" class="card-row-c">
+    <!-- Target cards will be injected here -->
+  </div>
+  
+  <div class="row-label-c">Target arrangement</div>
+  
+  <div class="footer-controls-c">
+    <button id="impossible-btn-c">This seems impossible!</button>
+    <div id="result-message-c"></div>
+  </div>
+</div>
+```
+
+:::
 
 {{< comments >}}

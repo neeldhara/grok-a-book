@@ -1,0 +1,185 @@
+.card-trick-container-m {
+    border: 2px solid #4CAF50;
+    border-radius: 12px;
+    padding: 25px;
+    margin: 20px 0;
+    background-color: #f8f9fa;
+  }
+  
+  .controls-m {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+    align-items: center;
+  }
+  
+  .controls-m button {
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .controls-m button:hover:not(:disabled) {
+    background-color: #388E3C;
+  }
+  
+  .controls-m button:disabled {
+    background-color: #95a5a6;
+    cursor: not-allowed;
+  }
+  
+  #reset-btn-m {
+    background-color: #e74c3c;
+  }
+  
+  #reset-btn-m:hover:not(:disabled) {
+    background-color: #c0392b;
+  }
+  
+  .slider-container-m {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  #cut-slider-m {
+    width: 200px;
+  }
+  
+  #moves-counter-m {
+    margin-left: auto;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .card-row-m {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+    margin: 1rem 0;
+    padding: 1rem;
+    padding-top: 2.5rem !important;
+    overflow: hidden;
+  }
+  
+  .row-label-m {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+    margin: 0.5rem 0;
+  }
+  
+  .card-m {
+    width: 50px;
+    height: 50px;
+    border: 2px solid #2c3e50;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    margin-top: 20px;
+  }
+  
+  .card-formula {
+    position: absolute;
+    top: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.75rem;
+    color: #4CAF50;
+    font-weight: bold;
+  }
+  
+  .card-m.face-up {
+    background-color: white;
+    color: #2c3e50;
+  }
+  
+  .card-m.face-down {
+    background-color: #2c3e50;
+    color: white;
+  }
+  
+  .card-value {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  .card-info {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 0.8rem;
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  .footer-controls-m {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  #impossible-btn-m {
+    background-color: #FF9800;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #impossible-btn-m:hover:not(:disabled) {
+    background-color: #F57C00;
+  }
+  
+  #result-message-m {
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    display: none;
+  }
+  
+  #result-message-m.success {
+    display: block;
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+  }
+  
+  #result-message-m.error {
+    display: block;
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+  }
+  
+  #result-message-m.warning {
+    display: block;
+    background-color: #fcf8e3;
+    color: #8a6d3b;
+    border: 1px solid #faebcc;
+  }
