@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="300" height="300" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Grid lines -->
+  <rect x="50" y="50" width="200" height="200" fill="none" stroke="black" stroke-width="3"/>
+  <line x1="100" y1="50" x2="100" y2="250" stroke="black" stroke-width="3"/>
+  <line x1="150" y1="50" x2="150" y2="250" stroke="black" stroke-width="3"/>
+  <line x1="200" y1="50" x2="200" y2="250" stroke="black" stroke-width="3"/>
+  <line x1="50" y1="100" x2="250" y2="100" stroke="black" stroke-width="3"/>
+  <line x1="50" y1="150" x2="250" y2="150" stroke="black" stroke-width="3"/>
+  <line x1="50" y1="200" x2="250" y2="200" stroke="black" stroke-width="3"/>
+  
+  <!-- Highlighted cross -->
+  <rect x="150" y="100" width="50" height="50" fill="#4a90e2" stroke="none"/>
+  <rect x="100" y="150" width="50" height="50" fill="#4a90e2" stroke="none"/>
+  <rect x="150" y="150" width="50" height="50" fill="#4a90e2" stroke="none"/>
+  <rect x="200" y="150" width="50" height="50" fill="#4a90e2" stroke="none"/>
+  <rect x="150" y="200" width="50" height="50" fill="#4a90e2" stroke="none"/>
+  
+  <!-- Caption -->
+  <text x="150" y="280" text-anchor="middle" font-family="Arial" font-size="16">Figure 2. Cross window</text>
+</svg>

@@ -1,0 +1,220 @@
+/* Interactive container */
+.trick-container-c {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  width: 100%;
+}
+
+/* Deck containers */
+.deck-container-c {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+  padding: 10px;
+  min-height: 100px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+  width: 100%;
+}
+
+#bottom-row-c {
+  margin-top: 20px;
+  background-color: #e9f7e9; /* Light green background to distinguish from top row */
+}
+
+/* Card design */
+.card-c {
+  width: 50px;
+  height: 80px;
+  perspective: 600px;
+  display: inline-block;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.card-front {
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+}
+
+.card-value {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.card-suit {
+  font-size: 24px;
+  margin-top: 0;
+  line-height: 1;
+}
+
+.red {
+  color: red;
+}
+
+.black {
+  color: black;
+}
+
+.card-back {
+  background: repeating-linear-gradient(
+    45deg,
+    #606dbc,
+    #606dbc 10px,
+    #465298 10px,
+    #465298 20px
+  );
+  transform: rotateY(180deg);
+  border: 1px solid #ccc;
+}
+
+.card-c.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5px;
+}
+
+/* Controls */
+.controls-c {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.controls-c button {
+  padding: 8px 12px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+}
+
+.controls-c button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.controls-c button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+#reset-btn-c {
+  background-color: #e74c3c;
+}
+
+#reset-btn-c:hover:not(:disabled) {
+  background-color: #c0392b;
+}
+
+/* Card area */
+.card-area-c {
+  min-height: 300px;
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Card container */
+.card-container-c {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  min-height: 120px;
+  padding: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+}
+
+/* Piles container */
+.piles-container-c {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+/* Card pile */
+.card-pile-c {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  min-height: 120px;
+  min-width: 300px;
+  padding: 1rem;
+  border: 1px dashed #ccc;
+  border-radius: 8px;
+  justify-content: center;
+}
+
+/* Explanation */
+.explanation-c {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+/* Animation classes */
+.card-c.moving {
+  z-index: 10;
+}
+
+@keyframes shuffle {
+  0% { transform: translateX(0) rotate(0deg); }
+  25% { transform: translateX(-30px) rotate(-5deg); }
+  50% { transform: translateX(30px) rotate(5deg); }
+  75% { transform: translateX(-10px) rotate(-2deg); }
+  100% { transform: translateX(0) rotate(0deg); }
+}
+
+.shuffling {
+  animation: shuffle 0.5s ease;
+}

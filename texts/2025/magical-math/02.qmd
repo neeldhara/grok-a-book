@@ -2,12 +2,99 @@
 title: "Back to Magic"
 date: 2025-03-02
 toc: false
+include-in-header:
+  text: |
+    <script type="application/javascript" src="scripts/02a.js"></script>
+    <script type="application/javascript" src="scripts/02c.js"></script>
+    <link rel="stylesheet" href="styles/02a.css">
+    <link rel="stylesheet" href="styles/02c.css">
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+:::{.callout-tip}
+## Acknowledgements
+
+Most of the playables here were made with help from a bunch of LLMs from within Windsurf. I mostly used Claude 3.7 without thinking, but frequently also appealed to Gemini, GPT-4o and Deepseek. Any bugs in the implementations here are very likely prompting error :) Please leave a comment if you find an issue, or if you have any suggestions! The interactives are best viewed on desktop and are not particularly optimized for mobile. 
+:::
 
 
+We start with ten cards, and perform CATO as many times as we want. The split the cards off into two piles so that all cards in even positions are on one pile and all cards in odd positions are on another. Turn one pile over another, and observe that you ALWAYS end up with 5 face up cards!
+
+```{=html}
+<div class="card-trick-container-b">
+  <div class="controls-b">
+    <div class="slider-container-b">
+      <label for="cut-slider-b">Cut amount: <span id="slider-value-b">1</span></label>
+      <input type="range" id="cut-slider-b" min="0" max="9" value="1">
+    </div>
+    <button id="cut-flip-btn-b">Cut and Flip</button>
+    <button id="shuffles-complete-btn-b">Shuffles Complete</button>
+    <button id="reset-btn-b">Reset</button>
+  </div>
+  
+  <div id="card-container-b">
+    <!-- Cards will be injected here -->
+  </div>
+  
+  <div id="card-counter-b">
+    <p>Number of face up cards at odd positions: <span id="odd-count-b">0</span><br>
+    Number of face up cards at even positions: <span id="even-count-b">0</span></p>
+  </div>
+</div>
+```
+
+Now let's setup a situation where we not only get five face-up cards, but also expose a royal flush: 10♥, J♥, Q♥, K♥, A♥ (or any subset of five cards that we want to rig). Start off with 10 high cards (10, J, Q, K, A of hearts and spades), and follow the following process:
+
+1. Shuffle cards thoroughly.
+2. Deal in pairs, asking volunteers to "keep" or "flip" each pair.
+3. Group into fours, again choosing "keep" or "flip."
+4. Deal into four rows of five; alternate dealing directions.
+5. Fold rows from sides chosen by volunteer until one pile remains.
+
+Alternately, you can just split the cards into left and right piles with odd and even cards and flip the cards over. 
+
+- **Outcome:** Only the hearts (Royal Flush: 10♥, J♥, Q♥, K♥, A♥) face up; all others face down.
+
+This works because:
+
+- When you pair cards up, make sure that you can only see a heart card. Therefore:
+    - if you have two spades, hold them facing each other
+    - if you have two hearts, hold them with their backs to each other
+    - if you have a heart and a space, hold the heart card on top of the spade, both face up, with the heart card hiding the spade
+- Hearts always positioned face-up (odd positions) or face-down (even positions).
+- It's the opposite for the non-heart cards. 
+- Final folds preserve odd-even logic, ensuring hearts remain consistently positioned.
+
+
+```{=html}
+<div class="card-trick-container-c">
+  <div class="controls-c">
+    <button id="shuffle-btn-c">Shuffle Cards</button>
+    <button id="arrange-pairs-btn-c">Arrange Pairs</button>
+    <button id="split-piles-btn-c">Split Into Odd/Even Piles</button>
+    <button id="flip-pile-btn-c" disabled>Flip Even Pile</button>
+    <button id="combine-btn-c" disabled>Combine Piles</button>
+    <button id="reset-btn-c">Reset</button>
+  </div>
+  
+  <div class="card-area-c">
+    <div id="main-deck-c" class="card-container-c">
+      <!-- Main deck area -->
+    </div>
+    
+    <div class="piles-container-c" style="display: none;">
+      <div>
+        <h4>Odd Positions</h4>
+        <div id="odd-pile-c" class="card-pile-c"></div>
+      </div>
+      <div>
+        <h4>Even Positions</h4>
+        <div id="even-pile-c" class="card-pile-c"></div>
+      </div>
+    </div>
+  </div>
+</div>
+```
 
 {{< comments >}}

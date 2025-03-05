@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cross Window</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(5, 60px);
+      grid-template-rows: repeat(5, 60px);
+      gap: 2px;
+    }
+    .grid-cell {
+      border: 2px solid #000;
+      width: 60px;
+      height: 60px;
+    }
+    .highlight {
+      background-color: #4a90e2;
+    }
+    .caption {
+      text-align: center;
+      margin-top: 20px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="grid-container">
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell highlight"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+      <div class="grid-cell"></div>
+    </div>
+    <div class="caption">Figure 2. Cross window</div>
+  </div>
+</body>
+</html>

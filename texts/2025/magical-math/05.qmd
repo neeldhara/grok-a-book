@@ -2,12 +2,153 @@
 title: "Robotic Vision"
 date: 2025-03-05
 toc: false
+include-in-header:
+  text: |
+    <script type="application/javascript" src="scripts/05a.js"></script>
+    <script type="application/javascript" src="scripts/05b.js"></script>
+    <link rel="stylesheet" href="styles/05a.css">
+    <link rel="stylesheet" href="styles/05b.css">
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+In a 2-dimensional deBruijn array, we fix a window size (say 2 X 2) and have 2-dimensional array where every subgrid of 
+
+```{=html}
+<div class="debruijn-container">
+  <div class="controls">
+    <button id="reset-btn">Reset</button>
+    <button id="autoplay-btn">Start Auto-Play</button>
+    <div class="slider-container">
+      <label for="speed-slider">Speed (ms): <span id="speed-value">500</span></label>
+      <input type="range" id="speed-slider" min="100" max="1000" value="500" step="100">
+    </div>
+  </div>
+  
+  <div class="grid-section">
+    <div>
+      <div class="section-title">4×4 de Bruijn Grid</div>
+      <div id="grid-container" class="grid-container"></div>
+    </div>
+    
+    <div>
+      <div class="section-title">2×2 Window</div>
+      <div id="window-container" class="window-container"></div>
+    </div>
+    
+    <div>
+      <div class="section-title">Controls</div>
+      <div class="direction-controls">
+        <button id="move-up">↑</button>
+        <button id="move-left">←</button>
+        <button id="move-right">→</button>
+        <button id="move-down">↓</button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="pattern-section">
+    <div class="section-title">Unique Patterns Found: <span id="pattern-count">0/16</span></div>
+    <div id="pattern-display" class="pattern-display"></div>
+  </div>
+  
+  <div class="explanation">
+    <h3>How It Works</h3>
+    <p>This interactive demonstrates a 2D de Bruijn pattern. You can move the 2×2 window around the 4×4 grid using the arrow buttons or keyboard arrow keys. The window can wrap around the edges and corners.</p>
+    <p>Each unique 2×2 pattern you encounter is recorded below. There are exactly 16 possible patterns (2^4), and in a perfect de Bruijn pattern, each appears exactly once as you move the window through all possible positions.</p>
+    <p>This property makes de Bruijn patterns useful in robotics and computer vision for position encoding, as a robot can determine its exact location by observing just a small window of the pattern.</p>
+  </div>
+</div>
+```
+
+### Cross Patterns
+
+What if we use a different window shape? Let's try a cross pattern instead of a square:
+
+```{=html}
+<div style="display: flex; justify-content: center; margin: 20px 0;">
+  <div style="text-align: center;">
+    <div style="display: inline-grid; grid-template-columns: repeat(3, 50px); grid-template-rows: repeat(3, 50px); gap: 2px; margin-bottom: 10px;">
+      <div style="border: 1px solid black;"></div>
+      <div style="border: 1px solid black; background-color: #4a90e2;"></div>
+      <div style="border: 1px solid black;"></div>
+      <div style="border: 1px solid black; background-color: #4a90e2;"></div>
+      <div style="border: 1px solid black; background-color: #4a90e2;"></div>
+      <div style="border: 1px solid black; background-color: #4a90e2;"></div>
+      <div style="border: 1px solid black;"></div>
+      <div style="border: 1px solid black; background-color: #4a90e2;"></div>
+      <div style="border: 1px solid black;"></div>
+    </div>
+    <div>Figure 2. Cross window</div>
+  </div>
+</div>
+```
+
+Unlike the 2×2 window, it turns out that with a cross-shaped window, it's impossible to create a pattern where every position has a unique signature. 
+
+Let's explore this with two interactive games:
+
+::: {.panel-tabset}
+
+## Game 1: Find Identical Cross Patterns
+
+```{=html}
+<div class="cross-game-container">
+  <div class="game-section">
+    <p>In this randomly generated 4×4 grid, find two locations where the cross pattern (up, down, left, right) is identical.</p>
+    
+    <div class="game-controls">
+      <button id="game1-reset" class="reset-btn">Reset Game</button>
+      <button id="game1-done" class="done-btn">Check Selection</button>
+    </div>
+    
+    <div id="game1-message" class="game-message">Find two locations where the cross pattern is identical.</div>
+    
+    <div class="game1-container">
+      <div class="pattern-display-container" id="game1-left-pattern">
+        <!-- Left pattern will be displayed here -->
+      </div>
+      
+      <div id="game1-grid" class="game-grid"></div>
+      
+      <div class="pattern-display-container" id="game1-right-pattern">
+        <!-- Right pattern will be displayed here -->
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+## Game 2: Create Your Own Grid
 
 
+```{=html}
+<div class="cross-game-container">
+  <div class="game-section">
+    <p>Color the grid however you like by clicking on cells to toggle between 0 and 1. When you press "Done", the game will find two locations with identical cross patterns.</p>
+    
+    <div class="game-controls">
+      <button id="game2-done" class="done-btn">Done</button>
+      <button id="game2-reset" class="reset-btn">Reset Grid</button>
+    </div>
+    
+    <div id="game2-message" class="game-message">Color the grid however you like, then press "Done".</div>
+    
+    <div class="game2-container">
+      <div class="pattern-display-container" id="game2-left-pattern">
+        <!-- Left pattern will be displayed here -->
+      </div>
+      
+      <div id="game2-grid" class="game-grid"></div>
+      
+      <div class="pattern-display-container" id="game2-right-pattern">
+        <!-- Right pattern will be displayed here -->
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+:::
 
 {{< comments >}}
