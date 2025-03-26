@@ -4,7 +4,7 @@
 <a href="<%= item.url %>" class="book-card-link" <%= metadataAttrs(item) %>>
   <div class="book-card">
     <% if (item.status) { %>
-      <span class="book-status listing-status"><%= item.status %></span>
+      <span class="book-status status-<%= item.status.toLowerCase() %> listing-status"><%= item.status %></span>
     <% } %>
     <div class="book-cover">
       <% if (item.image) { %>

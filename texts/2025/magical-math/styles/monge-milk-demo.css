@@ -1,0 +1,151 @@
+/* Monge and Milk shuffle demonstration styles */
+.monge-milk-demo {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.monge-milk-demo .cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+.monge-milk-demo .cards-row {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.monge-milk-demo .card {
+  width: 30px;
+  height: 50px;
+  border: 1px solid #999;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  cursor: default;
+  flex-shrink: 0;
+  position: relative;
+}
+
+/* Add a small indicator for original position */
+.monge-milk-demo .card::after {
+  content: attr(data-index);
+  position: absolute;
+  bottom: 2px;
+  right: 2px;
+  font-size: 8px;
+  opacity: 0.7;
+}
+
+.monge-milk-demo .button-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.monge-milk-demo .control-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.monge-milk-demo .control-button:hover:not(:disabled) {
+  background-color: #e0e0e0;
+}
+
+.monge-milk-demo .control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f8f8f8;
+  border-color: #eee;
+}
+
+.monge-milk-demo .status-container {
+  margin-bottom: 10px;
+  font-style: italic;
+  text-align: center;
+  min-height: 24px;
+}
+
+/* Animation helper classes */
+.monge-milk-demo .hidden {
+  display: none !important;
+}
+
+/* Legend for color coding */
+.monge-milk-demo .legend {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.monge-milk-demo .legend-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.monge-milk-demo .legend-items {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.monge-milk-demo .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.monge-milk-demo .legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+  border: 1px solid #999;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .monge-milk-demo .cards-container {
+    gap: 20px;
+  }
+  
+  .monge-milk-demo .card {
+    width: 25px;
+    height: 40px;
+    font-size: 14px;
+  }
+  
+  .monge-milk-demo .button-container {
+    gap: 10px;
+  }
+  
+  .monge-milk-demo .control-button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+}

@@ -1,13 +1,68 @@
 ---
-title: "The Mandelbrot Set"
+title: "Perfect Shuffles"
 date: 2025-03-13
 toc: false
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+Perfect shuffles are a fascinating concept in both mathematics and card magic. There are two main types of perfect shuffles:
 
+1. **In-Shuffle**: The top and bottom halves of the deck are perfectly interleaved, with the first card from the bottom half becoming the top card of the shuffled deck.
 
+2. **Out-Shuffle**: The top and bottom halves of the deck are perfectly interleaved, with the first card from the top half remaining the top card of the shuffled deck.
+
+The interactive demonstration below shows how these two types of perfect shuffles work with a deck of 20 cards. The top row (1-10) is shown in light red, and the bottom row (11-20) is shown in light blue.
+
+- Click the **In-Shuffle** button to perform an in-shuffle
+- Click the **Out-Shuffle** button to perform an out-shuffle
+- Click the **Split Deck** button to separate the cards back into two rows
+
+<div id="shuffle-demo"></div>
+
+<script src="scripts/shuffle-demo.js"></script>
+<link rel="stylesheet" href="styles/shuffle-demo.css">
+
+#### Mathematical Properties
+
+Perfect shuffles have interesting mathematical properties:
+
+- With a standard 52-card deck, 8 consecutive out-shuffles will return the deck to its original order.
+- With a 2n-card deck, the number of out-shuffles needed to restore the original order is related to the order of 2 modulo (2n-1).
+- In-shuffles and out-shuffles can be represented as permutations, making them useful for studying group theory.
+
+Perfect shuffles are widely used in card magic because of their predictable patterns and the ability to control the position of specific cards in the deck.
+
+### Monge and Milk Shuffles
+
+The Monge shuffle (also called the over/under shuffle) and the Milk shuffle (also known as the Klondike shuffle) are two other interesting shuffling techniques with mathematical properties.
+
+#### Monge Shuffle
+
+In a Monge shuffle, cards are placed alternately on top and bottom of the pile:
+- The top card is taken and held in the other hand
+- The next card is placed above it
+- The third card is placed below the first two
+- This pattern continues, alternating between placing cards on top and bottom
+
+#### Milk (Klondike) Shuffle
+
+The Milk shuffle involves taking pairs of cards from the top and bottom of the deck:
+- Take the top card, then the bottom card
+- Place them together on a new pile
+- Continue this process until all cards are in the new pile
+
+The demonstration below shows how these shuffles work with a deck of 20 cards. The cards are color-coded to help visualize the pattern of movement.
+
+<div id="monge-milk-demo"></div>
+
+<script src="scripts/monge-milk-demo.js"></script>
+<link rel="stylesheet" href="styles/monge-milk-demo.css">
+
+#### Interesting Properties
+
+- The Monge and Milk shuffles are inverses of each other. Performing a Milk shuffle followed by a Monge shuffle (or vice versa) returns the deck to its original order.
+- Both shuffles have predictable cycle lengths depending on the number of cards in the deck.
+- These shuffles are useful in card magic for controlling the positions of specific cards.
 
 {{< comments >}}

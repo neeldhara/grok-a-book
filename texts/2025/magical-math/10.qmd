@@ -6,8 +6,353 @@ toc: false
 
 ### {{< meta title >}}
 
-Coming Soon.
+```{=html}
+<div class="card-interactive">
+  <div id="card-container"></div>
+  <div class="button-container">
+    <button id="deal-button">Deal</button>
+    <button id="riffle-button" disabled>Riffle</button>
+    <button id="deal-five-button" disabled>Deal Five (Round 1)</button>
+    <button id="reassemble-button" disabled>Reassemble</button>
+    <button id="deal-five-button-2" disabled>Deal Five (Round 2)</button>
+  </div>
+</div>
 
+<style>
+.card-interactive {
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f5f5f5;
+}
 
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4a86e8;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover:not([disabled]) {
+  background-color: #3a76d8;
+}
+
+button:disabled {
+  background-color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.card {
+  display: block;
+  width: 40px;
+  height: 25px;
+  margin: 2px;
+  padding: 3px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: white;
+  font-size: 12px;
+  text-align: center;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.pile {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px;
+  padding: 10px;
+  border: 1px dashed #999;
+  border-radius: 5px;
+}
+
+.pile-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.pile-label {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  display: none;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initial deck of cards
+  const initialDeck = ['6S', 'TS', '9S', 'AS', '8S', 'AH', 'KC', 'QC', 'JD', 'TD', 'AD', 'KH', 'QD', 'JH', 'TH', 'AC', 'KD', 'QH', 'JC', 'TC', '2S', '3S', '4S', '5S', '7S'];
+  
+  // Create copies of the deck for manipulation
+  let mainDeck = [...initialDeck];
+  let secondPile = [];
+  let piles = [[], [], [], [], []];
+  
+  // Get DOM elements
+  const cardContainer = document.getElementById('card-container');
+  const dealButton = document.getElementById('deal-button');
+  const riffleButton = document.getElementById('riffle-button');
+  const dealFiveButton = document.getElementById('deal-five-button');
+  const reassembleButton = document.getElementById('reassemble-button');
+  const dealFiveButton2 = document.getElementById('deal-five-button-2');
+  
+  // Function to display cards
+  function displayCards() {
+    cardContainer.innerHTML = '';
+    
+    // Always render Main Deck container
+    const mainPileDiv = document.createElement('div');
+    mainPileDiv.className = 'pile';
+    mainPileDiv.id = 'main-deck';
+    const mainPileLabel = document.createElement('div');
+    mainPileLabel.className = 'pile-label';
+    mainPileLabel.textContent = 'Main Deck';
+    mainPileDiv.appendChild(mainPileLabel);
+    
+    const mainPileContainer = document.createElement('div');
+    mainPileContainer.className = 'pile-container';
+    mainPileDiv.appendChild(mainPileContainer);
+    
+    mainDeck.forEach(card => {
+      const cardDiv = document.createElement('div');
+      cardDiv.className = 'card';
+      cardDiv.textContent = card;
+      mainPileContainer.appendChild(cardDiv);
+    });
+    
+    cardContainer.appendChild(mainPileDiv);
+    
+    // Always render Second Pile container
+    const secondPileDiv = document.createElement('div');
+    secondPileDiv.className = 'pile';
+    secondPileDiv.id = 'second-pile';
+    const secondPileLabel = document.createElement('div');
+    secondPileLabel.className = 'pile-label';
+    secondPileLabel.textContent = 'Second Pile';
+    secondPileDiv.appendChild(secondPileLabel);
+    
+    const secondPileContainer = document.createElement('div');
+    secondPileContainer.className = 'pile-container';
+    secondPileDiv.appendChild(secondPileContainer);
+    
+    if (secondPile.length > 0) {
+      secondPile.forEach(card => {
+        const cardDiv = document.createElement('div');
+        cardDiv.className = 'card';
+        cardDiv.textContent = card;
+        secondPileContainer.appendChild(cardDiv);
+      });
+    }
+    
+    cardContainer.appendChild(secondPileDiv);
+    
+    // Display five piles if any of them has cards
+    if (piles.some(pile => pile.length > 0)) {
+      piles.forEach((pile, index) => {
+        if (pile.length > 0) {
+          const pileDiv = document.createElement('div');
+          pileDiv.className = 'pile';
+          const pileLabel = document.createElement('div');
+          pileLabel.className = 'pile-label';
+          pileLabel.textContent = `Pile ${index + 1}`;
+          pileDiv.appendChild(pileLabel);
+          
+          const pileContainer = document.createElement('div');
+          pileContainer.className = 'pile-container';
+          pileDiv.appendChild(pileContainer);
+          
+          pile.forEach(card => {
+            const cardDiv = document.createElement('div');
+            cardDiv.className = 'card';
+            cardDiv.textContent = card;
+            pileContainer.appendChild(cardDiv);
+          });
+          
+          cardContainer.appendChild(pileDiv);
+        }
+      });
+    }
+  }
+  
+  // Initialize display
+  displayCards();
+  
+  // Deal button functionality
+  dealButton.addEventListener('click', function() {
+    if (mainDeck.length >= 13) {
+      dealButton.disabled = true;
+      let cardsToDeal = 13;
+      
+      function dealNextCard() {
+        if (cardsToDeal > 0) {
+          // Get the top card element from the main deck container
+          let mainDeckContainer = document.querySelector('#main-deck .pile-container');
+          let cardElem = mainDeckContainer ? mainDeckContainer.querySelector('.card') : null;
+          
+          if (!cardElem) {
+            // Fallback if element not found: directly update state
+            secondPile.unshift(mainDeck.shift());
+            displayCards();
+            cardsToDeal--;
+            setTimeout(dealNextCard, 200);
+            return;
+          }
+          
+          let startRect = cardElem.getBoundingClientRect();
+          let secondPileContainer = document.querySelector('#second-pile .pile-container');
+          let targetRect = secondPileContainer ? secondPileContainer.getBoundingClientRect() : { top: startRect.top, left: startRect.left };
+          
+          // Create a clone of the card element for animation
+          let clone = cardElem.cloneNode(true);
+          clone.style.position = 'absolute';
+          clone.style.top = startRect.top + 'px';
+          clone.style.left = startRect.left + 'px';
+          clone.style.margin = '0';
+          clone.style.transition = 'all 0.5s ease';
+          document.body.appendChild(clone);
+          
+          // Calculate target position: position at the bottom of the second pile container
+          let targetTop = targetRect.bottom - cardElem.offsetHeight;
+          let targetLeft = targetRect.left;
+          
+          // Force reflow and then animate
+          clone.getBoundingClientRect();
+          clone.style.top = targetTop + 'px';
+          clone.style.left = targetLeft + 'px';
+          
+          clone.addEventListener('transitionend', function() {
+            clone.remove();
+            // Update state: move the card from mainDeck to secondPile
+            secondPile.unshift(mainDeck.shift());
+            displayCards();
+            cardsToDeal--;
+            setTimeout(dealNextCard, 100);
+          }, { once: true });
+        } else {
+          // After all cards have been animated, enable the riffle button
+          riffleButton.disabled = false;
+        }
+      }
+      
+      dealNextCard();
+    }
+  });
+  
+  // Riffle button functionality
+  riffleButton.addEventListener('click', function() {
+    // Perform riffle shuffle
+    let shuffledDeck = [];
+    let mainCopy = [...mainDeck];
+    let secondCopy = [...secondPile];
+    
+    // Random riffle
+    while (mainCopy.length > 0 && secondCopy.length > 0) {
+      // Randomly decide which pile to take from
+      if (Math.random() < 0.5) {
+        if (mainCopy.length > 0) {
+          shuffledDeck.push(mainCopy.shift());
+        }
+      } else {
+        if (secondCopy.length > 0) {
+          shuffledDeck.push(secondCopy.shift());
+        }
+      }
+    }
+    
+    // Add any remaining cards
+    shuffledDeck = [...shuffledDeck, ...mainCopy, ...secondCopy];
+    
+    // Update the main deck and clear second pile
+    mainDeck = shuffledDeck;
+    secondPile = [];
+    
+    displayCards();
+    
+    // Enable the next button and disable current
+    riffleButton.disabled = true;
+    dealFiveButton.disabled = false;
+  });
+  
+  // Deal five button functionality (Round 1)
+  dealFiveButton.addEventListener('click', function() {
+    // Reset piles
+    piles = [[], [], [], [], []];
+    
+    // Deal into five piles
+    let pileIndex = 0;
+    while (mainDeck.length > 0) {
+      piles[pileIndex].push(mainDeck.shift());
+      pileIndex = (pileIndex + 1) % 5;
+    }
+    
+    displayCards();
+    
+    // Enable the next button and disable current
+    dealFiveButton.disabled = true;
+    reassembleButton.disabled = false;
+  });
+  
+  // Reassemble button functionality
+  reassembleButton.addEventListener('click', function() {
+    // Reassemble the deck from the piles
+    mainDeck = [];
+    
+    // Collect piles in a random order
+    const pileIndices = [0, 1, 2, 3, 4];
+    for (let i = pileIndices.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [pileIndices[i], pileIndices[j]] = [pileIndices[j], pileIndices[i]];
+    }
+    
+    pileIndices.forEach(index => {
+      mainDeck = [...mainDeck, ...piles[index]];
+    });
+    
+    // Clear the piles
+    piles = [[], [], [], [], []];
+    
+    displayCards();
+    
+    // Enable the next button and disable current
+    reassembleButton.disabled = true;
+    dealFiveButton2.disabled = false;
+  });
+  
+  // Deal five button functionality (Round 2)
+  dealFiveButton2.addEventListener('click', function() {
+    // Reset piles
+    piles = [[], [], [], [], []];
+    
+    // Deal into five piles
+    let pileIndex = 0;
+    while (mainDeck.length > 0) {
+      piles[pileIndex].push(mainDeck.shift());
+      pileIndex = (pileIndex + 1) % 5;
+    }
+    
+    displayCards();
+    
+    // Disable all buttons after the final step
+    dealFiveButton2.disabled = true;
+  });
+});
+</script>
+```
 
 {{< comments >}}

@@ -2,12 +2,273 @@
 title: "To the Core of Our Being"
 date: 2025-03-07
 toc: false
+format:
+  html:
+    css: styles/07.css
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+This interactive demonstration simulates the "order matters" card trick described in the reading. In this effect, a deck is cut repeatedly, and then three people each receive consecutive cards. Through a clever mathematical pattern, the performer can predict the arrangement of these cards.
 
+Try it yourself! The simulation below has 48 cards (with the aces removed). You can cut the deck as many times as you like by clicking where you want to cut. When you're ready, click "Reveal Top Three Cards" and then try to predict which card is lowest (L), medium (M), or highest (H) before revealing them.
 
+```{=html}
+<div class="card-trick-container">
+  <div class="instructions">
+    <p><strong>Instructions:</strong> Click anywhere in the deck to cut it. You can cut as many times as you want. When you're done cutting, click "Reveal Top Three Cards", then try to predict which card is lowest (L), medium (M), or highest (H) before toggling them to see their values.</p>
+  </div>
+  
+  <div class="controls">
+    <button id="reset-btn" class="btn btn-primary">Reset Deck</button>
+    <button id="reveal-btn" class="btn btn-success">Reveal Top Three Cards</button>
+    <button id="toggle-cards-btn" class="btn btn-secondary" disabled>Toggle Selected Cards</button>
+    <button id="toggle-all-cards-btn" class="btn btn-danger">Toggle All Cards</button>
+  </div>
+  
+  <div class="status-message" id="status-message"></div>
+  
+  <div class="deck-container" id="deck-container">
+    <!-- Cards will be generated here by JavaScript -->
+  </div>
+  
+  <div class="selected-card-area hidden" id="selected-card-area">
+    <div class="selected-card" id="card1">
+      <span class="card-label">L</span>
+      <span class="card-value">?</span>
+    </div>
+    <div class="selected-card" id="card2">
+      <span class="card-label">M</span>
+      <span class="card-value">?</span>
+    </div>
+    <div class="selected-card" id="card3">
+      <span class="card-label">H</span>
+      <span class="card-value">?</span>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Card values and suits
+  const values = ['2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K', 'A'];
+  const suits = ['S', 'H', 'D', 'C'];
+  
+  // Table 1 specific order - from the image
+  const predefinedOrder = [
+    'AH', '6H', 'QH', '3C', '7D', '8S', '4C', '6S', '9D', '2H', '5H', 'JS', '4D', 'TS', 'QS', '2C',
+    '8D', 'JD', '3H', '9S', 'TD', 'AS', '7C', '5S', 'TH', '9H', 'AD', 'TC', '6D', 'AC', '8C', 'JC',
+    '2D', 'QD', '8H', '3S', 'JH', '4S', '2S', '6C', '5D', '4H', '7H', '5C', '3D', 'QC', '9C', '7S'
+  ];
+  
+  // Define the patterns from Table 1
+  // The third column shows the pattern for L/M/H
+  // 1: Low, 2: Medium, 3: High
+  const patterns = {
+    // First column cards (index 0-15) - pattern from third column in table
+    'AH': '123', '6H': '231', 'QH': '312', '3C': '123', '7D': '231', '8S': '312', '4C': '123', '6S': '231',
+    '9D': '312', '2H': '123', '5H': '231', 'JS': '312', '4D': '123', 'TS': '231', 'QS': '312', '2C': '123',
+    // Second column cards (index 16-31) - pattern from third column in table
+    '8D': '231', 'JD': '312', '3H': '123', '9S': '231', 'TD': '312', 'AS': '132', '7C': '213', '5S': '132',
+    'TH': '321', '9H': '213', 'AD': '132', 'TC': '321', '6D': '213', 'AC': '123', '8C': '231', 'JC': '213',
+    // Third column cards (index 32-47) - pattern from third column in table
+    '2D': '132', 'QD': '321', '8H': '213', '3S': '132', 'JH': '321', '4S': '213', '2S': '132', '6C': '321',
+    '5D': '213', '4H': '132', '7H': '321', '5C': '213', '3D': '132', 'QC': '321', '9C': '321', '7S': '312'
+  };
+  
+  // Elements
+  const deckContainer = document.getElementById('deck-container');
+  const resetBtn = document.getElementById('reset-btn');
+  const revealBtn = document.getElementById('reveal-btn');
+  const toggleCardsBtn = document.getElementById('toggle-cards-btn');
+  const toggleAllCardsBtn = document.getElementById('toggle-all-cards-btn');
+  const statusMessage = document.getElementById('status-message');
+  const selectedCardArea = document.getElementById('selected-card-area');
+  const card1 = document.getElementById('card1');
+  const card2 = document.getElementById('card2');
+  const card3 = document.getElementById('card3');
+  
+  // State variables
+  let deck = [];
+  let topThreeCards = [];
+  let revealedCards = false;
+  let cardsToggled = false;
+  let allCardsToggled = false;
+  
+  // Initialize deck
+  function initializeDeck() {
+    deck = [];
+    
+    // Create deck based on the predefined order from Table 1
+    for (let cardCode of predefinedOrder) {
+      const value = cardCode.charAt(0);
+      const suit = cardCode.charAt(1);
+      deck.push({ value, suit });
+    }
+    
+    // Render the deck
+    renderDeck();
+    
+    // Reset UI state
+    revealedCards = false;
+    cardsToggled = false;
+    allCardsToggled = false;
+    toggleCardsBtn.disabled = true;
+    toggleAllCardsBtn.textContent = 'Show All Cards';
+    statusMessage.textContent = 'Click anywhere in the deck to cut it.';
+    selectedCardArea.classList.add('hidden');
+    revealBtn.disabled = false;
+  }
+  
+  // Not used anymore since we're using the predefined order
+  // Keeping this function in case we want to add random shuffle option later
+  function shuffleDeck() {
+    for (let i = deck.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [deck[i], deck[j]] = [deck[j], deck[i]];
+    }
+  }
+  
+  // Arrange cards in three rows of 16
+  function renderDeck() {
+    deckContainer.innerHTML = '';
+    deck.forEach((card, index) => {
+      const cardElement = document.createElement('div');
+      cardElement.className = 'card';
+      cardElement.dataset.color = card.suit === 'H' || card.suit === 'D' ? 'red' : 'black';
+      cardElement.textContent = `${card.value}${card.suit}`;
+      cardElement.style.order = index;
+      deckContainer.appendChild(cardElement);
+      
+      // Add event listener for cutting the deck
+      cardElement.addEventListener('click', function() {
+        if (!revealedCards) {
+          cutDeck(index);
+        }
+      });
+    });
+    
+    // Set CSS for grid layout
+    deckContainer.style.display = 'grid';
+    deckContainer.style.gridTemplateColumns = 'repeat(16, auto)';
+  }
+  
+  // Cut the deck at the specified index
+  function cutDeck(index) {
+    if (index === 0 || index === deck.length - 1) {
+      statusMessage.textContent = 'Please cut somewhere in the middle of the deck.';
+      return;
+    }
+    
+    const topPortion = deck.slice(0, index);
+    const bottomPortion = deck.slice(index);
+    
+    deck = [...bottomPortion, ...topPortion];
+    renderDeck();
+    
+    statusMessage.textContent = `Deck cut at position ${index}. You can cut again or reveal the top three cards.`;
+  }
+  
+  // Reveal the top three cards
+  function revealTopThreeCards() {
+    topThreeCards = deck.slice(0, 3);
+    
+    // Highlight the top three cards in the deck
+    for (let i = 0; i < 3; i++) {
+      const cardElement = deckContainer.children[i];
+      cardElement.classList.add('highlighted');
+    }
+    
+    // Convert card values to numerical values for comparison
+    const getNumericValue = (value) => {
+      if (value === 'A') return 1;
+      if (value === 'T') return 10;
+      if (value === 'J') return 11;
+      if (value === 'Q') return 12;
+      if (value === 'K') return 13;
+      return parseInt(value);
+    };
+    
+    // Get numeric values for each card
+    const numericValues = topThreeCards.map(card => getNumericValue(card.value));
+    
+    // Determine L/M/H without rearranging
+    const labels = ['L', 'M', 'H'];
+    const sortedIndices = [0, 1, 2].sort((a, b) => numericValues[a] - numericValues[b]);
+    
+    sortedIndices.forEach((sortedIndex, i) => {
+      const card = topThreeCards[sortedIndex];
+      const cardElement = deckContainer.children[sortedIndex];
+      const label = labels[i];
+      
+      // Find the appropriate selected card by its label
+      const selectedCard = document.getElementById(`card${sortedIndex + 1}`);
+      
+      selectedCard.querySelector('.card-label').textContent = label;
+      selectedCard.querySelector('.card-value').textContent = '?';
+      selectedCard.querySelector('.card-value').style.color = cardElement.dataset.color;
+      selectedCard.dataset.value = `${card.value}${card.suit}`;
+    });
+    
+    selectedCardArea.classList.remove('hidden');
+    toggleCardsBtn.disabled = false;
+    revealedCards = true;
+    statusMessage.textContent = 'Top three cards revealed. Can you predict which is lowest, medium, and highest?';
+    revealBtn.disabled = true;
+  }
+  
+  // Toggle showing the actual values of the cards
+  function toggleCards() {
+    cardsToggled = !cardsToggled;
+    
+    document.querySelectorAll('.selected-card').forEach(card => {
+      const cardValue = card.querySelector('.card-value');
+      if (cardsToggled) {
+        cardValue.textContent = card.dataset.value;
+      } else {
+        cardValue.textContent = '?';
+      }
+    });
+    
+    toggleCardsBtn.textContent = cardsToggled ? 'Hide Cards' : 'Toggle Cards';
+  }
+  
+  // Toggle all cards in the deck
+  function toggleAllCards() {
+    allCardsToggled = !allCardsToggled;
+    
+    // Toggle each card in the deck
+    const cardElements = deckContainer.querySelectorAll('.card');
+    cardElements.forEach(card => {
+      if (allCardsToggled) {
+        // Show card face
+        const value = card.textContent;
+        const suit = value.charAt(1);
+        const color = suit === 'H' || suit === 'D' ? 'red' : 'black';
+        card.innerHTML = `<span style="color: ${color}">${value}</span>`;
+        card.classList.add('flipped');
+      } else {
+        // Show card back
+        card.innerHTML = '';
+        card.classList.remove('flipped');
+      }
+    });
+    
+    toggleAllCardsBtn.textContent = allCardsToggled ? 'Hide All Cards' : 'Show All Cards';
+  }
+  
+  // Event listeners
+  resetBtn.addEventListener('click', initializeDeck);
+  revealBtn.addEventListener('click', revealTopThreeCards);
+  toggleCardsBtn.addEventListener('click', toggleCards);
+  toggleAllCardsBtn.addEventListener('click', toggleAllCards);
+  
+  // Initialize the game
+  initializeDeck();
+});
+</script>
+```
+
+This simulation demonstrates the principles described in the reading, where the seemingly random process of cutting a deck actually creates interesting mathematical patterns when looking at the relative order of cards. As discussed in the text, this trick belongs to the mathematical concept called "Products" that combines patterns to create seemingly impossible predictions.
 
 {{< comments >}}

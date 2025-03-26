@@ -2,12 +2,358 @@
 title: "This de Bruijn Stuff Is Cool but Can It Get You a Job?"
 date: 2025-03-08
 toc: false
+format:
+  html:
+    css: styles/08.css
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+This interactive demonstration simulates the "Partitioning People" card trick. In this effect, five spectators each receive consecutive cards from a specially arranged deck. Based on their card suits, they naturally form into groups - for example, if three people have hearts and two have clubs, they form a grouping pattern of "3,2".
 
+The deck is arranged so that at each possible cut point, the next five cards will create a unique grouping pattern. Enter a grouping pattern below (like "14,25,3" for one person with the same suit as person 4, another pair with positions 2 and 5, and person 3 alone) to find out which position to cut the deck and which five cards to distribute.
 
+```{=html}
+<div class="partition-calculator">
+  <div class="instructions">
+    <p><strong>Instructions:</strong> Enter a grouping pattern using positions (1-5) to show which cards share the same suit. For example:</p>
+    <ul>
+      <li>"14,25,3" means positions 1 and 4 share a suit, positions 2 and 5 share a suit, and position 3 has a unique suit</li>
+      <li>"1345,2" means positions 1,3,4,5 share the same suit, and position 2 has a unique suit</li>
+      <li>"123,45" means positions 1,2,3 share a suit, and positions 4,5 share a different suit</li>
+    </ul>
+  </div>
+  
+  <div class="input-area">
+    <label for="grouping-input">Enter Grouping Pattern:</label>
+    <input type="text" id="grouping-input" placeholder="e.g., 14,25,3">
+    <button id="calculate-btn" class="btn btn-primary">Find Cards</button>
+  </div>
+  
+  <div class="result-area" id="result-area">
+    <div class="result-message" id="result-message"></div>
+    <div class="cards-display" id="cards-display"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Card deck in the special arrangement that ensures each grouping pattern appears exactly once
+  const orderedDeck = [
+    'AD', '2D', '3D', '4D', '5D', 'AC', '3H', '2H', 'AH', '3C',
+    '2C', '7D', '6D', '6C', '5C', '4C', '4H', '7C', '5H', '8C',
+    'AS', '6H', '7H', '2S', '8D', '4S', '3S', '9D', '6S', '5S',
+    '8H', '7S', 'KD', 'QD', '9C', '9H', '9S', '8S', 'TC', 'TH',
+    'TS', 'JH', 'JD', 'QH', 'JS', 'JC', 'KH', 'QS', 'JK', 'QC',
+    'TD', 'KC'
+  ];
+  
+  // Elements
+  const groupingInput = document.getElementById('grouping-input');
+  const calculateBtn = document.getElementById('calculate-btn');
+  const resultMessage = document.getElementById('result-message');
+  const cardsDisplay = document.getElementById('cards-display');
+  
+  // Function to get grouping pattern for a sequence of 5 cards
+  function getGroupingPattern(cards) {
+    // Get suits of the cards
+    const suits = cards.map(card => card.charAt(1));
+    
+    // Create map of suit to positions
+    const suitGroups = {};
+    suits.forEach((suit, i) => {
+      if (!suitGroups[suit]) suitGroups[suit] = [];
+      suitGroups[suit].push(i + 1); // Convert to 1-based position
+    });
+    
+    // Sort positions within each suit group
+    for (let suit in suitGroups) {
+      suitGroups[suit].sort((a, b) => a - b);
+    }
+    
+    // Convert to array of position groups, sorted by first position
+    const groups = Object.values(suitGroups)
+      .sort((a, b) => a[0] - b[0])
+      .map(group => group.join(''));
+    
+    return groups.join(',');
+  }
+  
+  // Function to normalize a grouping pattern
+  function normalizePattern(pattern) {
+    // Split into groups and sort positions within each group
+    const groups = pattern.split(',').map(group => 
+      group.split('').map(Number).sort((a,b) => a-b).join('')
+    );
+    // Sort groups by first position in each group
+    return groups.sort((a,b) => parseInt(a[0]) - parseInt(b[0])).join(',');
+  }
+
+  // Function to get 5 cards starting at a position, handling wraparound
+  function getFiveCards(startPos) {
+    const cards = [];
+    for (let i = 0; i < 5; i++) {
+      const pos = (startPos + i) % orderedDeck.length;
+      cards.push(orderedDeck[pos]);
+    }
+    return cards;
+  }
+
+  // Function to find cut position for a given grouping pattern
+  function findCutPosition(targetPattern) {
+    const normalizedTarget = normalizePattern(targetPattern);
+    
+    // Check all possible positions, including wraparound
+    for (let i = 0; i < orderedDeck.length; i++) {
+      const cards = getFiveCards(i);
+      const pattern = getGroupingPattern(cards);
+      if (normalizePattern(pattern) === normalizedTarget) {
+        return i;
+      }
+    }
+    return -1;
+  }
+  
+  // Function to get card details
+  function getCardDetails(cardCode) {
+    if (cardCode === 'JK') {
+      return { value: 'JK', suit: '', valueName: 'Joker', suitName: '', color: 'red' };
+    }
+    
+    const value = cardCode.charAt(0);
+    const suit = cardCode.charAt(1);
+    
+    let valueName;
+    switch(value) {
+      case 'A': valueName = 'Ace'; break;
+      case 'T': valueName = '10'; break;
+      case 'J': valueName = 'Jack'; break;
+      case 'Q': valueName = 'Queen'; break;
+      case 'K': valueName = 'King'; break;
+      default: valueName = value;
+    }
+    
+    let suitName, color;
+    switch(suit) {
+      case 'H': suitName = 'Hearts'; color = 'red'; break;
+      case 'D': suitName = 'Diamonds'; color = 'red'; break;
+      case 'C': suitName = 'Clubs'; color = 'black'; break;
+      case 'S': suitName = 'Spades'; color = 'black'; break;
+      default: suitName = suit; color = 'black';
+    }
+    
+    return { value, suit, valueName, suitName, color };
+  }
+  
+  // Function to calculate and display the cards
+  function calculateCards() {
+    const groupingPattern = groupingInput.value.trim();
+    
+    // Validate input format
+    const isValidFormat = /^[1-5]+(?:,[1-5]+)*$/.test(groupingPattern);
+    if (!isValidFormat) {
+      resultMessage.textContent = 'Invalid format. Use numbers 1-5 separated by commas.';
+      cardsDisplay.innerHTML = '';
+      return;
+    }
+    
+    // Check if all positions 1-5 are used exactly once
+    const positions = groupingPattern.replace(/,/g, '').split('').map(Number).sort();
+    if (positions.join('') !== '12345') {
+      resultMessage.textContent = 'Invalid pattern. Use each position (1-5) exactly once.';
+      cardsDisplay.innerHTML = '';
+      return;
+    }
+    
+    const cutPosition = findCutPosition(groupingPattern);
+    if (cutPosition === -1) {
+      resultMessage.textContent = 'This grouping pattern does not appear in the deck sequence.';
+      cardsDisplay.innerHTML = '';
+      return;
+    }
+    
+    const cards = getFiveCards(cutPosition);
+    
+    // Display the result
+    resultMessage.textContent = `Cut the deck at position ${cutPosition + 1} and deal these 5 cards in order:`;
+    
+    // Create card display
+    cardsDisplay.innerHTML = '';
+    cards.forEach((card, index) => {
+      const cardDetails = getCardDetails(card);
+      
+      const cardElement = document.createElement('div');
+      cardElement.className = 'card';
+      
+      const positionLabel = document.createElement('div');
+      positionLabel.className = 'position-label';
+      positionLabel.textContent = `Position ${index + 1}`;
+      
+      const cardContent = document.createElement('div');
+      cardContent.className = 'card-content';
+      cardContent.style.color = cardDetails.color;
+      cardContent.innerHTML = `${cardDetails.valueName}${cardDetails.suitName ? `<br>of<br>${cardDetails.suitName}` : ''}`;
+      
+      const cardCode = document.createElement('div');
+      cardCode.className = 'card-code';
+      cardCode.textContent = card;
+      
+      cardElement.appendChild(positionLabel);
+      cardElement.appendChild(cardContent);
+      cardElement.appendChild(cardCode);
+      
+      cardsDisplay.appendChild(cardElement);
+    });
+    
+    // Explain the grouping
+    const explanation = document.createElement('div');
+    explanation.className = 'explanation';
+    explanation.innerHTML = `<p>These cards will naturally group into the pattern ${groupingPattern} based on their suits.</p>`;
+    cardsDisplay.appendChild(explanation);
+  }
+  
+  // Event listeners
+  calculateBtn.addEventListener('click', calculateCards);
+  
+  groupingInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      calculateCards();
+    }
+  });
+});
+</script>
+```
+
+This simulation demonstrates the mathematical principles described in the reading, where a carefully arranged deck allows the performer to predict exactly how spectators will group themselves based on the suits of their cards. The arrangement ensures that each possible partition of 5 people appears exactly once in the sequence.
+
+### Practice Your Memory
+
+Test your pattern recognition skills! The deck below shows all cards face down, color-coded by suit (hearts are red, clubs are black, spades are green, diamonds are blue, and the joker is yellow). Click anywhere to cut the deck, then try to guess the pattern of the next five cards.
+
+```{=html}
+<div class="practice-deck">
+  <div class="instructions">
+    <p>1. Click any card to cut the deck at that position</p>
+    <p>2. Enter your guess for the pattern in the boxes below (H for hearts, C for clubs, S for spades, D for diamonds)</p>
+    <p>3. Click "Check Pattern" to verify your guess</p>
+  </div>
+  
+  <div class="deck-display" id="practice-deck"></div>
+  
+  <div class="guess-area">
+    <div class="guess-boxes">
+      <div class="guess-box" data-position="Position 1">
+        <input type="text" maxlength="1" placeholder="H/C/S/D">
+      </div>
+      <div class="guess-box" data-position="Position 2">
+        <input type="text" maxlength="1" placeholder="H/C/S/D">
+      </div>
+      <div class="guess-box" data-position="Position 3">
+        <input type="text" maxlength="1" placeholder="H/C/S/D">
+      </div>
+      <div class="guess-box" data-position="Position 4">
+        <input type="text" maxlength="1" placeholder="H/C/S/D">
+      </div>
+      <div class="guess-box" data-position="Position 5">
+        <input type="text" maxlength="1" placeholder="H/C/S/D">
+      </div>
+    </div>
+    <button id="check-pattern" class="btn btn-primary">Check Pattern</button>
+    <div id="pattern-result" class="result-message"></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const practiceDeck = document.getElementById('practice-deck');
+  const checkButton = document.getElementById('check-pattern');
+  const patternResult = document.getElementById('pattern-result');
+  const guessBoxes = document.querySelectorAll('.guess-box input');
+  
+  let selectedPosition = -1;
+  
+  // Same deck sequence as before
+  const orderedDeck = [
+    'AD', '2D', '3D', '4D', '5D', 'AC', '3H', '2H', 'AH', '3C',
+    '2C', '7D', '6D', '6C', '5C', '4C', '4H', '7C', '5H', '8C',
+    'AS', '6H', '7H', '2S', '8D', '4S', '3S', '9D', '6S', '5S',
+    '8H', '7S', 'KD', 'QD', '9C', '9H', '9S', '8S', 'TC', 'TH',
+    'TS', 'JH', 'JD', 'QH', 'JS', 'JC', 'KH', 'QS', 'JK', 'QC',
+    'TD', 'KC'
+  ];
+  
+  // Function to get suit class for a card
+  function getSuitClass(card) {
+    if (card === 'JK') return 'joker';
+    const suit = card.charAt(1);
+    switch(suit) {
+      case 'H': return 'hearts';
+      case 'D': return 'diamonds';
+      case 'C': return 'clubs';
+      case 'S': return 'spades';
+      default: return '';
+    }
+  }
+  
+  // Display the deck
+  orderedDeck.forEach((card, index) => {
+    const cardBack = document.createElement('div');
+    cardBack.className = `card-back ${getSuitClass(card)}`;
+    cardBack.textContent = index + 1;
+    cardBack.dataset.position = index;
+    
+    cardBack.addEventListener('click', () => {
+      // Remove previous selection
+      document.querySelectorAll('.card-back').forEach(c => c.classList.remove('selected-cut'));
+      // Add selection to clicked card
+      cardBack.classList.add('selected-cut');
+      selectedPosition = index;
+      
+      // Clear previous guess and result
+      guessBoxes.forEach(box => box.value = '');
+      patternResult.textContent = '';
+    });
+    
+    practiceDeck.appendChild(cardBack);
+  });
+  
+  // Function to get 5 cards starting at a position (with wraparound)
+  function getFiveCards(startPos) {
+    const cards = [];
+    for (let i = 0; i < 5; i++) {
+      const pos = (startPos + i) % orderedDeck.length;
+      cards.push(orderedDeck[pos]);
+    }
+    return cards;
+  }
+  
+  // Check button handler
+  checkButton.addEventListener('click', () => {
+    if (selectedPosition === -1) {
+      patternResult.textContent = 'Please select a position in the deck first!';
+      return;
+    }
+    
+    const userGuess = Array.from(guessBoxes).map(box => box.value.toUpperCase()).join('');
+    if (!/^[HCSD]{5}$/.test(userGuess)) {
+      patternResult.textContent = 'Please enter H, C, S, or D for each position.';
+      return;
+    }
+    
+    const actualCards = getFiveCards(selectedPosition);
+    const actualPattern = actualCards.map(card => card === 'JK' ? 'J' : card.charAt(1)).join('');
+    
+    if (userGuess === actualPattern) {
+      patternResult.className = 'result-message success';
+      patternResult.textContent = 'Correct! The actual cards are: ' + actualCards.join(', ');
+    } else {
+      patternResult.className = 'result-message error';
+      patternResult.textContent = 'Not quite. The actual cards are: ' + actualCards.join(', ') + 
+        '. Try to find the pattern in these cards!';
+    }
+  });
+});
+</script>
+```
 
 {{< comments >}}

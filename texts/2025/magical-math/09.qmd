@@ -1,13 +1,215 @@
 ---
-title: "Order Matters"
-date: 2025-03-09
+title: "Lie Detector"
+date: 2025-03-08
 toc: false
+format:
+  html:
+    css: styles/09.css
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+This interactive demonstration simulates the "Lie Detector" card trick. In this effect, a performer can seemingly detect when a spectator is lying about the color of a card. The trick uses the Gilbreath Principle, which ensures that when cards are dealt into two piles from a specially arranged deck, the cards in corresponding positions will have opposite colors.
 
+```{=html}
+<div class="lie-detector">
+  <!-- Phase 1: Recording the sequence -->
+  <div id="phase1">
+    <div class="phase-title">Phase 1: Guessing Colors</div>
+    <div class="instructions">
+      <p>I'll call out the color of each card. Your job is to guess if I'm telling the truth or lying.</p>
+      <p>Click either the word "Correct" or the checkmark ✓ if you think I'm telling the truth.</p>
+      <p>Click either the word "Wrong" or the cross ✗ if you think I'm lying.</p>
+      <p>We'll do this for 10 cards, and then move to Phase 2.</p>
+    </div>
+    
+    <div class="score-display" id="score-display">0 guesses correct out of 0 so far</div>
+    <div class="debug-display" id="sequence-display">Sequence: []</div>
+    
+    <div class="guess-buttons">
+      <span id="correct-word-btn" class="guess-btn correct-btn">Correct</span>
+      <span id="correct-emoji-btn" class="guess-btn correct-emoji-btn">✓</span>
+      <span id="wrong-word-btn" class="guess-btn wrong-btn">Wrong</span>
+      <span id="wrong-emoji-btn" class="guess-btn wrong-emoji-btn">✗</span>
+    </div>
+    
+    <div id="phase1-feedback" class="feedback">Click a button to start guessing!</div>
+  </div>
+  
+  <!-- Phase 2: Testing the spectator -->
+  <div id="phase2" class="hidden">
+    <div class="phase-title">Phase 2: Lie Detector Test</div>
+    <div class="instructions">
+      <p>Now it's your turn! Look at each card and decide whether to tell the truth or lie about its color.</p>
+      <p>Click the RED or BLACK button to indicate what you claim the card's color is.</p>
+      <p>Our lie detector will determine if you're being truthful based on the sequence recorded in Phase 1!</p>
+    </div>
+    
+    <div class="score-display" id="phase2-counter">Card 1 of 10</div>
+    <div class="debug-display" id="phase2-sequence-display">Sequence: []</div>
+    
+    <div class="guess-buttons">
+      <span id="red-btn" class="guess-btn red-btn">RED</span>
+      <span id="black-btn" class="guess-btn black-btn">BLACK</span>
+    </div>
+    
+    <div id="phase2-feedback" class="feedback">Select a color to begin!</div>
+  </div>
+</div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Elements
+  const phase1 = document.getElementById('phase1');
+  const phase2 = document.getElementById('phase2');
+  const scoreDisplay = document.getElementById('score-display');
+  const sequenceDisplay = document.getElementById('sequence-display');
+  const phase2Counter = document.getElementById('phase2-counter');
+  const phase2SequenceDisplay = document.getElementById('phase2-sequence-display');
+  const correctWordBtn = document.getElementById('correct-word-btn');
+  const correctEmojiBtn = document.getElementById('correct-emoji-btn');
+  const wrongWordBtn = document.getElementById('wrong-word-btn');
+  const wrongEmojiBtn = document.getElementById('wrong-emoji-btn');
+  const redBtn = document.getElementById('red-btn');
+  const blackBtn = document.getElementById('black-btn');
+  const phase1Feedback = document.getElementById('phase1-feedback');
+  const phase2Feedback = document.getElementById('phase2-feedback');
+  
+  // Game state
+  let correctGuesses = 0;
+  let totalGuesses = 0;
+  let cardSequence = [];
+  let currentPhase2Card = 0;
+  
+  // Truth messages
+  const truthMessages = [
+    "You're telling the truth! I can see it in your eyes.",
+    "That's honest! Your truthfulness is refreshing.",
+    "Truth detected! You're an open book.",
+    "Honesty is the best policy, and you're following it!",
+    "I sense no deception. You're being truthful.",
+    "The truth shines through your words!",
+    "Your honesty is commendable!",
+    "Truth confirmed! You're not even trying to hide it.",
+    "That's the truth, and we both know it!",
+    "Honest answer detected! Your integrity is showing."
+  ];
+  
+  // Lie messages
+  const lieMessages = [
+    "You're lying! I caught you red-handed.",
+    "That's a lie! Your microexpressions give you away.",
+    "Deception detected! You can't fool this system.",
+    "Nice try, but that's clearly a lie.",
+    "You're not being truthful. The signs are obvious.",
+    "Lie detected! Your poker face needs work.",
+    "That's not the truth, and you know it!",
+    "I sense deception in your choice!",
+    "You're trying to deceive me, but it won't work!",
+    "That's a lie! The algorithm never fails."
+  ];
+  
+  // Get random message from array
+  function getRandomMessage(array) {
+    return array[Math.floor(Math.random() * array.length)];
+  }
+  
+  // Phase 1 button handlers
+  correctWordBtn.addEventListener('click', function() {
+    handlePhase1Click('RED', true, true);
+  });
+  
+  correctEmojiBtn.addEventListener('click', function() {
+    handlePhase1Click('BLACK', true, true);
+  });
+  
+  wrongWordBtn.addEventListener('click', function() {
+    handlePhase1Click('RED', false, false);
+  });
+  
+  wrongEmojiBtn.addEventListener('click', function() {
+    handlePhase1Click('BLACK', false, false);
+  });
+  
+  function handlePhase1Click(color, isCorrectButton, incrementScore) {
+    // Record the color in the sequence
+    cardSequence.push(color);
+    
+    // Update score - only increment when clicking on "Correct" word or checkbox emoji
+    if (incrementScore) {
+      correctGuesses++;
+    }
+    
+    
+    totalGuesses++;
+    scoreDisplay.textContent = `${correctGuesses} guesses correct out of ${totalGuesses} so far`;
+    
+    // Update sequence display
+    sequenceDisplay.textContent = `Sequence: [${cardSequence.join(', ')}]`;
+    
+    // Show feedback based on which button was clicked
+    if (isCorrectButton) {
+      phase1Feedback.textContent = "You think I'm telling the truth!";
+    } else {
+      phase1Feedback.textContent = "You think I'm lying!";
+    }
+    
+    // Check if we should move to phase 2
+    if (totalGuesses >= 10) {
+      setTimeout(function() {
+        phase1.classList.add('hidden');
+        phase2.classList.remove('hidden');
+        phase2Counter.textContent = `Card 1 of 10`;
+        phase2SequenceDisplay.textContent = `Sequence: [${cardSequence.join(', ')}], Current: 0`;
+        phase2Feedback.textContent = "Select a color to begin!";
+        phase2Feedback.className = "feedback";
+      }, 1500);
+    }
+  }
+  
+  // Phase 2 button handlers
+  redBtn.addEventListener('click', function() {
+    handlePhase2Click('RED');
+  });
+  
+  blackBtn.addEventListener('click', function() {
+    handlePhase2Click('BLACK');
+  });
+  
+  function handlePhase2Click(selectedColor) {
+    if (currentPhase2Card >= 10) return;
+    
+    // Compare selected color with recorded sequence
+    const actualColor = cardSequence[currentPhase2Card];
+    const isTruthful = selectedColor === actualColor;
+    
+    // Update feedback
+    if (isTruthful) {
+      phase2Feedback.textContent = getRandomMessage(truthMessages);
+      phase2Feedback.className = "feedback truth-feedback";
+    } else {
+      phase2Feedback.textContent = getRandomMessage(lieMessages);
+      phase2Feedback.className = "feedback lie-feedback";
+    }
+    
+    // Move to next card
+    currentPhase2Card++;
+    
+    // Update counter or end game
+    if (currentPhase2Card < 10) {
+      phase2Counter.textContent = `Card ${currentPhase2Card + 1} of 10`;
+      phase2SequenceDisplay.textContent = `Sequence: [${cardSequence.join(', ')}], Current: ${currentPhase2Card}`;
+    } else {
+      phase2Counter.textContent = "Test complete!";
+      phase2SequenceDisplay.textContent = `Sequence: [${cardSequence.join(', ')}], Test completed`;
+      redBtn.disabled = true;
+      blackBtn.disabled = true;
+    }
+  }
+});
+</script>
+```
+
+The trick above demonstrates the Gilbreath Principle, which is a mathematical property that allows for seemingly impossible predictions. In the real version of this trick, the performer secretly knows the colors of the cards in the spectator's pile because they are the opposite of the colors in their own pile. This creates the illusion of mind-reading or lie detection.
 
 {{< comments >}}

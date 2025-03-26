@@ -12,69 +12,46 @@
   notes: 03.qmd
 
 - date: 2025-03-04
-  title: "Going Further"
+  title: "DeBruijn with Color Patterns"
   notes: 04.qmd
+  video: https://www.youtube.com/watch?v=rChVqV45vs4
 
 - date: 2025-03-05
-  title: "Robotic Vision"
+  title: "2D deBruijn Patterns"
   notes: 05.qmd
+  video: https://www.youtube.com/watch?v=OTBFz5rVMjI
 
 - date: 2025-03-06
-  title: "Making Codes"
+  title: "DNA Sequence Analysis + Middle Layer Graph Conjecture"
   notes: 06.qmd
+  video: https://www.youtube.com/watch?v=fmzNtFnSu4E
 
 - date: 2025-03-07
-  title: "To the Core of Our Being"
+  title: "deBruijn Variant: LMH + Color Pattern Derivation"
   notes: 07.qmd
+  video: https://www.youtube.com/watch?v=sFBmfGt3LCk
 
 - date: 2025-03-08
-  title: "This de Bruijn Stuff Is Cool but Can It Get You a Job?"
+  title: "deBruijn Variant: Suit Grouping Variation"
   notes: 08.qmd
+  video: https://www.youtube.com/watch?v=8xaEtttBgSE
 
 - date: 2025-03-09
-  title: "Order Matters"
+  title: "Gilbreath - Lie Detector"
   notes: 09.qmd
+  video: https://www.youtube.com/watch?v=fYWds8kC8tw
 
 - date: 2025-03-10
-  title: "A Mind-reading Effect"
+  title: "Dealing Two Impressive Poker Hands"
   notes: 10.qmd
+  video: https://www.youtube.com/watch?v=ILZzYGnHx7o
 
 - date: 2025-03-11
-  title: "Universal Cycles Again"
+  title: "Counting Gilbreath Permutations + Ultimate Principle"
   notes: 11.qmd
+  video: https://www.youtube.com/watch?v=3uosLJee71M
 
 - date: 2025-03-12
-  title: "The Gilbreath Principle"
+  title: "Reverse Perfect Shuffle Application: Finding Partner Card"
   notes: 12.qmd
-
-- date: 2025-03-13
-  title: "The Mandelbrot Set"
-  notes: 13.qmd
-
-- date: 2025-03-14
-  title: "A Mind-reading Computer"
-  notes: 14.qmd
-
-- date: 2025-03-17
-  title: "A Look Inside Perfect Shuffles"
-  notes: 15.qmd
-
-- date: 2025-03-18
-  title: "A Look Inside Monge and Milk Shuffles"
-  notes: 16.qmd
-
-- date: 2025-03-19
-  title: "A Look Inside Down-and-Under Shuffles"
-  notes: 17.qmd
-
-- date: 2025-03-20
-  title: "All the Shuffles Are Related"
-  notes: 18.qmd
-
-- date: 2025-03-21
-  title: "The Miracle Divination"
-  notes: 19.qmd
-
-- date: 2025-03-22
-  title: "How Many Magic Tricks Are There?"
-  notes: 20.qmd
+  video: https://www.youtube.com/watch?v=Gqmf-pMGT7g

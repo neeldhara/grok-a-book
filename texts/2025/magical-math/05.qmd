@@ -8,6 +8,8 @@ include-in-header:
     <script type="application/javascript" src="scripts/05b.js"></script>
     <link rel="stylesheet" href="styles/05a.css">
     <link rel="stylesheet" href="styles/05b.css">
+    <script src="scripts/05c.js" defer></script>
+    <link rel="stylesheet" href="styles/05c.css">
 ---
 
 ### {{< meta title >}}
@@ -150,5 +152,43 @@ Let's explore this with two interactive games:
 ```
 
 :::
+
+## De Bruijn Combs
+
+A "comb" is a pattern where certain positions are transparent (open blocks) and others are opaque (shaded blocks). Imagine having a 8-length window where the first, second, fourth and eighth positions are exposed and the others are opaque. Now imagine sliding this window over a 16-bit sequence (with wrap-arounds).At every step of the slide, you can read off four bits from the exposed positions. Can you find a 16-bit sequence so that every read is distinct? It turns out that there is exactly one such sequence (not counting cyclic shifts or complements), and you can play with it below. 
+
+This opens up a host of puzzles: what about other comb patterns? For a given comb pattern, is it solvable? If yes, how many morally distinct solutions are there?
+
+```{=html}
+<div class="comb-game-container"> 
+  <div class="comb-controls">
+    <button id="comb-reset-btn" class="btn btn-danger">Reset</button>
+    <button id="comb-prev-btn" class="btn btn-secondary">Previous</button>
+    <button id="comb-next-btn" class="btn btn-primary">Next</button>
+    <span id="comb-position-display" class="position-display">Position: 1 / 16</span>
+  </div>
+  
+  <div class="comb-sequence-container">
+    <div id="comb-overlay" class="comb-overlay"></div>
+    <div id="comb-sequence" class="comb-sequence"></div>
+  </div>
+  
+  <div class="comb-pattern-display">
+    <div class="pattern-section">
+      <h4>Current Pattern:</h4>
+      <div id="current-pattern" class="pattern-display"></div>
+      <div class="pattern-info">Decimal: <span id="pattern-decimal">0</span></div>
+    </div>
+    
+    <div class="patterns-section">
+      <h4>Patterns Seen:</h4>
+      <div id="patterns-grid" class="patterns-grid"></div>
+    </div>
+  </div>
+</div>
+```
+
+<link rel="stylesheet" href="styles/05c.css">
+<script src="scripts/05c.js"></script>
 
 {{< comments >}}

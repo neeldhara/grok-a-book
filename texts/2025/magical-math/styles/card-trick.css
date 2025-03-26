@@ -1,0 +1,188 @@
+/* Card trick styles */
+.card-trick-container {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+  overflow-x: auto;
+  padding: 10px 0;
+}
+
+.card {
+  width: 60px;
+  height: 90px;
+  background-color: white;
+  border: 1px solid #999;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+  transition: all 0.3s ease;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+/* Pastel colors for card pairs */
+.card.rank-A {
+  background-color: #FFD6E0; /* Pastel pink */
+}
+
+.card.rank-2 {
+  background-color: #FFEFB5; /* Pastel yellow */
+}
+
+.card.rank-3 {
+  background-color: #D7F9E9; /* Pastel mint */
+}
+
+.card.rank-4 {
+  background-color: #D6EAFF; /* Pastel blue */
+}
+
+.card.rank-5 {
+  background-color: #E5D9F2; /* Pastel lavender */
+}
+
+.card.rank-6 {
+  background-color: #CDFFD8; /* Pastel green */
+}
+
+.card.selected {
+  border: 2px solid blue;
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.card.eliminated {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.black {
+  color: black;
+}
+
+.red {
+  color: red;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.control-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 0 5px;
+  transition: all 0.2s ease;
+}
+
+.control-button:hover {
+  background-color: #e0e0e0;
+}
+
+.control-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status-container {
+  margin-bottom: 20px;
+  font-style: italic;
+  text-align: center;
+  min-height: 24px;
+}
+
+.slider-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 10px;
+}
+
+.slider-label {
+  margin-bottom: 5px;
+}
+
+.slider-value {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.piles-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.pile {
+  min-height: 100px;
+  min-width: 70px;
+  border: 1px dashed #ccc;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Animation classes */
+.card-moving {
+  position: absolute;
+  z-index: 100;
+  transition: all 0.3s ease;
+}
+
+@keyframes cardDeal {
+  0% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100px) rotate(5deg);
+    opacity: 0.8;
+  }
+}
+
+@keyframes cardCollect {
+  0% {
+    transform: translateY(100px) rotate(5deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+  }
+}
+
+.hidden {
+  display: none !important;
+}

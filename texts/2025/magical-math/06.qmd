@@ -1,13 +1,106 @@
 ---
-title: "Making Codes"
-date: 2025-03-06
+title: "DNA Sequencing"
+format: html
 toc: false
+page-layout: full
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+## DNA Sequence Analysis
 
+DNA sequencing is a fundamental technique in molecular biology that determines the precise order of nucleotides (A, C, G, and T) in a DNA molecule. One interesting mathematical problem in DNA sequencing involves reconstructing a DNA sequence from its constituent triplets.
 
+When a DNA strand interacts with a sequencing array, each consecutive triplet (three consecutive nucleotides) in the strand is highlighted in the array. Given these highlights, can we determine the original DNA sequence?
 
-{{< comments >}}
+```{=html}
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<div class="dna-game-container">
+  <div class="instructions">
+    <p>Enter a DNA sequence (using only A, C, G, and T) to see how its triplets are highlighted in the array and visualized in the De Bruijn graph in real-time. Use the Play button to see the Euler path through the graph.</p>
+  </div>
+  
+  <div class="input-section">
+    <div class="input-container">
+      <input type="text" id="dna-input" class="dna-input" placeholder="Enter DNA sequence (A, C, G, and T)" maxlength="20">
+      <button id="clear-btn" class="btn btn-secondary">Clear</button>
+      <button id="example-btn" class="btn btn-success">Load Example</button>
+    </div>
+    <div id="error-message" class="error-message hidden"></div>
+  </div>
+  
+  <div>
+    <h4>Your DNA Sequence:</h4>
+    <div id="sequence-display" class="sequence-display"></div>
+  </div>
+  
+  <div class="visualization-container">
+    <div class="triples-grid-container">
+      <h4 class="visualization-heading">Triplets Array:</h4>
+      <div id="triples-grid" class="triples-grid"></div>
+      <div class="grid-caption">Figure: Array of triplets from DNA sequence</div>
+    </div>
+    
+    <div class="graph-container">
+      <h4 class="visualization-heading">De Bruijn Graph:</h4>
+      <div id="graph-canvas-container">
+        <svg id="graph-svg" width="100%" height="400"></svg>
+      </div>
+      <div id="walk-result" class="walk-result"></div>
+      <div class="walk-controls">
+        <button id="prev-btn" class="btn btn-sm btn-secondary" disabled>Previous</button>
+        <button id="play-pause-btn" class="btn btn-sm btn-primary">Play</button>
+        <button id="next-btn" class="btn btn-sm btn-secondary" disabled>Next</button>
+        <button id="reset-btn" class="btn btn-sm btn-danger" disabled>Reset</button>
+      </div>
+      <div class="graph-caption">Figure: De Bruijn graph representation of the sequence</div>
+    </div>
+  </div>
+</div>
+```
+
+<link rel="stylesheet" href="styles/06.css">
+<script src="scripts/06.js"></script>
+
+The problem shown in the interactive above is an example of sequence reconstruction from triplets. In the array, each cell represents a possible triplet of nucleotides. When a DNA sequence is analyzed, all triplets present in the sequence are highlighted.
+
+For example, the sequence AACTCCAGTATGGC contains these triplets:
+- AAC (positions 1-3)
+- ACT (positions 2-4)
+- CTC (positions 3-5)
+- TCC (positions 4-6)
+- CCA (positions 5-7)
+- CAG (positions 6-8)
+- AGT (positions 7-9)
+- GTA (positions 8-10)
+- TAT (positions 9-11)
+- ATG (positions 10-12)
+- TGG (positions 11-13)
+- GGC (positions 12-14)
+
+The reverse problem is even more interesting: given only the highlighted cells in the array, can you determine the original DNA sequence? This is a classic example of sequence reconstruction from overlapping fragments, which has important applications in genome sequencing and assembly.
+
+## Middle Layer Graph Explorer
+
+The middle layer graph described in the text can be explored interactively below. Use the slider to select a value of n (where r = (n-1)/2), then click "Generate Middle Layer Graph" to visualize the graph of r-element and (r+1)-element subsets.
+
+```{=html}
+<div class="middle-layer-container">
+  <div class="controls-section">
+    <div class="slider-container">
+      <label for="n-slider" id="slider-label">Pick a number:</label>
+      <input type="range" id="n-slider" min="0" max="5" value="0" step="1">
+      <span id="n-value">3</span>
+    </div>
+    <div class="button-container">
+      <button id="generate-btn">Generate Middle Layer Graph</button>
+      <button id="reset-btn" style="cursor: pointer;" onclick="document.getElementById('reset-btn').disabled = true; document.getElementById('slider-label').style.display = 'inline'; document.getElementById('n-slider').disabled = false; document.getElementById('generate-btn').disabled = false; document.getElementById('graph-container').innerHTML = '';">Reset</button>
+    </div>
+  </div>
+  <div id="graph-container"></div>
+</div>
+```
+
+<script src="scripts/middle-layer.js"></script>
+
+{{< comments >}} 

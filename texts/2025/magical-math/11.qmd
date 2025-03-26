@@ -1,13 +1,129 @@
 ---
-title: "Universal Cycles Again"
+title: "Gilbreath Principle"
 date: 2025-03-11
 toc: false
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+## Gilbreath Principle in Action
+
+:::{.callout-note}
+THEOREM. The Ultimate Gilbreath Principle. For a permutation $\pi$ of $\{1,2,3, \ldots, N\}$, the following four properties are equivalent:
+
+1. $\pi$ is a Gilbreath permutation.
+2. For each $j$, the top $j$ cards $\{\pi(1), \pi(2), \pi(3), \ldots, \pi(j)\}$ are distinct modulo $j$.
+3. For each $j$ and $k$ with $k j \leq N$, the $j$ cards $(\pi((k-1) j+1)$, $\pi((k-1) j+2), \ldots, \pi(k j)\}$ are distinct modulo $j$.
+4. For each $j$, the top $j$ cards are consecutive in $1,2,3, \ldots, N$.
+:::
 
 
+The Gilbreath Principle is a fascinating mathematical property that works with sequences of numbers. Let's explore it interactively.
+
+<style>
+.observablehq button {
+  background-color: #f0f0f0 !important;
+  border: 1px solid #d0d0d0 !important;
+  color: #333 !important;
+  padding: 6px 12px !important;
+  border-radius: 4px !important;
+}
+</style>
+
+```{ojs}
+//| echo: false
+viewof deckSize = Inputs.range([4, 52], {
+  step: 2,
+  value: 20,
+  label: "Deck Size:"
+})
+
+viewof numCards = Inputs.range([0, deckSize], {
+  step: 1,
+  value: Math.floor(deckSize/2),
+  label: "Number of cards to deal off:"
+})
+
+deck = {
+  let numbers = Array.from({length: deckSize}, (_, i) => i + 1);
+  let dealt = numbers.slice(0, numCards).reverse();
+  let remaining = numbers.slice(numCards);
+  return {dealt, remaining}
+}
+
+viewof shuffle = Inputs.button("Riffle Shuffle", {
+  value: "Shuffle"
+})
+
+result = {
+  if (shuffle === undefined) return [];
+  let shuffled = [];
+  let i = 0, j = 0;
+  
+  while (i < deck.dealt.length && j < deck.remaining.length) {
+    if (Math.random() < 0.5) {
+      shuffled.push({value: deck.dealt[i++], source: "dealt"});
+    } else {
+      shuffled.push({value: deck.remaining[j++], source: "remaining"});
+    }
+  }
+  
+  while (i < deck.dealt.length) shuffled.push({value: deck.dealt[i++], source: "dealt"});
+  while (j < deck.remaining.length) shuffled.push({value: deck.remaining[j++], source: "remaining"});
+  
+  return shuffled;
+}
+
+display = {
+  const cardStyle = `
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    line-height: 40px;
+    text-align: center;
+    font-family: monospace;
+    font-size: 16px;
+    border-radius: 5px;
+  `;
+  
+  return html`
+    <div style="margin: 20px 0;">
+      <div style="margin-bottom: 20px;">
+        <div style="margin-bottom: 10px; font-weight: bold;">Dealt Cards:</div>
+        <div>
+          ${deck.dealt.map(n => 
+            `<span style="${cardStyle} background: #ffcccc; border: 2px solid #ff9999;">${n}</span>`
+          ).join('')}
+        </div>
+      </div>
+      
+      <div style="margin-bottom: 20px;">
+        <div style="margin-bottom: 10px; font-weight: bold;">Remaining Cards:</div>
+        <div>
+          ${deck.remaining.map(n => 
+            `<span style="${cardStyle} background: #cce6ff; border: 2px solid #99ccff;">${n}</span>`
+          ).join('')}
+        </div>
+      </div>
+      
+      ${result.length > 0 ? html`
+        <div>
+          <div style="margin-bottom: 10px; font-weight: bold;">After Shuffle:</div>
+          <div>
+            ${result.map(card => {
+              const bgColor = card.source === "dealt" ? "#ffcccc" : "#cce6ff";
+              const borderColor = card.source === "dealt" ? "#ff9999" : "#99ccff";
+              return `<span style="${cardStyle} background: ${bgColor}; border: 2px solid ${borderColor};">${card.value}</span>`;
+            }).join('')}
+          </div>
+        </div>
+      ` : ''}
+    </div>
+  `
+}
+```
+
+Try dealing different numbers of cards and observe what happens when you riffle shuffle them! The Gilbreath Principle states that after the riffle shuffle, adjacent pairs of cards will always contain one card from each of the original piles.
 
 {{< comments >}}

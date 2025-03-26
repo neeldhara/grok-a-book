@@ -40,7 +40,8 @@ format:
   html:
     theme: cosmo
     css: css/teaching.css
-    toc: true
+    toc: false
+    page-layout: full
 
 extensions:
   - fontawesome

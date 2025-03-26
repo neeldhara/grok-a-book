@@ -49,10 +49,14 @@ A reading of 4000 weeks is not necessary, this book holds up well standalone, al
 :::{.callout-caution icon="false"}
 ##### Timings and Venue
 
-We meet on Zoom at 9PM IST for about 20 minutes every day according to the schedule below. A link to a Whatsapp group will be posted here soon. If you want a heads up when these details are available, drop your email below.
+We meet on Zoom at 9PM IST for about 20 minutes every day according to the schedule below. Here is a link to a [WA group](https://chat.whatsapp.com/DuThNGufqc4Lepmq1imVMA) where we discuss more and post announcements. 
 
-<script async src="https://talk.hyvor.com/embed/newsletter.js" type="module"></script>
-<hyvor-talk-newsletter website-id="12638"></hyvor-talk-newsletter>
+The Zoom details are as follows:
+
+Meeting ID: `938 5856 0752`<br>
+Passcode: `4000`
+
+See you there!
 :::
 :::
 

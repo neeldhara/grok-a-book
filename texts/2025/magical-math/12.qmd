@@ -1,13 +1,96 @@
 ---
-title: "The Gilbreath Principle"
+title: "Card Trick Demonstration"
 date: 2025-03-12
 toc: false
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+This trick demonstrates how a deck of cards can act as a computer, tracking your input and finding your selected card through elimination.
 
+<div id="card-trick-demo"></div>
 
+<script src="scripts/card-trick.js"></script>
+<link rel="stylesheet" href="styles/card-trick.css">
+
+<div class="trick-explanation">
+  <h4>How the Trick Works</h4>
+  <p>
+    Make up a small deck of twelve cards as follows: Use the ace through
+    six of spades and the ace through six of clubs. Arrange these as if
+    they were a new deck: The ace of spades on top followed by the two
+    of spades, and so on, ending with the six of spades. Then the clubs,
+    in reverse order—the six of clubs, followed by the five of clubs, and
+    so on, with the ace of clubs on the bottom.
+  </p>
+  
+  <p>
+    The packet is going to act as a computer. It needs some input from
+    you. Think of a small number, say, two, three, or four; deal the packet
+    of twelve cards into that number of piles, face-down on the table, from
+    right to left. Reassemble the piles into a single packet by putting one
+    on the next (left to right, or right to left). Repeat once more—think of
+    a new small number, deal that many piles, and reassemble.
+  </p>
+  
+  <p>
+    The next step of mixing involves a reverse perfect shuffle. Hold the packet 
+    face-down as if you were about to deal them in a card game. Spread through 
+    the packet, pushing out alternate cards. When you are through, remove the 
+    forward cards as a group and place them on top.
+  </p>
+  
+  <p>
+    The packet of cards is tracking your input. When you are done shuffling, 
+    let the computer know by performing a Monge shuffle. To do this, hold the
+    packet in dealing position. Deal the cards from one hand to the other
+    as follows: Push the top card off and take it in the opposite hand. Push
+    the next card off on top of the first card. Push the next card off and
+    put it underneath the first two. The next card is placed on top, the next
+    underneath, and so on until you are done.
+  </p>
+  
+  <p>
+    To select a card, hold the cards face-down in dealing position.
+    Start moving cards one at a time from the top of the packet to the
+    bottom. Stop whenever you want. The current top card is your choice.
+    Deal it, face-down, off to one side.
+  </p>
+  
+  <p>
+    The computer will now find out which card you picked by a process of elimination.
+    This final elimination phase uses the down-and-under shuffle. Hold the eleven-card 
+    packet face-down in dealing position. Deal the top card down onto the table. 
+    Put the next card under the packet (from top to bottom). Deal the next card onto 
+    the table, put the next under the packet and so on. This eliminates cards one at 
+    a time until one card is left in your hand.
+  </p>
+  
+  <p>
+    You have selected a card freely from a mixed deck and the cards
+    have determined a card from those remaining. The two cards should
+    be a match in value—like the two of spades and the two of clubs.
+  </p>
+</div>
+
+<style>
+.trick-explanation {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.trick-explanation h4 {
+  color: #007bff;
+  margin-top: 0;
+}
+
+.trick-explanation p {
+  text-align: justify;
+  line-height: 1.6;
+}
+</style>
 
 {{< comments >}}

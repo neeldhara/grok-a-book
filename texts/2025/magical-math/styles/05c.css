@@ -1,0 +1,403 @@
+.comb-game-container {
+  border: 2px solid #3498db;
+  border-radius: 12px;
+  padding: 25px;
+  margin: 20px 0;
+  background-color: #f8f9fa;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.comb-interactive {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.comb-sequence-container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  height: 130px;
+  overflow: visible;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comb-sequence {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 60px;
+  order: 2;
+}
+
+.comb-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  z-index: 10;
+  order: 1;
+}
+
+.comb-title {
+  font-weight: bold;
+  color: #e74c3c;
+  text-align: center;
+  font-size: 0.9rem;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 0;
+  order: 3;
+}
+
+.comb-container {
+  display: flex;
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.sequence-bit {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-right: 1px dashed #ccc;
+}
+
+.sequence-bit:last-child {
+  border-right: none;
+}
+
+.sequence-bit.bit-1 {
+  background-color: #3498db;
+  color: white;
+}
+
+.sequence-bit.bit-0 {
+  background-color: white;
+  color: #2c3e50;
+}
+
+.comb-cell {
+  height: 40px;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.comb-cell.open-position {
+  border: 2px dashed #e74c3c;
+  background-color: rgba(231, 76, 60, 0.05);
+}
+
+.position-label {
+  position: absolute;
+  top: -22px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #e74c3c;
+  background-color: white;
+  padding: 0 4px;
+  border-radius: 10px;
+  z-index: 5;
+}
+
+.bit-highlight {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.bit-highlight.bit-1 {
+  background-color: #3498db;
+}
+
+.bit-highlight.bit-0 {
+  background-color: white;
+  border: 1px solid #ddd;
+}
+
+.comb-pattern-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.pattern-title, .patterns-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.pattern-bits {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pattern-bit {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 4px;
+}
+
+.pattern-bit.bit-1 {
+  background-color: #3498db;
+  color: white;
+}
+
+.pattern-bit.bit-0 {
+  background-color: white;
+  color: #2c3e50;
+  border: 1px solid #ddd;
+}
+
+.pattern-decimal {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.comb-patterns-seen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.patterns-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.pattern-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+}
+
+.pattern-item.seen {
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.pattern-item-bits {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 5px;
+}
+
+.pattern-item-bit {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+  border-radius: 2px;
+}
+
+.pattern-item-bit.bit-1 {
+  background-color: #3498db;
+  color: white;
+}
+
+.pattern-item-bit.bit-0 {
+  background-color: white;
+  color: #2c3e50;
+  border: 1px solid #ddd;
+}
+
+.pattern-item-decimal {
+  font-size: 0.8rem;
+  color: #6c757d;
+}
+
+.comb-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+  margin: 0 5px;
+}
+
+.btn-danger {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #7f8c8d;
+  color: white;
+}
+
+.btn-primary {
+  background-color: #3498db;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.position-display {
+  margin-left: auto;
+  font-weight: bold;
+}
+
+.game-controls {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.game-controls button {
+  padding: 8px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 10px;
+}
+
+.game-controls button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.game-controls button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.reset-btn {
+  background-color: #e74c3c !important;
+}
+
+.reset-btn:hover:not(:disabled) {
+  background-color: #c0392b !important;
+}
+
+#comb-position-display {
+  margin-left: auto;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.pattern-section h4, .patterns-section h4 {
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.pattern-display {
+  display: flex;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.pattern-display div {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.pattern-display div:nth-child(odd) {
+  background-color: #3498db;
+  color: white;
+}
+
+.pattern-display div:nth-child(even) {
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #333;
+}
+
+.pattern-info {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.patterns-section {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .comb-sequence-container {
+    height: 130px;
+  }
+  
+  .sequence-bit {
+    width: 30px;
+    height: 50px;
+    font-size: 1rem;
+  }
+  
+  .pattern-bit {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+  }
+  
+  .patterns-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
