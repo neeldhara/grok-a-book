@@ -42,6 +42,12 @@ format:
     css: css/teaching.css
     toc: false
     page-layout: full
+    include-in-header:
+      text: |
+        <!-- Fathom - beautiful, simple website analytics -->
+        <script src="https://cdn.usefathom.com/script.js" data-site="AUDPUXUT" defer></script>
+        <!-- / Fathom --> 
+
 
 extensions:
   - fontawesome
