@@ -1,6 +1,6 @@
 ---
 title: "The Minimum Number of Comparisons Necessary to Determine a Transitive Tournament"
-date: 2025-05-06
+date: 2025-05-20
 toc: false
 ---
 

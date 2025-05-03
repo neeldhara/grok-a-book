@@ -1,5 +1,5 @@
 ---
-title: "Topics on Tournaments | Apr-May 2025"
+title: "Topics on Tournaments | May 2025"
 sidebar: false
 page-layout: full
 toc: false
@@ -24,7 +24,7 @@ date-format: DD MMM, YYYY
 
 ---
 
-##### 21 Apr 2025 to 18 May 2025
+##### 05 May 2025 to 01 June 2025
 
 :::: {.columns}
 

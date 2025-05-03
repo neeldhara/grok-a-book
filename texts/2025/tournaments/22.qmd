@@ -1,6 +1,6 @@
 ---
 title: "Score Vectors of Generalizations of Tournaments"
-date: 2025-05-12
+date: 2025-05-26
 toc: false
 ---
 

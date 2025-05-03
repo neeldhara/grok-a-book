@@ -1,0 +1,80 @@
+- date: 2025-06-30
+  title: "Measurement (Part 1)"
+  summary: "Introduction to foundational concepts of measurement in probability"
+  notes: "01.qmd"
+- date: 2025-07-01
+  title: "Measurement (Part 2)"
+  summary: "Further exploration of measurement in probability theory"
+  notes: "02.qmd"
+- date: 2025-07-02
+  title: "Judgment (Part 1)"
+  summary: "Examining probability as degree of belief"
+  notes: "03.qmd"
+- date: 2025-07-03
+  title: "Judgment (Part 2)"
+  summary: "Continuing the exploration of subjective probability"
+  notes: "04.qmd"
+- date: 2025-07-04
+  title: "Psychology (Part 1)"
+  summary: "The psychology of probabilistic reasoning"
+  notes: "05.qmd"
+- date: 2025-07-07
+  title: "Psychology (Part 2)"
+  summary: "Psychological heuristics and biases in probability judgment"
+  notes: "06.qmd"
+- date: 2025-07-08
+  title: "Frequency (Part 1)"
+  summary: "Understanding probability through frequency interpretations"
+  notes: "07.qmd"
+- date: 2025-07-09
+  title: "Frequency (Part 2)"
+  summary: "Applications of frequency-based probability"
+  notes: "08.qmd"
+- date: 2025-07-10
+  title: "Mathematics (Part 1)"
+  summary: "Mathematical foundations of probability theory"
+  notes: "09.qmd"
+- date: 2025-07-11
+  title: "Mathematics (Part 2)"
+  summary: "Advanced mathematical concepts in probability"
+  notes: "10.qmd"
+- date: 2025-07-14
+  title: "Inverse Inference (Part 1)"
+  summary: "Introduction to Bayesian reasoning"
+  notes: "11.qmd"
+- date: 2025-07-15
+  title: "Inverse Inference (Part 2)"
+  summary: "Applications of Bayesian inference"
+  notes: "12.qmd"
+- date: 2025-07-16
+  title: "Unification (Part 1)"
+  summary: "Unifying different interpretations of probability"
+  notes: "13.qmd"
+- date: 2025-07-17
+  title: "Unification (Part 2)"
+  summary: "Synthesis of probability concepts across disciplines"
+  notes: "14.qmd"
+- date: 2025-07-18
+  title: "Algorithmic Randomness (Part 1)"
+  summary: "Computational perspectives on randomness"
+  notes: "15.qmd"
+- date: 2025-07-28
+  title: "Algorithmic Randomness (Part 2)"
+  summary: "Algorithmic complexity and randomness measures"
+  notes: "16.qmd"
+- date: 2025-07-29
+  title: "Physical Chance (Part 1)"
+  summary: "Probability in physical systems"
+  notes: "17.qmd"
+- date: 2025-07-30
+  title: "Physical Chance (Part 2)"
+  summary: "Quantum probability and indeterminism"
+  notes: "18.qmd"
+- date: 2025-07-31
+  title: "Induction (Part 1)"
+  summary: "Inductive reasoning and probability"
+  notes: "19.qmd"
+- date: 2025-08-01
+  title: "Induction (Part 2)"
+  summary: "Philosophical implications of probabilistic induction"
+  notes: "20.qmd"

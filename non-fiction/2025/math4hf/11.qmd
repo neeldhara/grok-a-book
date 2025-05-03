@@ -1,0 +1,12 @@
+---
+title: "Chapter 11: Freedom"
+subtitle: "Mathematical freedom and creative expression"
+date: "2025-06-23"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

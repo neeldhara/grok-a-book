@@ -10,6 +10,22 @@
   subtitle: ""
   url: /texts/2025/tournaments
   description: "by John W. Moon. An introduction to the theory of tournaments from a predominantly combinatorial perspective."
-  date: 2025-04-21
-  status: Upcoming
+  date: 2025-05-05
+  status: Ongoing
   image: /texts/2025/tournaments/cover.jpg
+
+- title: "Proof and the Art of Mathematics"
+  subtitle: ""
+  url: /texts/2025/proof
+  description: "by Joel D. Hamkins. A journey into the world of proofs and the art of mathematics."
+  date: 2025-05-05
+  status: Ongoing
+  image: /texts/2025/proof/cover.png
+
+- title: "Ten Great Ideas About Chance"
+  subtitle: ""
+  url: /texts/2025/chance
+  description: "by Persi Diaconis and Brian Skyrms. A history book, a probability book, a philosophy book."
+  date: 2025-06-30
+  status: Upcoming
+  image: /texts/2025/chance/cover.jpg

@@ -5,13 +5,13 @@ toc: false
 listing:
   - id: texts-listing
     contents: texts/listing.yml
-    sort: date asc
+    sort: date desc
     type: grid
     grid-columns: 1
     categories: false
     sort-ui: false
     filter-ui: false
-    page-size: 3
+    page-size: 10
     fields: [image, date, title, subtitle, description, status]
     template: _templates/book-card.ejs
 ---

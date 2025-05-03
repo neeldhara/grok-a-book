@@ -1,6 +1,6 @@
 ---
 title: "A Reversal Theorem"
-date: 2025-05-15
+date: 2025-05-29
 toc: false
 ---
 

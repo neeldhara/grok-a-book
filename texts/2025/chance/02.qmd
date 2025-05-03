@@ -1,0 +1,12 @@
+---
+title: "Measurement (Part 2)"
+subtitle: "Further exploration of measurement in probability theory"
+date: "2025-07-01"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

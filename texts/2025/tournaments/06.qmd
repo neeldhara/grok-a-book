@@ -1,6 +1,6 @@
 ---
 title: "The Distribution of 3-cycles in a Tournament"
-date: 2025-04-26
+date: 2025-05-10
 toc: false
 ---
 

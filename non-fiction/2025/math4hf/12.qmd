@@ -1,0 +1,12 @@
+---
+title: "Chapter 12: Community"
+subtitle: "The social dimensions of mathematical practice"
+date: "2025-06-24"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

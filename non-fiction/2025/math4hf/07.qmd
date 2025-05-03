@@ -1,0 +1,12 @@
+---
+title: "Chapter 7: Truth"
+subtitle: "Mathematical truth and its pursuit"
+date: "2025-06-17"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

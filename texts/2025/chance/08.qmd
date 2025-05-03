@@ -1,0 +1,12 @@
+---
+title: "Frequency (Part 2)"
+subtitle: "Applications of frequency-based probability"
+date: "2025-07-09"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

@@ -17,10 +17,15 @@ This website serves to catalog records of meetings organized around book reading
 - identify a ~month-long window and make a reading plan
 - meet every day at a fixed time over Zoom (the default is 9PM IST)
 
-The meetings are recorded and if there is any material that went into prep (slides and/or notes), they will be posted here along with the recordings. There will be, in any case, a placeholder page for each session with a comment box thrown in, so we can have asynchronous discussions. 
+This plan is merely suggestive: some readings will have different frequencies and/or durations. The broad guiding principle is to have some fixed cadence and a generally clear indication of the format of the discussions. 
+
+The meetings are recorded, and if there is any material that went into prep (slides and/or notes), they will be posted here along with the recordings. There will be, in any case, a placeholder page for each session with a comment box thrown in, so we can have asynchronous discussions. 
+
 
 We alternate between [textbook-ish material](texts.qmd) and [non-fiction reads](non-fiction.qmd).
 
-Do you have any suggestions/ideas? Drop a comment below!
+Do you have any suggestions/ideas? Drop a comment below! 
+
+PS. If you would like to use this platform to run a reading group, please reach out to me over email: `neeldhara.misra@gmail.com`. Thanks!
 
 {{< comments >}}

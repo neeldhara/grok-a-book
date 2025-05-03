@@ -1,6 +1,6 @@
 ---
 title: "The Diameter of a Tournament"
-date: 2025-05-02
+date: 2025-05-16
 toc: false
 ---
 

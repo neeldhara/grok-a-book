@@ -1,0 +1,12 @@
+---
+title: "Chapter 2: Exploration"
+subtitle: "Mathematical exploration as a path to flourishing"
+date: "2025-06-10"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

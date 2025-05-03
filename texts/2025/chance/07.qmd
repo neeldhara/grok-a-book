@@ -1,0 +1,12 @@
+---
+title: "Frequency (Part 1)"
+subtitle: "Understanding probability through frequency interpretations"
+date: "2025-07-08"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

@@ -1,6 +1,6 @@
 ---
 title: "Strong Tournaments"
-date: 2025-04-23
+date: 2025-05-07
 toc: false
 ---
 

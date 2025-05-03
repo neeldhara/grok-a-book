@@ -1,0 +1,12 @@
+---
+title: "Induction (Part 1)"
+subtitle: "Inductive reasoning and probability"
+date: "2025-07-31"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

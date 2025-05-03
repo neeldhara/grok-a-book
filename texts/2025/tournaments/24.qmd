@@ -1,6 +1,6 @@
 ---
 title: "The Largest Score in a Tournament"
-date: 2025-05-14
+date: 2025-05-28
 toc: false
 ---
 

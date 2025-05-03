@@ -1,0 +1,12 @@
+---
+title: "Psychology (Part 2)"
+subtitle: "Psychological heuristics and biases in probability judgment"
+date: "2025-07-07"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

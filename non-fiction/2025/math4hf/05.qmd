@@ -1,0 +1,12 @@
+---
+title: "Chapter 5: Beauty"
+subtitle: "Aesthetic dimensions of mathematical experience"
+date: "2025-06-13"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

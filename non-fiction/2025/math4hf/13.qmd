@@ -1,0 +1,12 @@
+---
+title: "Chapter 13: Love & Epilogue"
+subtitle: "Love for mathematics and concluding thoughts"
+date: "2025-06-25"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

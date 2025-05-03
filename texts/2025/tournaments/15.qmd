@@ -1,6 +1,6 @@
 ---
 title: "Ranking the Participants in a Tournament"
-date: 2025-05-05
+date: 2025-05-19
 toc: false
 ---
 

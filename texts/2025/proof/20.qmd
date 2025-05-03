@@ -1,0 +1,12 @@
+---
+title: "Sections 6.12, 7.1"
+date: 2025-05-30
+toc: false
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

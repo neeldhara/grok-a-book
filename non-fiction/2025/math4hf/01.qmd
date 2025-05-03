@@ -1,0 +1,12 @@
+---
+title: "Preface & Chapter 1: Flourishing"
+subtitle: "Introduction to mathematical flourishing"
+date: "2025-06-09"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

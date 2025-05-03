@@ -1,6 +1,6 @@
 ---
 title: "Universal Tournaments"
-date: 2025-05-07
+date: 2025-05-21
 toc: false
 ---
 

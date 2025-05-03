@@ -1,0 +1,12 @@
+---
+title: "Psychology (Part 1)"
+subtitle: "The psychology of probabilistic reasoning"
+date: "2025-07-04"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

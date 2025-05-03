@@ -1,0 +1,63 @@
+---
+title: "Proof and the Art of Mathematics | May-Jul 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### Proof and the Art of Mathematics
+
+#### _Joel D. Hamkins_
+
+---
+
+##### 05 May 2025 to 09 Jul 2025
+
+:::: {.columns}
+
+::: {.column width="65%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+From the preface of the book:
+
+> [...] I have organized the book around a selection of mathematically rich topics, having interesting theorems with elementary proofs. I have chosen what I find to be especially enjoyable mathematical topics—at times fanciful, yet always amenable to a serious mathematical analysis—-because I feel students will learn best how to write proofs with material that is itself intrinsically interesting. Please enjoy! 
+
+My main motivation for this reading is that I am teaching discrete mathematics course this summer and attempting to write a companion text. Hamikins' book is a joy to read and I am looking forward to the good vibes! No specific pre-requisites required. 
+
+You can find this book on [Amazon](https://www.amazon.in/Proof-Mathematics-Joel-David-Hamkins/dp/0262539799). More pointers on the [book site](https://jdh.hamkins.org/proof-and-the-art-of-mathematics/).
+:::
+
+
+:::
+
+::: {.column width="35%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We meet on Zoom at 9AM IST for about 60-90 minutes every day according to the daily-ish schedule below: the plan is to meet on all weekdays with a break about half-way, and cover an average of two subsections in one session. Here's a link to a [WA group](https://chat.whatsapp.com/Ly8fdhlautx1mdL83rXEk8) for general discussions and meetup reminders, and announcements of any changes to the schedule. The Zoom details are below:
+
+Meeting ID: `977 9556 2618`<br>
+Passcode: `irrational`
+
+See you there!
+:::
+:::
+
+::::
+
+:::{#lectures-listing}
+:::

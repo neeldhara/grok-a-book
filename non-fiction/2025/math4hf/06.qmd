@@ -1,0 +1,12 @@
+---
+title: "Chapter 6: Permanence"
+subtitle: "The enduring nature of mathematical truth"
+date: "2025-06-16"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

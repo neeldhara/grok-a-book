@@ -1,6 +1,6 @@
 ---
 title: "Criteria for a Score Vector"
-date: 2025-05-11
+date: 2025-05-25
 toc: false
 ---
 

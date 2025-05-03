@@ -1,0 +1,71 @@
+---
+title: "Mathematics for Human Flourishing | June 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### Flourishing
+
+#### _Francis Su_
+
+---
+
+##### 09 Jun 2025 to 25 Jun 2025
+
+:::: {.columns}
+
+::: {.column width="65%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+From Yale Press: 
+
+> For mathematician Francis Su, a society without mathematical affection is like a city without concerts, parks, or museums. To miss out on mathematics is to live without experiencing some of humanity’s most beautiful ideas.
+>
+> ​In this profound book, written for a wide audience but especially for those disenchanted by their past experiences, an award-winning mathematician and educator weaves parables, puzzles, and personal reflections to show how mathematics meets basic human desires—such as for play, beauty, freedom, justice, and love—and cultivates virtues essential for human flourishing. These desires and virtues, and the stories told here, reveal how mathematics is intimately tied to being human. Some lessons emerge from those who have struggled, including philosopher Simone Weil, whose own mathematical contributions were overshadowed by her brother’s, and Christopher Jackson, who discovered mathematics as an inmate in a federal prison. Christopher’s letters to the author appear throughout the book and show how this intellectual pursuit can—and must—be open to all.
+
+You can learn more about the book at [the author's website](https://www.francissu.com/flourishing).
+:::
+:::
+
+::: {.column width="35%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We meet on Zoom at **9PM IST** for about **60-90 minutes** each weekday from June 9th to June 25th, covering one chapter per day. 
+
+Here's a link to a [WA group](https://chat.whatsapp.com/Cg4o6XPtkC9JhySHL4uHcq) for general discussions and meetup reminders. Click [here](https://iitgn-ac-in.zoom.us/j/98947282652?pwd=CDKwdORyHmV6fmg0DVAdOpIUMyF1ta.1) to join on Zoom or use the details below:
+
+Meeting ID: `989 4728 2652`<br>
+Passcode: `math4HF`
+
+See you there!
+:::
+
+
+:::{.callout-tip icon="false"}
+##### Prerequisites
+
+No mathematical background is required to participate in this reading. The book is accessible to anyone interested in mathematics education, philosophy, or the human aspects of mathematical practice.
+:::
+
+:::
+
+::::
+
+:::{#lectures-listing}
+:::

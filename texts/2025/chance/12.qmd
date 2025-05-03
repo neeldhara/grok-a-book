@@ -1,0 +1,12 @@
+---
+title: "Inverse Inference (Part 2)"
+subtitle: "Applications of Bayesian inference"
+date: "2025-07-15"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

@@ -11,6 +11,7 @@ listing:
     categories: false
     sort-ui: false
     filter-ui: false
+    page-size: 10
     fields: [image, date, title, subtitle, description, status]
     template: _templates/book-card.ejs
 ---

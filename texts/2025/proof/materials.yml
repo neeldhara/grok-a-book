@@ -1,0 +1,185 @@
+
+- date: 2025-05-05
+  title: "Sections 1.1, 1.2"
+  summary: "The number $\\sqrt{2}$ is irrational; Lowest terms"
+  notes: "01.qmd"
+- date: 2025-05-06
+  title: "Sections 1.3, 1.4"
+  summary: "A geometric proof; Generalizations to other roots"
+  notes: "02.qmd"
+- date: 2025-05-07
+  title: "Sections 2.1, 2.2"
+  summary: "$n^{2}-n$ is even; One theorem, seven proofs"
+  notes: "03.qmd"
+- date: 2025-05-08
+  title: "Sections 2.3, 3.1"
+  summary: "Different proofs suggest different generalizations; Prime numbers"
+  notes: "04.qmd"
+- date: 2025-05-09
+  title: "Sections 3.2, 3.3"
+  summary: "The fundamental theorem of arithmetic; Euclidean division algorithm"
+  notes: "05.qmd"
+- date: 2025-05-12
+  title: "Sections 3.4, 3.5"
+  summary: "Fundamental theorem of arithmetic, uniqueness; Infinitely many primes"
+  notes: "06.qmd"
+- date: 2025-05-13
+  title: "Sections 4.1, 4.2"
+  summary: "The least-number principle; Common induction"
+  notes: "07.qmd"
+- date: 2025-05-14
+  title: "Sections 4.3, 4.4"
+  summary: "Several proofs using induction; Proving the induction principle"
+  notes: "08.qmd"
+- date: 2025-05-15
+  title: "Sections 4.5, 4.6"
+  summary: "Strong induction; Buckets of Fish via nested induction"
+  notes: "09.qmd"
+- date: 2025-05-16
+  title: "Sections 4.7, 5.1"
+  summary: "Every number is interesting; More pointed at than pointing"
+  notes: "10.qmd"
+- date: 2025-05-19
+  title: "Sections 5.2, 5.3"
+  summary: "Chocolate bar problem; Tiling problems"
+  notes: "11.qmd"
+- date: 2025-05-20
+  title: "Sections 5.4, 5.5"
+  summary: "Escape!; Representing integers as a sum"
+  notes: "12.qmd"
+- date: 2025-05-21
+  title: "Sections 5.6, 5.7"
+  summary: "Permutations and combinations; The pigeon-hole principle"
+  notes: "13.qmd"
+- date: 2025-05-22
+  title: "Sections 5.8, 6.1"
+  summary: "The zigzag theorem; A geometric sum"
+  notes: "14.qmd"
+- date: 2025-05-23
+  title: "Sections 6.2, 6.3"
+  summary: "Binomial square; Criticism of the 'without words' aspect"
+  notes: "15.qmd"
+- date: 2025-05-26
+  title: "Sections 6.4, 6.5"
+  summary: "Triangular choices; Further identities"
+  notes: "16.qmd"
+- date: 2025-05-27
+  title: "Sections 6.6, 6.7"
+  summary: "Sum of odd numbers; A Fibonacci identity"
+  notes: "17.qmd"
+- date: 2025-05-28
+  title: "Sections 6.8, 6.9"
+  summary: "A sum of cubes; Another infinite series"
+  notes: "18.qmd"
+- date: 2025-05-29
+  title: "Sections 6.10, 6.11"
+  summary: "Area of a circle; Tiling with dominoes"
+  notes: "19.qmd"
+- date: 2025-05-30
+  title: "Sections 6.12, 7.1"
+  summary: "How to lie with pictures; Twenty-One"
+  notes: "20.qmd"
+- date: 2025-06-02
+  title: "Sections 7.2, 7.3"
+  summary: "Buckets of Fish; The game of Nim"
+  notes: "21.qmd"
+- date: 2025-06-03
+  title: "Sections 7.4, 7.5"
+  summary: "The Gold Coin game; Chomp"
+  notes: "22.qmd"
+- date: 2025-06-04
+  title: "Sections 7.6, 7.7"
+  summary: "Games of perfect information; The fundamental theorem of finite games"
+  notes: "23.qmd"
+- date: 2025-06-11
+  title: "Sections 8.1, 8.2"
+  summary: "Figures in the integer lattice; Pick's theorem for rectangles"
+  notes: "24.qmd"
+- date: 2025-06-12
+  title: "Sections 8.3, 8.4"
+  summary: "Pick's theorem for triangles; Amalgamation"
+  notes: "25.qmd"
+- date: 2025-06-13
+  title: "Sections 8.5, 8.6"
+  summary: "Triangulations; Proof of Pick's theorem, general case"
+  notes: "26.qmd"
+- date: 2025-06-16
+  title: "Sections 9.1, 9.2"
+  summary: "Regular polygons in the integer lattice; Hexagonal and triangular lattices"
+  notes: "27.qmd"
+- date: 2025-06-17
+  title: "Sections 9.3, 10.1"
+  summary: "Generalizing to arbitrary lattices; The polygonal dissection congruence theorem"
+  notes: "28.qmd"
+- date: 2025-06-18
+  title: "Sections 10.2, 10.3"
+  summary: "Triangles to parallelograms; Parallelograms to rectangles"
+  notes: "29.qmd"
+- date: 2025-06-19
+  title: "Sections 10.4, 10.5"
+  summary: "Rectangles to squares; Combining squares"
+  notes: "30.qmd"
+- date: 2025-06-20
+  title: "Sections 10.6, 10.7"
+  summary: "Full proof of the dissection congruence theorem; Scissors congruence"
+  notes: "31.qmd"
+- date: 2025-06-23
+  title: "Sections 11.1, 11.2"
+  summary: "Relations; Equivalence relations"
+  notes: "32.qmd"
+- date: 2025-06-24
+  title: "Sections 11.3, 11.4"
+  summary: "Equivalence classes and partitions; Closures of a relation"
+  notes: "33.qmd"
+- date: 2025-06-25
+  title: "Sections 11.5, 12.1"
+  summary: "Functions; The bridges of Königsberg"
+  notes: "34.qmd"
+- date: 2025-06-26
+  title: "Sections 12.2, 12.3"
+  summary: "Circuits and paths in a graph; The five-room puzzle"
+  notes: "35.qmd"
+- date: 2025-06-27
+  title: "Sections 12.4, 13.1" # Note: 13.1 spans multiple sub-items in the ToC, treated as one here.
+  summary: "The Euler characteristic; Hilbert's Grand Hotel"
+  notes: "36.qmd"
+- date: 2025-06-30
+  title: "Sections 13.2, 13.3" # Note: 13.3 spans multiple sub-items in the ToC
+  summary: "Countability; Uncountability of the real numbers"
+  notes: "37.qmd"
+- date: 2025-07-01
+  title: "Sections 13.4, 13.5"
+  summary: "Transcendental numbers; Equinumerosity"
+  notes: "38.qmd"
+- date: 2025-07-02
+  title: "Sections 13.6, 13.7"
+  summary: "The Shröder-Cantor-Bernstein theorem; The real plane and real line are equinumerous"
+  notes: "39.qmd"
+- date: 2025-07-03
+  title: "Sections 14.1, 14.2"
+  summary: "Partial orders; Minimal versus least elements"
+  notes: "40.qmd"
+- date: 2025-07-04
+  title: "Sections 14.3, 14.4"
+  summary: "Linear orders; Isomorphisms of orders"
+  notes: "41.qmd"
+- date: 2025-07-07
+  title: "Sections 14.5, 14.6"
+  summary: "The rational line is universal; The eventual domination order"
+  notes: "42.qmd"
+- date: 2025-07-08
+  title: "Sections 15.1, 15.2"
+  summary: "Definition of continuity; Sums and products of continuous functions"
+  notes: "43.qmd"
+- date: 2025-07-09
+  title: "Sections 15.3, 15.4"
+  summary: "Continuous at exactly one point; The least-upper-bound principle"
+  notes: "44.qmd"
+- date: 2025-07-10
+  title: "Sections 15.5, 15.6"
+  summary: "The intermediate-value theorem; The Heine-Borel theorem"
+  notes: "45.qmd"
+- date: 2025-07-11
+  title: "Sections 15.7, 15.8"
+  summary: "The Bolzano-Weierstrass theorem; The principle of continuous induction"
+  notes: "46.qmd"

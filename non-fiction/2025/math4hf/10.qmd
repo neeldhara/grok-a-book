@@ -1,0 +1,12 @@
+---
+title: "Chapter 10: Justice"
+subtitle: "Equity and access in mathematics education"
+date: "2025-06-20"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

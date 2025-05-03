@@ -1,6 +1,6 @@
 ---
 title: "Irreducible Tournaments"
-date: 2025-04-22
+date: 2025-05-06
 toc: false
 ---
 

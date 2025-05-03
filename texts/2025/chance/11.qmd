@@ -1,0 +1,12 @@
+---
+title: "Inverse Inference (Part 1)"
+subtitle: "Introduction to Bayesian reasoning"
+date: "2025-07-14"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

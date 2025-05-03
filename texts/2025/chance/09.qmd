@@ -1,0 +1,12 @@
+---
+title: "Mathematics (Part 1)"
+subtitle: "Mathematical foundations of probability theory"
+date: "2025-07-10"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

@@ -1,6 +1,6 @@
 ---
 title: "The Number of Score Vectors"
-date: 2025-05-13
+date: 2025-05-27
 toc: false
 ---
 

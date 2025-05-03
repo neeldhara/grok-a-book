@@ -1,0 +1,12 @@
+---
+title: "Chapter 8: Struggle"
+subtitle: "Productive struggle in mathematical learning"
+date: "2025-06-18"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

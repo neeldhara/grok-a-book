@@ -1,0 +1,12 @@
+---
+title: "Chapter 9: Power"
+subtitle: "Mathematics as empowerment and agency"
+date: "2025-06-19"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

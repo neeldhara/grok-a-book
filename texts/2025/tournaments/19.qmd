@@ -1,6 +1,6 @@
 ---
 title: "Oriented Graphs Induced by Voting Patterns"
-date: 2025-05-09
+date: 2025-05-23
 toc: false
 ---
 

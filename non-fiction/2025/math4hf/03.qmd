@@ -1,0 +1,12 @@
+---
+title: "Chapter 3: Meaning"
+subtitle: "Finding meaning through mathematics"
+date: "2025-06-11"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+
+{{< comments >}}

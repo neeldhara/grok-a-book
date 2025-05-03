@@ -1,6 +1,6 @@
 ---
 title: "The Maximum Number of Spanning Paths of a Tournament"
-date: 2025-04-30
+date: 2025-05-14
 toc: false
 ---
 

@@ -1,0 +1,70 @@
+---
+title: "Ten Great Ideas About Chance | July 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### Ten Great Ideas About Chance
+
+#### _Persi Diaconis and Brian Skyrms_
+
+---
+
+##### 30 Jun 2025 to 01 Aug 2025
+
+:::: {.columns}
+
+::: {.column width="58%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+This exploration of probability blends mathematics, philosophy, and psychology as it examines ten fundamental ideas that have shaped our understanding of chance. Diaconis and Skyrms take us on a journey from the basic concepts of measurement to the profound implications of induction, offering insights into how we interpret randomness and uncertainty in our world.
+
+Each chapter in this book reveals a key idea about chance, building a comprehensive picture of probability theory and its applications across disciplines. The book presents technical concepts in an approachable way, making it accessible to readers with various backgrounds.
+
+You can find this book on [Amazon](https://www.amazon.com/Ten-Great-Ideas-About-Chance/dp/0691174160).
+:::
+
+:::{.callout-tip icon="false"}
+##### Prerequisites
+
+A basic familiarity with probability theory and statistics will be helpful, though the discussions will be largely self-contained and accessible.
+:::
+
+:::
+
+::: {.column width="42%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We meet on Zoom at **9AM IST** for about **60-90 minutes** each weekday according to the schedule below. Note that we'll have a break during the week of July 21st. 
+
+Each chapter is explored over two sessions, allowing for deeper discussion and understanding.
+
+Here's a link to a [WA group](https://chat.whatsapp.com/InlhVJOdcDq0T5YZfX33GZ) for general discussions and meetup reminders. Click [here](https://iitgn-ac-in.zoom.us/j/96635182073?pwd=LbIPaDTyfse7YwQLjEQTyq3gQDvoqv.1) to join on Zoom or use the details below:
+
+Meeting ID: `966 3518 2073`<br>
+Passcode: `chance`
+
+See you there!
+:::
+:::
+
+::::
+
+:::{#lectures-listing}
+:::
