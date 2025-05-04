@@ -29,3 +29,10 @@
   date: 2025-06-30
   status: Upcoming
   image: /texts/2025/chance/cover.jpg
+
+- title: "Algebra Chapter 0"
+  subtitle: "by Paolo Aluffi. An introduction to Algebra through the lens of Category Theory."
+  url: /texts/2025/algebrach0
+  date: 2025-05-10
+  status: Upcoming
+  image: /texts/2025/algebrach0/cover.jpg

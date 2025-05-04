@@ -1,0 +1,67 @@
+---
+title: "Algebra: Chapter 0 | May 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### Algebra: Chapter 0
+
+#### _Paolo Aluffi_
+
+---
+
+##### 10 May 2025 to 26 July 2025
+
+:::: {.columns}
+
+::: {.column width="58%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+The book aims to introduce the mathematical field of Algebra from the ground up, doing so by introducing category theory, and describing concepts through its lens.
+
+Algebra remains fundamental to mathematics and many fields of computer science. Its applications cannot be overstated.
+
+You can find this book  [here](https://agorism.dev/book/math/alg/algebra_chapter-0_paolo-aluffi.pdf).
+:::
+
+
+
+:::{.callout-tip icon="false"}
+##### Prerequisites
+
+No such mandatory prerequisites, but a degree of mathematical maturity helps.
+:::
+
+
+:::
+
+::: {.column width="42%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We meet on Google Meet at 11 AM IST for about 60 minutes every Saturday according to the schedule below. Here's a link to a [GChat](https://chat.google.com/room/AAQAtKUtKwg?cls=7) for general discussions and meetup reminders. 
+The [GMeet link](https://meet.google.com/meo-poio-zae) itself.
+
+See you there!
+:::
+:::
+
+::::
+
+:::{#lectures-listing}
+:::

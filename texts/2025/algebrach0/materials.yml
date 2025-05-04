@@ -1,0 +1,59 @@
+- date: 2025-05-10
+  title: "Preliminaries: Set theory and Categories"
+  summary: "A quick introduction to basic elements of naive set theory and categories"
+  notes: "01.qmd"
+
+- date: 2025-05-17
+  title: "Groups, first encounter"
+  summary: "Yet to be filled"
+  notes: "02.qmd"
+
+- date: 2025-05-24
+  title: "Rings and modules, Part I"
+  summary: "Yet to be filled"
+  notes: "03.qmd"
+
+- date: 2025-05-31
+  title: "Rings and modules, Part II"
+  summary: "Yet to be filled"
+  notes: "04.qmd"
+
+- date: 2025-06-07
+  title: "Groups, second encounter"
+  summary: "Yet to be filled"
+  notes: "05.qmd"
+
+- date: 2025-06-14
+  title: "Irreducibility and factorisation in integral domains"
+  summary: "Yet to be filled"
+  notes: "06.qmd"
+
+- date: 2025-06-21
+  title: "Linear Algebra, Part I"
+  summary: "Yet to be filled"
+  notes: "07.qmd"
+
+- date: 2025-06-28
+  title: "Linear Algebra, Part II"
+  summary: "Yet to be filled"
+  notes: "08.qmd"
+
+- date: 2025-07-05
+  title: "Fields, Part I"
+  summary: "Yet to be filled"
+  notes: "09.qmd"
+
+- date: 2025-07-12
+  title: "Fields, Part II"
+  summary: "Yet to be filled"
+  notes: "10.qmd"
+
+- date: 2025-07-19
+  title: "Linear Algebra, Reprise Part I"
+  summary: "Yet to be filled"
+  notes: "11.qmd"
+
+- date: 2025-07-26
+  title: "Linear Algebra, Reprise Part II"
+  summary: "Yet to be filled"
+  notes: "12.qmd"
