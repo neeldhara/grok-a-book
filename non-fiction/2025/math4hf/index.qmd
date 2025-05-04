@@ -18,7 +18,7 @@ feed: true
 date-format: DD MMM, YYYY
 ---
 
-### Flourishing
+### Mathematics for Human Flourishing
 
 #### _Francis Su_
 
