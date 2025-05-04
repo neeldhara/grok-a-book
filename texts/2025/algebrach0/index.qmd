@@ -54,10 +54,12 @@ No such mandatory prerequisites, but a degree of mathematical maturity helps.
 :::{.callout-caution icon="false"}
 ##### Timings and Venue
 
-We meet on Google Meet at 11 AM IST for about 60 minutes every Saturday according to the schedule below. Here's a link to a [GChat](https://chat.google.com/room/AAQAtKUtKwg?cls=7) for general discussions and meetup reminders. 
+We meet on Google Meet at 11 AM IST for about 60 minutes every Saturday according to the schedule below. Here's a link to a [Zulip Chat](https://algch0.zulipchat.com/join/s2icew3hjl774vfk76vkwudb/) for general discussions and meetup reminders. 
 The [GMeet link](https://meet.google.com/meo-poio-zae) itself.
 
 See you there!
+
+(This reading group is primarily being setup by Aniket Mishra, if you have any questions you can contact them at [this email](23110026@iitgn.ac.in)).
 :::
 :::
 
