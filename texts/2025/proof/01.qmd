@@ -1,12 +1,20 @@
 ---
-title: "Sections 1.1, 1.2"
+title: "Chapter 1: A classical beginning"
 date: 2025-05-05
 toc: false
 ---
 
 ### {{< meta title >}}
 
-Coming Soon.
+We spent some time on variations of the proof of the fact that $\sqrt{2}$ is irrational. Some things that came up:
+
+- The least number principle vs axiom of choice: are these independent? 
+- While working through a critique of an incorrect proof showing that $\sqrt{n}$ is irrational for all $n$, we showed that $\sqrt{n}$ is rational iff $n = m^2$ for some $m$.
+- We went over a nice geometric proof of the irrationality of $\sqrt{2}$ and translated it to algebraic terms. 
+
+Up next: exercises!
+
+Find a recording [here](https://youtube.com/live/GCUNFOOLgqc).
 
 
 {{< comments >}}

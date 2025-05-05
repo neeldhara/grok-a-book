@@ -6,7 +6,18 @@ toc: false
 
 ### {{< meta title >}}
 
-Coming Soon.
+We talked about:
+
+- round robin vs knockout tournaments
+- the notion of tournament solutions 
+- when two tournaments are isomorphic 
+
+Exercises:
+
+- explicitly enumerate all labeled tournaments on 3 and 4 vertices
+- show that self-complementary cyclic tournaments on $n$ vertices exist if and only if $n$ is odd
+
+View a recording of the session [here](https://youtube.com/live/Znh_U-kWen8).
 
 
 

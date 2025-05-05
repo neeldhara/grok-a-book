@@ -1,11 +1,12 @@
 
 - date: 2025-05-05
-  title: "Sections 1.1, 1.2"
-  summary: "The number $\\sqrt{2}$ is irrational; Lowest terms"
+  title: "Chapter 1"
+  summary: "A classical beginning."
   notes: "01.qmd"
+  video: "https://youtube.com/live/GCUNFOOLgqc"
 - date: 2025-05-06
-  title: "Sections 1.3, 1.4"
-  summary: "A geometric proof; Generalizations to other roots"
+  title: "Exercises from Chapter 1"
+  summary: "Working through a general characterization of when the k-th root of n is irrational."
   notes: "02.qmd"
 - date: 2025-05-07
   title: "Sections 2.1, 2.2"
