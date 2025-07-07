@@ -5,11 +5,13 @@
   date: 2025-03-26
   status: Complete
   image: non-fiction/2025/meditations-for-mortals/cover.jpg
+  id: 1
 
 - title: "Mathematics for Human Flourishing"
   subtitle: "Mathematical Exploration and Human Flourishing"
   url: non-fiction/2025/math4hf
   description: "By Francis Su. An inclusive vision of what mathematics is, who it's for, and why anyone should learn it"
   date: 2025-06-09
-  status: Upcoming
+  status: Ongoing
   image: non-fiction/2025/math4hf/cover.png
+  id: 2

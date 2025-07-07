@@ -5,14 +5,16 @@
   date: 2025-03-01
   status: Complete
   image: /texts/2025/magical-math/cover.jpg
+  id: 1
 
 - title: "Topics on Tournaments"
   subtitle: ""
   url: /texts/2025/tournaments
   description: "by John W. Moon. An introduction to the theory of tournaments from a predominantly combinatorial perspective."
   date: 2025-05-05
-  status: Ongoing
+  status: Complete
   image: /texts/2025/tournaments/cover.jpg
+  id: 2
 
 - title: "Proof and the Art of Mathematics"
   subtitle: ""
@@ -21,18 +23,21 @@
   date: 2025-05-05
   status: Ongoing
   image: /texts/2025/proof/cover.png
+  id: 4
 
 - title: "Ten Great Ideas About Chance"
   subtitle: ""
   url: /texts/2025/chance
   description: "by Persi Diaconis and Brian Skyrms. A history book, a probability book, a philosophy book."
-  date: 2025-06-30
+  date: 2025-07-20
   status: Upcoming
   image: /texts/2025/chance/cover.jpg
+  id: 5
 
 - title: "Algebra Chapter 0"
   subtitle: "by Paolo Aluffi. An introduction to Algebra through the lens of Category Theory."
   url: /texts/2025/algebrach0
   date: 2025-05-10
-  status: Upcoming
+  status: Complete
   image: /texts/2025/algebrach0/cover.jpg
+  id: 3

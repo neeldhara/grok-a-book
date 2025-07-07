@@ -5,7 +5,7 @@ toc: false
 listing:
   - id: texts-listing
     contents: texts/listing.yml
-    sort: date desc
+    sort: id desc
     type: grid
     grid-columns: 1
     categories: false
