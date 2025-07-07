@@ -1,8 +1,11 @@
 ---
-title: "Sections 1.3, 1.4"
+title: "Chapter 1"
 date: 2025-05-06
+description: "Exercises based on Chapter 1"
 toc: false
 ---
+
+{{< video https://youtube.com/live/vlNyVnCTZck >}}
 
 ### {{< meta title >}}
 

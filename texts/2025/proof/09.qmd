@@ -1,8 +1,11 @@
 ---
-title: "Sections 4.5, 4.6"
+title: "Chapter 5"
 date: 2025-05-15
+description: "Discrete Mathematics (continued)"
 toc: false
 ---
+
+{{< video https://youtube.com/live/UTezJem8IMY >}}
 
 ### {{< meta title >}}
 

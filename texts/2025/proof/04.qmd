@@ -1,8 +1,11 @@
 ---
-title: "Sections 2.3, 3.1"
+title: "Chapter 3"
 date: 2025-05-08
+description: "Number Theory"
 toc: false
 ---
+
+{{< video https://youtube.com/live/wZ-I4s79VNU >}}
 
 ### {{< meta title >}}
 

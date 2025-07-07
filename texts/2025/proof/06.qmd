@@ -1,8 +1,11 @@
 ---
-title: "Sections 3.4, 3.5"
+title: "Chapter 4"
 date: 2025-05-12
+description: "Mathematical Induction"
 toc: false
 ---
+
+{{< video https://youtube.com/live/2A1jGqg3Tw0 >}}
 
 ### {{< meta title >}}
 

@@ -1,8 +1,11 @@
 ---
-title: "Sections 5.2, 5.3"
+title: "Chapter 6"
 date: 2025-05-19
+description: "Proofs without Words"
 toc: false
 ---
+
+{{< video https://youtube.com/live/RmnTuTrq0m4 >}}
 
 ### {{< meta title >}}
 

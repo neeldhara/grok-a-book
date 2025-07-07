@@ -1,8 +1,11 @@
 ---
-title: "Sections 2.1, 2.2"
+title: "Chapter 2"
 date: 2025-05-07
+description: "Multiple Proofs, and exercises."
 toc: false
 ---
+
+{{< video https://youtube.com/live/6en-O8E9-jc >}}
 
 ### {{< meta title >}}
 

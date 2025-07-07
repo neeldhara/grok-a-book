@@ -1,8 +1,11 @@
 ---
-title: "Sections 4.1, 4.2"
+title: "Chapter 4"
 date: 2025-05-13
+description: "Exercises based on Chapter 4"
 toc: false
 ---
+
+{{< video https://youtube.com/live/WiRYIPioPC8 >}}
 
 ### {{< meta title >}}
 
