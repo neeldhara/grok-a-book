@@ -1,0 +1,11 @@
+---
+title: "The Coda of the Normal (Parts 1-6)"
+subtitle: "Advanced Properties of the Normal Distribution, Multivariate Normal Distribution, Gaussian Processes, Brownian Motion, Wiener Process Properties, and Applications in Stochastic Calculus"
+date: "2025-11-11"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

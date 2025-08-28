@@ -1,0 +1,11 @@
+---
+title: "Numbers Play a Game of Chance (Parts 1-6)"
+subtitle: "Probability in Number Theory, Distribution of Prime Numbers, Random Matrix Theory Connections, Probabilistic Number Theory Results, The Circle Method, and Applications to Additive Number Theory"
+date: "2025-10-07"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

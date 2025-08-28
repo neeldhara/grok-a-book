@@ -1,0 +1,68 @@
+---
+title: "A Data-Centric Introduction to Computing | September 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### A Data-Centric Introduction to Computing
+
+#### _Kathi Fisler, Shriram Krishnamurthi, Benjamin S. Lerner, Joe Gibbs Politz_
+
+---
+
+##### 5 Sep 2025 to 15 Nov 2025
+
+:::: {.columns}
+
+::: {.column width="58%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+This book presents a comprehensive introduction to computing through a data-centric lens, emphasizing how programs manipulate data and how data structures enable efficient computation. The authors take a rigorous yet accessible approach, covering fundamental concepts from basic programming to advanced topics in algorithms and data structures.
+
+The book uniquely approaches computing education by prioritizing data as the central organizing principle, rather than starting with programming syntax or control structures. This perspective helps students understand the "why" behind computational techniques and develop a deeper intuition for designing efficient programs.
+
+You can find this book at [dcic-world.org](https://dcic-world.org/2025-02-09/index.html).
+:::
+
+:::{.callout-tip icon="false"}
+##### Prerequisites
+
+I think (hope!) that no prior programming experience is required. We'll find out as we go along. 
+:::
+
+:::
+
+::: {.column width="42%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We start with an introduction session on **Friday, September 5th**, followed by regular sessions **Monday through Saturday at 9PM IST** for about **60-90 minutes** each day according to the tentative schedule below. I've paced the readings at two chapters a week on average (with exceptions in the first and last weeks). I could be awfully wrong about how long this will actually take, and we will roll with the punches :)
+
+
+I plan to use this page to maintain a tentative schedule. I _hope_ to post rough discussion summaries. For announcements and access to session recordings, please [join us on Circle](https://neeldhara.circle.so/join?invitation_token=924361a2580c337aa021cb792310818b8a04df69-4a5a6b8f-3871-4da1-a5b7-bf67206599aa). 
+
+_Note: unlike previous reading groups, there are no Zoom links: the online sessions happen through Circle. Also, no Whatsapp groups! Circle will send you email reminders ahead of the sessions and you can also add the events to your calendar._
+
+See you there!
+:::
+:::
+
+::::
+
+:::{#lectures-listing}
+:::

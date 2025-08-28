@@ -1,0 +1,69 @@
+---
+title: "The Theory of Probability | December 2025"
+sidebar: false
+page-layout: full
+toc: false
+listing:
+  - id: lectures-listing
+    contents: materials.yml
+    type: table
+    fields: [date, title, summary]
+    sort: [date]
+    sort-ui: false
+    filter-ui: false
+    template: ../../../materials.ejs
+    page-size: 50
+categories: true
+feed: true
+date-format: DD MMM, YYYY
+---
+
+### The Theory of Probability
+
+#### _Santosh S. Venkatesh_
+
+---
+
+##### 5 Sep 2025 to 22 Nov 2025
+
+:::: {.columns}
+
+::: {.column width="58%"}
+:::{.callout-note icon="false"}
+##### About the Book
+
+From its classical foundations to the advanced modern theory, this self-contained and comprehensive guide to probability weaves together mathematical proofs, historical context, and richly detailed illustrative applications. It is suitable for advanced undergraduates with a solid mathematics preparation, graduate students in theoretical disciplines, and researchers in pure and applied probability who wish to stay abreast of the remarkable developments of the late twentieth century.
+
+The book uniquely combines rigorous mathematical treatment with engaging historical anecdotes and concrete examples that bring probability theory to life. Topics range from basic probability spaces to advanced concepts like algorithmic randomness and Brownian motion.
+
+You can find this book at [Santosh Venkatesh's website](https://www.santoshvenkatesh.com/book).
+:::
+
+:::{.callout-tip icon="false"}
+##### Prerequisites
+
+A foundation in mathematical analysis and linear algebra is recommended. The book appears to assume some familiarity with advanced calculus and basic concepts from real analysis.
+:::
+
+:::
+
+::: {.column width="42%"}
+:::{.callout-caution icon="false"}
+##### Timings and Venue
+
+We start with an introduction session on **Friday, September 5th**, followed by regular sessions **Monday through Friday at 9AM IST** for about **60-90 minutes** each day according to the schedule below.
+
+I am *very* tentatively setting aside a week per chapter, and this will get us through Part A over ten weeks. The last week is reserved for review, although we'll probably take those as buffer days for missed sessions.
+
+I plan to use this page to maintain a tentative schedule. I _hope_ to post rough discussion summaries. For announcements and access to session recordings, please [join us on Circle](https://neeldhara.circle.so/join?invitation_token=687e4ac2248d0be9847e24b5ffc5e2ba2c16e88f-48409c87-50d8-410c-bc6e-7ad9bb711965).
+
+
+_Note: unlike previous reading groups, there are no Zoom links: the online sessions happen through Circle. Also, no Whatsapp groups! Circle will send you email reminders ahead of the sessions and you can also add the events to your calendar._ 
+
+See you there!
+:::
+:::
+::::
+
+:::{#lectures-listing}
+:::

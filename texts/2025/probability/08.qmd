@@ -1,0 +1,11 @@
+---
+title: "The Bernoulli Schema (Parts 1-6)"
+subtitle: "Bernoulli Trials and Binomial Distribution, Poisson Paradigm and Rare Events, Compound Poisson Distributions, Branching Processes, Galton-Watson Process, and Applications to Population Modeling"
+date: "2025-10-28"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

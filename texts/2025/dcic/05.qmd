@@ -1,0 +1,11 @@
+---
+title: "From Functions to Programs (Parts 1-3)"
+subtitle: "Designing Functions, From Functions to Programs, Systematic Program Design, How to Design Functions, Function Design Recipes, and Temperature Conversion"
+date: "2025-09-23"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

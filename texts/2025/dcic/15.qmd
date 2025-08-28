@@ -1,0 +1,11 @@
+---
+title: "Processing Self-Referential Data (Parts 1-3)"
+subtitle: "Self-Referential Data, List Recursion, Recursive List Processing, List Recursion Templates, List Recursion Examples, and Self-Referential Practice"
+date: "2025-10-28"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

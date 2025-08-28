@@ -1,0 +1,11 @@
+---
+title: "Repeated Expressions to Functions (Parts 1-3)"
+subtitle: "Similar Flags Example, Defining Functions, Function Evaluation, Type Annotations, Documentation, and Moon Weight Practice"
+date: "2025-09-19"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

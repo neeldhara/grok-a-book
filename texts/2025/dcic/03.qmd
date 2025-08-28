@@ -1,0 +1,11 @@
+---
+title: "Naming Values (Parts 1-3)"
+subtitle: "Definitions Pane, Naming Values, Names vs Strings, Expressions vs Statements, Program Directory, and Streamlining Image Building"
+date: "2025-09-16"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

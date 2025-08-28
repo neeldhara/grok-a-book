@@ -1,0 +1,11 @@
+---
+title: "Data Definitions (Parts 1-3)"
+subtitle: "Data Definitions, Itemizations, Intervals, Enumerations, Designing with Itemizations, and Traffic Light"
+date: "2025-10-10"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

@@ -1,0 +1,20 @@
+---
+title: "Introduction Session"
+subtitle: "Welcome and overview of the book and reading group format"
+date: "2025-09-05"
+---
+
+### {{< meta title >}}
+
+Welcome to our reading group for "The Theory of Probability"!
+
+This session will cover:
+- Overview of the book and its approach
+- Introduction to the reading group format and expectations
+- Getting to know each other and our backgrounds
+- Setting up any necessary tools or environments
+- Q&A about the book and the reading plan
+
+Coming Soon.
+
+{{< comments >}}

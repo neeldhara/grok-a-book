@@ -1,0 +1,11 @@
+---
+title: "Interactive Games as Reactive Systems (Parts 1-2)"
+subtitle: "Game Programming Concepts, and Reactive Programming in Games"
+date: "2025-11-21"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

@@ -1,0 +1,11 @@
+---
+title: "Mutating Variables (Parts 1-3)"
+subtitle: "Variables, Mutation, Variable Assignment, State, Mutation Examples, and Variable Practice"
+date: "2025-11-04"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

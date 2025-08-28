@@ -1,0 +1,246 @@
+- date: 2025-09-05
+  title: "Introduction Session"
+  summary: "Welcome and overview of the book and reading group format"
+  notes: "00.qmd"
+
+# Week 1: Sep 9-13 (Mon-Fri) - Chapter 1: Probability Spaces
+- date: 2025-09-09
+  title: "Probability Spaces (Part 1)"
+  summary: "Introduction to probability spaces and basic concepts"
+  notes: "01.qmd"
+- date: 2025-09-10
+  title: "Probability Spaces (Part 2)"
+  summary: "Sigma-algebras and measurable spaces"
+  notes: "01.qmd"
+- date: 2025-09-11
+  title: "Probability Spaces (Part 3)"
+  summary: "Probability measures and their properties"
+  notes: "01.qmd"
+- date: 2025-09-12
+  title: "Probability Spaces (Part 4)"
+  summary: "Random variables and distributions"
+  notes: "01.qmd"
+- date: 2025-09-13
+  title: "Probability Spaces (Part 5)"
+  summary: "Expectation and moments"
+  notes: "01.qmd"
+
+# Week 2: Sep 16-20 (Mon-Fri) - Chapter 2: Conditional Probability
+- date: 2025-09-16
+  title: "Conditional Probability (Part 1)"
+  summary: "Basic concepts of conditional probability"
+  notes: "02.qmd"
+- date: 2025-09-17
+  title: "Conditional Probability (Part 2)"
+  summary: "Bayes' theorem and its applications"
+  notes: "02.qmd"
+- date: 2025-09-18
+  title: "Conditional Probability (Part 3)"
+  summary: "Conditional expectation"
+  notes: "02.qmd"
+- date: 2025-09-19
+  title: "Conditional Probability (Part 4)"
+  summary: "Martingales and stopping times"
+  notes: "02.qmd"
+- date: 2025-09-20
+  title: "Conditional Probability (Part 5)"
+  summary: "Filtrations and information"
+  notes: "02.qmd"
+
+# Week 3: Sep 23-27 (Mon-Fri) - Chapter 3: A First Look at Independence
+- date: 2025-09-23
+  title: "A First Look at Independence (Part 1)"
+  summary: "Introduction to independence"
+  notes: "03.qmd"
+- date: 2025-09-24
+  title: "A First Look at Independence (Part 2)"
+  summary: "Product measures and independent events"
+  notes: "03.qmd"
+- date: 2025-09-25
+  title: "A First Look at Independence (Part 3)"
+  summary: "Independent random variables"
+  notes: "03.qmd"
+- date: 2025-09-26
+  title: "A First Look at Independence (Part 4)"
+  summary: "Sums of independent random variables"
+  notes: "03.qmd"
+- date: 2025-09-27
+  title: "A First Look at Independence (Part 5)"
+  summary: "The law of large numbers"
+  notes: "03.qmd"
+
+# Week 4: Sep 30-Oct 4 (Mon-Fri) - Chapter 4: Probability Sieves
+- date: 2025-09-30
+  title: "Probability Sieves (Part 1)"
+  summary: "Introduction to sieve methods"
+  notes: "04.qmd"
+- date: 2025-10-01
+  title: "Probability Sieves (Part 2)"
+  summary: "Inclusion-exclusion principle"
+  notes: "04.qmd"
+- date: 2025-10-02
+  title: "Probability Sieves (Part 3)"
+  summary: "Erdős–Ko–Rado theorem"
+  notes: "04.qmd"
+- date: 2025-10-03
+  title: "Probability Sieves (Part 4)"
+  summary: "Sieve of Eratosthenes probabilistic version"
+  notes: "04.qmd"
+- date: 2025-10-04
+  title: "Probability Sieves (Part 5)"
+  summary: "Large sieve inequality"
+  notes: "04.qmd"
+
+# Week 5: Oct 7-11 (Mon-Fri) - Chapter 5: Numbers Play a Game of Chance
+- date: 2025-10-07
+  title: "Numbers Play a Game of Chance (Part 1)"
+  summary: "Probability in number theory"
+  notes: "05.qmd"
+- date: 2025-10-08
+  title: "Numbers Play a Game of Chance (Part 2)"
+  summary: "Distribution of prime numbers"
+  notes: "05.qmd"
+- date: 2025-10-09
+  title: "Numbers Play a Game of Chance (Part 3)"
+  summary: "Random matrix theory connections"
+  notes: "05.qmd"
+- date: 2025-10-10
+  title: "Numbers Play a Game of Chance (Part 4)"
+  summary: "Probabilistic number theory results"
+  notes: "05.qmd"
+- date: 2025-10-11
+  title: "Numbers Play a Game of Chance (Part 5)"
+  summary: "The circle method"
+  notes: "05.qmd"
+
+# Week 6: Oct 14-18 (Mon-Fri) - Chapter 6: The Normal Law
+- date: 2025-10-14
+  title: "The Normal Law (Part 1)"
+  summary: "Introduction to the normal distribution"
+  notes: "06.qmd"
+- date: 2025-10-15
+  title: "The Normal Law (Part 2)"
+  summary: "Properties of the normal distribution"
+  notes: "06.qmd"
+- date: 2025-10-16
+  title: "The Normal Law (Part 3)"
+  summary: "The central limit theorem"
+  notes: "06.qmd"
+- date: 2025-10-17
+  title: "The Normal Law (Part 4)"
+  summary: "Proofs of the CLT"
+  notes: "06.qmd"
+- date: 2025-10-18
+  title: "The Normal Law (Part 5)"
+  summary: "Local CLT and Berry-Esseen theorem"
+  notes: "06.qmd"
+
+# Week 7: Oct 21-25 (Mon-Fri) - Chapter 7: Probabilities on the Real Line
+- date: 2025-10-21
+  title: "Probabilities on the Real Line (Part 1)"
+  summary: "Distribution functions and densities"
+  notes: "07.qmd"
+- date: 2025-10-22
+  title: "Probabilities on the Real Line (Part 2)"
+  summary: "Lebesgue-Stieltjes measures"
+  notes: "07.qmd"
+- date: 2025-10-23
+  title: "Probabilities on the Real Line (Part 3)"
+  summary: "Convolutions and characteristic functions"
+  notes: "07.qmd"
+- date: 2025-10-24
+  title: "Probabilities on the Real Line (Part 4)"
+  summary: "Fourier analysis in probability"
+  notes: "07.qmd"
+- date: 2025-10-25
+  title: "Probabilities on the Real Line (Part 5)"
+  summary: "Stable distributions"
+  notes: "07.qmd"
+
+# Week 8: Oct 28-Nov 1 (Mon-Fri) - Chapter 8: The Bernoulli Schema
+- date: 2025-10-28
+  title: "The Bernoulli Schema (Part 1)"
+  summary: "Bernoulli trials and binomial distribution"
+  notes: "08.qmd"
+- date: 2025-10-29
+  title: "The Bernoulli Schema (Part 2)"
+  summary: "Poisson paradigm and rare events"
+  notes: "08.qmd"
+- date: 2025-10-30
+  title: "The Bernoulli Schema (Part 3)"
+  summary: "Compound Poisson distributions"
+  notes: "08.qmd"
+- date: 2025-10-31
+  title: "The Bernoulli Schema (Part 4)"
+  summary: "Branching processes"
+  notes: "08.qmd"
+- date: 2025-11-01
+  title: "The Bernoulli Schema (Part 5)"
+  summary: "Galton-Watson process"
+  notes: "08.qmd"
+
+# Week 9: Nov 4-8 (Mon-Fri) - Chapter 9: The Essence of Randomness
+- date: 2025-11-04
+  title: "The Essence of Randomness (Part 1)"
+  summary: "Concepts of randomness"
+  notes: "09.qmd"
+- date: 2025-11-05
+  title: "The Essence of Randomness (Part 2)"
+  summary: "Kolmogorov complexity"
+  notes: "09.qmd"
+- date: 2025-11-06
+  title: "The Essence of Randomness (Part 3)"
+  summary: "Algorithmic randomness"
+  notes: "09.qmd"
+- date: 2025-11-07
+  title: "The Essence of Randomness (Part 4)"
+  summary: "Martin-Pour-El theory"
+  notes: "09.qmd"
+- date: 2025-11-08
+  title: "The Essence of Randomness (Part 5)"
+  summary: "Chaitin’s Ω number"
+  notes: "09.qmd"
+
+# Week 10: Nov 11-15 (Mon-Fri) - Chapter 10: The Coda of the Normal
+- date: 2025-11-11
+  title: "The Coda of the Normal (Part 1)"
+  summary: "Advanced properties of the normal distribution"
+  notes: "10.qmd"
+- date: 2025-11-12
+  title: "The Coda of the Normal (Part 2)"
+  summary: "Multivariate normal distribution"
+  notes: "10.qmd"
+- date: 2025-11-13
+  title: "The Coda of the Normal (Part 3)"
+  summary: "Gaussian processes"
+  notes: "10.qmd"
+- date: 2025-11-14
+  title: "The Coda of the Normal (Part 4)"
+  summary: "Brownian motion"
+  notes: "10.qmd"
+- date: 2025-11-15
+  title: "The Coda of the Normal (Part 5)"
+  summary: "Wiener process properties"
+  notes: "10.qmd"
+
+# Week 11: Nov 18-22 (Mon-Fri) - Review Week
+- date: 2025-11-18
+  title: "Review Session 1"
+  summary: "Review of Probability Spaces and Conditional Probability"
+  notes: "review.qmd"
+- date: 2025-11-19
+  title: "Review Session 2"
+  summary: "Review of Independence and Sieves"
+  notes: "review.qmd"
+- date: 2025-11-20
+  title: "Review Session 3"
+  summary: "Review of Number Theory and Normal Law"
+  notes: "review.qmd"
+- date: 2025-11-21
+  title: "Review Session 4"
+  summary: "Review of Real Line Probabilities and Bernoulli Schema"
+  notes: "review.qmd"
+- date: 2025-11-22
+  title: "Review Session 5"
+  summary: "Review of Randomness and Normal Coda"
+  notes: "review.qmd"

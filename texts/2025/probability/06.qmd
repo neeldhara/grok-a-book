@@ -1,0 +1,11 @@
+---
+title: "The Normal Law (Parts 1-6)"
+subtitle: "Introduction to the Normal Distribution, Properties of the Normal Distribution, The Central Limit Theorem, Proofs of the CLT, Local CLT and Berry-Esseen Theorem, and Applications and Generalizations"
+date: "2025-10-14"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

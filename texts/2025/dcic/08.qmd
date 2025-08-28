@@ -1,0 +1,11 @@
+---
+title: "Designing with Lists (Parts 1-3)"
+subtitle: "Processing Lists, List Processing Functions, List Processing Templates, List Membership, List Processing Examples, and Keep Items"
+date: "2025-10-03"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

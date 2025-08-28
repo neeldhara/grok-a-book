@@ -1,0 +1,11 @@
+---
+title: "Designing with Structures (Parts 1-3)"
+subtitle: "Structure Processing, Structure Templates, Structure Processing Examples, Distance Function, Complex Structures, and Structure Design Practice"
+date: "2025-10-17"
+---
+
+### {{< meta title >}}
+
+Coming Soon.
+
+{{< comments >}}

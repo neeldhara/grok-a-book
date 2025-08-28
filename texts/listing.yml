@@ -34,6 +34,15 @@
   image: /texts/2025/chance/cover.jpg
   id: 5
 
+- title: "A Data-Centric Introduction to Computing"
+  subtitle: "by Kathi Fisler, Shriram Krishnamurthi, Benjamin S. Lerner, Joe Gibbs Politz"
+  url: /texts/2025/dcic
+  description: "A comprehensive introduction to computing through a data-centric lens, emphasizing how programs manipulate data."
+  date: 2025-09-05
+  status: Upcoming
+  image: /texts/2025/dcic/cover.png
+  id: 6
+
 - title: "Algebra Chapter 0"
   subtitle: "by Paolo Aluffi. An introduction to Algebra through the lens of Category Theory."
   url: /texts/2025/algebrach0
@@ -41,3 +50,12 @@
   status: Complete
   image: /texts/2025/algebrach0/cover.jpg
   id: 3
+
+- title: "The Theory of Probability"
+  subtitle: "by Santosh S. Venkatesh"
+  url: /texts/2025/probability
+  description: "From its classical foundations to the advanced modern theory, this self-contained and comprehensive guide to probability weaves together mathematical proofs, historical context, and richly detailed illustrative applications."
+  date: 2025-12-01
+  status: Upcoming
+  image: /texts/2025/probability/cover.jpg
+  id: 7

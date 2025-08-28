@@ -1,0 +1,290 @@
+- date: 2025-09-05
+  title: "Introduction Session"
+  summary: "Welcome and overview of the book and reading group format"
+  notes: "00.qmd"
+
+# Week 1: Chapters 3-5 (2 days each, 6 days total)
+- date: 2025-09-09
+  title: "Basic Data (Part 1)"
+  summary: "Introduction to fundamental data concepts"
+  notes: "03.qmd"
+- date: 2025-09-10
+  title: "Basic Data (Part 2)"
+  summary: "Core data types and operations"
+  notes: "03.qmd"
+- date: 2025-09-11
+  title: "Tabular Data (Part 1)"
+  summary: "Working with tabular data structures"
+  notes: "04.qmd"
+- date: 2025-09-12
+  title: "Tabular Data (Part 2)"
+  summary: "Tabular data manipulation and analysis"
+  notes: "04.qmd"
+- date: 2025-09-13
+  title: "Lists (Part 1)"
+  summary: "Introduction to list data structures"
+  notes: "05.qmd"
+- date: 2025-09-14
+  title: "Lists (Part 2)"
+  summary: "List operations and methods"
+  notes: "05.qmd"
+
+# Week 2: Sep 15-21 (Mon-Sat) - Chapters 6-7
+- date: 2025-09-15
+  title: "Structured Data (Part 1)"
+  summary: "Working with structured data formats"
+  notes: "06.qmd"
+- date: 2025-09-16
+  title: "Structured Data (Part 2)"
+  summary: "Advanced structured data concepts"
+  notes: "06.qmd"
+- date: 2025-09-17
+  title: "Structured Data (Part 3)"
+  summary: "Complex structured data patterns"
+  notes: "06.qmd"
+- date: 2025-09-18
+  title: "Trees (Part 1)"
+  summary: "Introduction to tree data structures"
+  notes: "07.qmd"
+- date: 2025-09-19
+  title: "Trees (Part 2)"
+  summary: "Tree operations and traversal"
+  notes: "07.qmd"
+- date: 2025-09-20
+  title: "Trees (Part 3)"
+  summary: "Advanced tree algorithms"
+  notes: "07.qmd"
+
+# Week 3: Sep 22-28 (Mon-Sat) - Chapter 8
+- date: 2025-09-22
+  title: "Foundations: Bonus Materials (Part 1)"
+  summary: "Additional foundational concepts"
+  notes: "08.qmd"
+- date: 2025-09-23
+  title: "Foundations: Bonus Materials (Part 2)"
+  summary: "Bonus materials and exercises"
+  notes: "08.qmd"
+- date: 2025-09-24
+  title: "Foundations: Bonus Materials (Part 3)"
+  summary: "Advanced foundation topics"
+  notes: "08.qmd"
+- date: 2025-09-25
+  title: "From Pyret to Python (Part 1)"
+  summary: "Transitioning from Pyret to Python"
+  notes: "09.qmd"
+- date: 2025-09-26
+  title: "From Pyret to Python (Part 2)"
+  summary: "Python syntax and concepts"
+  notes: "09.qmd"
+- date: 2025-09-27
+  title: "From Pyret to Python (Part 3)"
+  summary: "Advanced Python features"
+  notes: "09.qmd"
+
+# Week 4: Sep 29-Oct 5 (Mon-Sat) - Chapter 10
+- date: 2025-09-29
+  title: "Tables in Python via Pandas (Part 1)"
+  summary: "Introduction to Pandas for tabular data"
+  notes: "10.qmd"
+- date: 2025-09-30
+  title: "Tables in Python via Pandas (Part 2)"
+  summary: "Pandas operations and methods"
+  notes: "10.qmd"
+- date: 2025-10-01
+  title: "Tables in Python via Pandas (Part 3)"
+  summary: "Advanced Pandas techniques"
+  notes: "10.qmd"
+- date: 2025-10-02
+  title: "Programming with State (Part 1)"
+  summary: "State management concepts"
+  notes: "11.qmd"
+- date: 2025-10-03
+  title: "Programming with State (Part 2)"
+  summary: "State in Pyret and Python"
+  notes: "11.qmd"
+- date: 2025-10-04
+  title: "Programming with State (Part 3)"
+  summary: "Advanced state programming"
+  notes: "11.qmd"
+
+# Week 5: Oct 6-12 (Mon-Sat) - Chapter 12
+- date: 2025-10-06
+  title: "More Programming with State: Python (Part 1)"
+  summary: "Advanced state concepts in Python"
+  notes: "12.qmd"
+- date: 2025-10-07
+  title: "More Programming with State: Python (Part 2)"
+  summary: "Python-specific state management"
+  notes: "12.qmd"
+- date: 2025-10-08
+  title: "More Programming with State: Python (Part 3)"
+  summary: "Complex state scenarios"
+  notes: "12.qmd"
+- date: 2025-10-09
+  title: "Predicting Growth (Part 1)"
+  summary: "Growth prediction models"
+  notes: "13.qmd"
+- date: 2025-10-10
+  title: "Predicting Growth (Part 2)"
+  summary: "Mathematical modeling of growth"
+  notes: "13.qmd"
+- date: 2025-10-11
+  title: "Predicting Growth (Part 3)"
+  summary: "Applications and case studies"
+  notes: "13.qmd"
+
+# Week 6: Oct 13-19 (Mon-Sat) - Chapter 14
+- date: 2025-10-13
+  title: "Halloween Analysis (Part 1)"
+  summary: "Data analysis techniques"
+  notes: "14.qmd"
+- date: 2025-10-14
+  title: "Halloween Analysis (Part 2)"
+  summary: "Statistical analysis methods"
+  notes: "14.qmd"
+- date: 2025-10-15
+  title: "Halloween Analysis (Part 3)"
+  summary: "Interpretation and insights"
+  notes: "14.qmd"
+- date: 2025-10-16
+  title: "Directed Acyclic Graphs (Part 1)"
+  summary: "Introduction to DAGs"
+  notes: "15.qmd"
+- date: 2025-10-17
+  title: "Directed Acyclic Graphs (Part 2)"
+  summary: "DAG algorithms and applications"
+  notes: "15.qmd"
+- date: 2025-10-18
+  title: "Directed Acyclic Graphs (Part 3)"
+  summary: "Advanced DAG concepts"
+  notes: "15.qmd"
+
+# Week 7: Oct 20-26 (Mon-Sat) - Chapter 16
+- date: 2025-10-20
+  title: "Graphs (Part 1)"
+  summary: "Introduction to graph theory"
+  notes: "16.qmd"
+- date: 2025-10-21
+  title: "Graphs (Part 2)"
+  summary: "Graph algorithms and traversals"
+  notes: "16.qmd"
+- date: 2025-10-22
+  title: "Graphs (Part 3)"
+  summary: "Advanced graph applications"
+  notes: "16.qmd"
+- date: 2025-10-23
+  title: "Several Variations on Sets (Part 1)"
+  summary: "Set theory foundations"
+  notes: "17.qmd"
+- date: 2025-10-24
+  title: "Several Variations on Sets (Part 2)"
+  summary: "Advanced set operations"
+  notes: "17.qmd"
+- date: 2025-10-25
+  title: "Several Variations on Sets (Part 3)"
+  summary: "Set theory applications"
+  notes: "17.qmd"
+
+# Week 8: Oct 27-Nov 2 (Mon-Sat) - Chapter 18
+- date: 2025-10-27
+  title: "State and Equality (Part 1)"
+  summary: "State management and equality concepts"
+  notes: "18.qmd"
+- date: 2025-10-28
+  title: "State and Equality (Part 2)"
+  summary: "Equality in programming"
+  notes: "18.qmd"
+- date: 2025-10-29
+  title: "State and Equality (Part 3)"
+  summary: "Advanced state and equality topics"
+  notes: "18.qmd"
+- date: 2025-10-30
+  title: "Recursion and Cycles from Mutation (Part 1)"
+  summary: "Recursive patterns with mutation"
+  notes: "19.qmd"
+- date: 2025-10-31
+  title: "Recursion and Cycles from Mutation (Part 2)"
+  summary: "Cycle detection in mutable structures"
+  notes: "19.qmd"
+- date: 2025-11-01
+  title: "Recursion and Cycles from Mutation (Part 3)"
+  summary: "Advanced mutation and recursion"
+  notes: "19.qmd"
+
+# Week 9: Nov 3-9 (Mon-Sat) - Chapter 20
+- date: 2025-11-03
+  title: "Detecting Cycles (Part 1)"
+  summary: "Cycle detection algorithms"
+  notes: "20.qmd"
+- date: 2025-11-04
+  title: "Detecting Cycles (Part 2)"
+  summary: "Implementation and optimization"
+  notes: "20.qmd"
+- date: 2025-11-05
+  title: "Detecting Cycles (Part 3)"
+  summary: "Advanced cycle detection techniques"
+  notes: "20.qmd"
+- date: 2025-11-06
+  title: "Avoiding Recomputation by Remembering Answers (Part 1)"
+  summary: "Memoization concepts"
+  notes: "21.qmd"
+- date: 2025-11-07
+  title: "Avoiding Recomputation by Remembering Answers (Part 2)"
+  summary: "Caching and memoization techniques"
+  notes: "21.qmd"
+- date: 2025-11-08
+  title: "Avoiding Recomputation by Remembering Answers (Part 3)"
+  summary: "Advanced memoization strategies"
+  notes: "21.qmd"
+
+# Week 10: Nov 10-16 (Mon-Sat) - Chapter 22
+- date: 2025-11-10
+  title: "Partial Domains (Part 1)"
+  summary: "Partial function domains"
+  notes: "22.qmd"
+- date: 2025-11-11
+  title: "Partial Domains (Part 2)"
+  summary: "Domain restrictions and constraints"
+  notes: "22.qmd"
+- date: 2025-11-12
+  title: "Partial Domains (Part 3)"
+  summary: "Advanced partial domain concepts"
+  notes: "22.qmd"
+- date: 2025-11-13
+  title: "Staging (Part 1)"
+  summary: "Staging and compilation concepts"
+  notes: "23.qmd"
+- date: 2025-11-14
+  title: "Staging (Part 2)"
+  summary: "Multi-stage programming"
+  notes: "23.qmd"
+- date: 2025-11-15
+  title: "Staging (Part 3)"
+  summary: "Advanced staging techniques"
+  notes: "23.qmd"
+
+# Week 11: Nov 17-23 (Mon-Sat) - Chapters 24-26
+- date: 2025-11-17
+  title: "Factoring Numbers (Part 1)"
+  summary: "Number theory and factoring"
+  notes: "24.qmd"
+- date: 2025-11-18
+  title: "Factoring Numbers (Part 2)"
+  summary: "Factoring algorithms"
+  notes: "24.qmd"
+- date: 2025-11-19
+  title: "Deconstructing Loops (Part 1)"
+  summary: "Loop analysis and optimization"
+  notes: "25.qmd"
+- date: 2025-11-20
+  title: "Deconstructing Loops (Part 2)"
+  summary: "Loop transformation techniques"
+  notes: "25.qmd"
+- date: 2025-11-21
+  title: "Interactive Games as Reactive Systems (Part 1)"
+  summary: "Game programming concepts"
+  notes: "26.qmd"
+- date: 2025-11-22
+  title: "Interactive Games as Reactive Systems (Part 2)"
+  summary: "Reactive programming in games"
+  notes: "26.qmd"
