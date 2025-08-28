@@ -51,9 +51,7 @@ A basic familiarity with probability theory and statistics will be helpful, thou
 :::{.callout-caution icon="false"}
 ##### Timings and Venue
 
-We meet on Zoom at **9PM IST** for about **60-90 minutes** each weekday according to the schedule below. Note that we'll have a break during the week of July 21st. 
-
-Each chapter is explored over two sessions, allowing for deeper discussion and understanding.
+We meet on Zoom at **9PM IST** for about **60-90 minutes** each weekday. Please ignore the schedule below: we planned to but did not have this reading group during the summer of 2025. It stands postponed to December 2025 with a detailed schedule coming soon. Thanks!
 
 Here's a link to a [WA group](https://chat.whatsapp.com/InlhVJOdcDq0T5YZfX33GZ) for general discussions and meetup reminders. Click [here](https://iitgn-ac-in.zoom.us/j/96635182073?pwd=LbIPaDTyfse7YwQLjEQTyq3gQDvoqv.1) to join on Zoom or use the details below:
 
